@@ -1,0 +1,22 @@
+{
+  "name": "prince0203.ml",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:copy-html": "cpx \"src/html/**/*\" dist",
+    "build:copy-assets": "cpx \"assets/**/*\" dist",
+    "build:compile-sass": "node-sass --source-map true --output-style compressed --output dist src/style.scss",
+    "build": "npm-run-all clean build:*"
+  },
+  "repository": "https://github.com/prince0203/prince0203.ml.git",
+  "author": "prince0203 <mc.prince.0203@gmail.com>",
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "hack": "^0.8.0"
+  }
+}

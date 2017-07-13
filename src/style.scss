@@ -1,0 +1,15 @@
+@import "../node_modules/hack/dist/hack";
+@import "../node_modules/hack/dist/dark-grey";
+
+.hack ul.horizontal > li {
+  display: inline;
+  padding: 0;
+  
+  &:after {
+    content: '';
+  }
+  
+  &:nth-child(n+2):before {
+    content: ' / ';
+  }
+}
