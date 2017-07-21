@@ -1,15 +1,48 @@
 @import "~hack/dist/hack";
 @import "~hack/dist/dark-grey";
 
-.hack ul.horizontal > li {
-  display: inline;
-  padding: 0;
-  
-  &:after {
-    content: '';
+.hack {
+  // Horizontal list
+  ul.horizontal > li {
+    display: inline;
+    padding: 0;
+    
+    &:after {
+      content: '';
+    }
+    
+    &:nth-child(n+2):before {
+      content: ' / ';
+    }
   }
   
-  &:nth-child(n+2):before {
-    content: ' / ';
+  // Icon tooltip
+  .icon-tooltip {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: default;
+    
+    &:after {
+      width: 0;
+      height: 0;
+      transition: width 300ms, height 300ms;
+      
+      content: '';
+      position: absolute;
+      top: 1em;
+      z-index: 1;
+      background-image: url(icon/256x256.png);
+      background-size: 100%;
+      border-radius: 5%;
+    }
+    
+    &:hover:after {
+      width: 64px;
+      height: 64px;
+      
+      border: solid #ccc;
+    }
   }
 }
