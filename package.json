@@ -2,8 +2,8 @@
   "name": "prince0203.ml",
   "version": "1.1.0",
   "scripts": {
-    "serve": "run-s clean build && run-p watch live-server",
-    "live-server": "live-server dist",
+    "start": "run-s clean build && run-p watch live-server",
+    "serve": "live-server dist",
     "clean": "rimraf dist",
     "build": "run-p build:*",
     "build:html": "cpx \"public/**/*\" dist",
