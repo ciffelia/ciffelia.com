@@ -3,7 +3,7 @@
 main {
   width: 100%;
 
-  $mainContentsNum: 11;
+  $mainContentsNum: 9;
   $contentsFadeInDuration: .5s;
   $contentsFadeInInterval: .1s;
 
@@ -49,21 +49,19 @@ main {
     color: PowderBlue;
   }
 
-  //dl {
-  //  dt {
-  //    float: left;
-  //
-  //    &:before {
-  //      content: '-';
-  //      margin-right: 5px;
-  //    }
-  //    &:after {
-  //      content: ':';
-  //      margin-right: 5px;
-  //    }
-  //  }
-  //}
-  dl {
+  dl.list {
+    dt {
+      &:not(:first-child) {
+        margin-top: 7px;
+      }
+      &:before {
+        content: '-';
+        margin-right: 7px;
+      }
+    }
+  }
+
+  dl.table {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 8px;
