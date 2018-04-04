@@ -1,52 +1,53 @@
+@import '../node_modules/modern-normalize/modern-normalize';
+@import 'variables';
+@import 'cutIn';
+@import 'header';
+@import 'main';
+
 html, body {
-  height: 100%;
   margin: 0;
+  line-height: 1.5;
 }
 
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
 
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   letter-spacing: 0.03em;
   color: white;
-  background: linear-gradient(to right, #536976, #292e49);
+
+  background: url(images/background.jpg) no-repeat center / cover;
+}
+
+.fixedWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
 }
 
 .container {
-  text-align: center;
-}
+  width: 100%;
+  max-width: 600px;
 
-.header > img {
-  border-radius: 5%;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.links {
-  padding: 0;
+  padding: 25px 0;
 
-  & > li {
-    display: inline-block;
-
-    .icon {
-      width: 32px;
-      height: 32px;
-
-      padding: 15px;
-      border: solid 1px white;
-      border-radius: 50%;
-
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.5);
-      }
-      &, &:hover {
-        transition: background-color .2s 0s linear;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
+  filter: drop-shadow(2px 2px black);
+  
+  background-color: transparentize(white, .9);
 }

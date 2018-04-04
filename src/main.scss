@@ -1,0 +1,103 @@
+@import 'variables';
+
+main {
+  width: 100%;
+
+  $mainContentsNum: 11;
+  $contentsFadeInDuration: .5s;
+  $contentsFadeInInterval: .1s;
+
+  @for $i from 1 through $mainContentsNum {
+    $delay: $contentsFadeInInterval * ($i - (1 + $mainContentsNum) / 2);
+
+    > :nth-child(#{$i}) {
+      @keyframes contentsFadeIn-#{$i} {
+        0% {
+          transform: translateY(-100px - 10px * $i);
+          opacity: 0;
+        }
+      }
+      animation: contentsFadeIn-#{$i} $contentsFadeInDuration $easeOutCirc ($cutInDuration + $headerRotateDuration + $headerSlideDuration + .5s + $delay) both;
+    }
+  }
+
+  > * {
+    margin: 20px 7%;
+    > * {
+      margin: 0;
+    }
+  }
+
+  .centeringWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .h2Wrapper {
+    height: 50px;
+
+    margin: auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparentize(Black, .8);
+  }
+
+  a {
+    color: PowderBlue;
+  }
+
+  //dl {
+  //  dt {
+  //    float: left;
+  //
+  //    &:before {
+  //      content: '-';
+  //      margin-right: 5px;
+  //    }
+  //    &:after {
+  //      content: ':';
+  //      margin-right: 5px;
+  //    }
+  //  }
+  //}
+  dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 8px;
+    line-height: 1.4;
+
+    text-align: center;
+
+    dt, dd {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    dt {
+      grid-column: 1/2;
+
+      padding-right: 15px;
+      border-right: white solid 1px;
+    }
+
+    dd {
+      grid-column: 2/3;
+
+      margin: 0;
+      padding-left: 15px;
+    }
+
+    .spacer {
+      grid-column: 1/3;
+      height: 1em;
+    }
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

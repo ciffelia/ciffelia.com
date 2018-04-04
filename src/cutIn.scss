@@ -1,0 +1,179 @@
+@import 'variables';
+
+.cutInWrapper {
+  width: 100%;
+  height: 220px;
+
+  @media screen and (max-width:550px) {
+    height: 40vw;
+  }
+
+  @keyframes cutInFade1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: .95;
+    }
+  }
+  @keyframes cutInFade2 {
+    0% {
+      opacity: .95;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: .95;
+    }
+  }
+  @keyframes cutInFade3 {
+    0% {
+      opacity: .95;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  animation: cutInFade1 $cutIn1Duration $easeInOutCirc $cutIn1Delay backwards, cutInFade2 $cutIn2Duration linear $cutIn2Delay, cutInFade3 $cutIn3Duration $easeInOutCirc $cutIn3Delay forwards;
+
+  .cutIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 120px;
+
+    > * {
+      filter: drop-shadow(4px 4px black);
+    }
+
+    @media screen and (max-width:550px) {
+      font-size: 20vw;
+    }
+
+    white-space: nowrap;
+
+    $bgColor: transparentize(Black, .5);
+    background: linear-gradient(to right, transparent, $bgColor, $bgColor, transparent);
+
+    @keyframes cutInSlide1 {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(5%);
+      }
+    }
+    @keyframes cutInSlide2 {
+      0% {
+        transform: translateX(5%);
+      }
+      100% {
+        transform: translateX(-5%);
+      }
+    }
+    @keyframes cutInSlide3 {
+      0% {
+        transform: translateX(-5%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    animation: cutInSlide1 $cutIn1Duration $easeInOutCirc $cutIn1Delay backwards, cutInSlide2 $cutIn2Duration linear $cutIn2Delay, cutInSlide3 $cutIn3Duration $easeInOutCirc $cutIn3Delay forwards;
+
+    img {
+      width: 120px;
+      @media screen and (max-width:550px) {
+        width: 20vw;
+      }
+
+      margin-right: 1%;
+
+      vertical-align: middle;
+      border-radius: 50%;
+
+      @keyframes cutInRotate1 {
+        0% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(9deg);
+        }
+      }
+      @keyframes cutInRotate2 {
+        0% {
+          transform: rotate(9deg);
+        }
+        100% {
+          transform: rotate(-9deg);
+        }
+      }
+      @keyframes cutInRotate3 {
+        0% {
+          transform: rotate(-9deg);
+        }
+        100% {
+          transform: rotate(-180deg);
+        }
+      }
+      animation: cutInRotate1 $cutIn1Duration $easeInOutCirc $cutIn1Delay backwards, cutInRotate2 $cutIn2Duration linear $cutIn2Delay, cutInRotate3 $cutIn3Duration $easeInOutCirc $cutIn3Delay forwards;
+    }
+
+    span {
+      span {
+        display: inline-block;
+      }
+
+      $cutInCharInterval: .1s;
+
+      @for $i from 1 through 6 {
+        $charDelay: $cutInCharInterval * ($i - (1 + 6) / 2);
+
+        span:nth-child(#{$i}) {
+          @keyframes cutInCharSlide-#{$i}-1 {
+            0% {
+              transform: translateY(-100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(-5%);
+              opacity: .95;
+            }
+          }
+          @keyframes cutInCharSlide-#{$i}-2 {
+            0% {
+              transform: translateY(-5%);
+              opacity: .95;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(5%);
+              opacity: .95;
+            }
+          }
+          @keyframes cutInCharSlide-#{$i}-3 {
+            0% {
+              transform: translateY(5%);
+              opacity: .95;
+            }
+            100% {
+              transform: translateY(100%);
+              opacity: 0;
+            }
+          }
+          animation:
+                  cutInCharSlide-#{$i}-1 $cutIn1Duration $easeInOutCirc ($cutIn1Delay + $charDelay) backwards,
+                  cutInCharSlide-#{$i}-2 $cutIn2Duration linear ($cutIn2Delay + $charDelay),
+                  cutInCharSlide-#{$i}-3 $cutIn3Duration $easeInOutCirc ($cutIn3Delay + $charDelay) forwards;
+        }
+      }
+    }
+  }
+}
