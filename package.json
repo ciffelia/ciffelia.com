@@ -2,24 +2,24 @@
   "name": "prince0203.ml",
   "version": "1.1.0",
   "scripts": {
-    "start": "run-s clean build && run-p watch serve",
-    "serve": "live-server dist",
-    "clean": "rimraf dist",
-    "build": "run-p build:*",
-    "build:html": "cpx \"public/**/*\" dist",
-    "build:sass": "node-sass --recursive --output-style compressed --source-map true --source-map-contents --output dist src/style.scss",
-    "watch": "run-p watch:*",
-    "watch:html": "cpx \"public/**/*\" dist --watch --no-initial",
-    "watch:sass": "node-sass --watch --recursive --output-style compressed --source-map true --source-map-contents --output dist src/style.scss"
+    "watch": "gulp watch",
+    "serve": "gulp serve",
+    "build": "gulp build"
   },
   "repository": "https://github.com/prince0203/prince0203.ml.git",
   "author": "prince0203 <mc.prince.0203@gmail.com>",
   "devDependencies": {
-    "cpx": "^1.5.0",
-    "live-server": "^1.2.0",
-    "node-sass": "^4.5.3",
-    "npm-run-all": "^4.1.1",
-    "rimraf": "^2.6.2"
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "node-sass-package-importer": "^5.1.1",
+    "rimraf": "^2.6.2",
+    "run-sequence": "^2.2.1"
   },
   "dependencies": {
     "modern-normalize": "^0.4.0"
