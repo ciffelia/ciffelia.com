@@ -90,9 +90,8 @@ main {
       padding-left: 15px;
     }
 
-    .spacer {
-      grid-column: 1/3;
-      height: 1em;
+    dt.spacer, dt.spacer + dd {
+      margin-top: .8em;
     }
   }
 
