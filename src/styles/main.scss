@@ -51,6 +51,7 @@ main {
 
   dl.list {
     dt {
+      font-size: 1.1em;
       &:not(:first-child) {
         margin-top: 7px;
       }
