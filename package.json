@@ -1,12 +1,12 @@
 {
-  "name": "prince0203.ml",
-  "version": "1.1.0",
+  "name": "ciffelia.com",
+  "version": "2.0.0",
   "scripts": {
     "watch": "gulp watch",
     "serve": "gulp serve",
     "build": "gulp build"
   },
-  "repository": "https://github.com/prince0203/prince0203.ml.git",
+  "repository": "https://github.com/prince0203/ciffelia.com.git",
   "author": "prince0203 <mc.prince.0203@gmail.com>",
   "devDependencies": {
     "browser-sync": "^2.23.6",
