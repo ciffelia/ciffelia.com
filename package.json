@@ -1,6 +1,5 @@
 {
   "name": "ciffelia.com",
-  "version": "2.1.1",
   "scripts": {
     "watch": "gulp watch",
     "serve": "gulp serve",
