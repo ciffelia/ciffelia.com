@@ -131,8 +131,8 @@
 
       $cutInCharInterval: .1s;
 
-      @for $i from 1 through 6 {
-        $charDelay: $cutInCharInterval * ($i - (1 + 6) / 2);
+      @for $i from 1 through 8 {
+        $charDelay: $cutInCharInterval * ($i - (1 + 8) / 2);
 
         span:nth-child(#{$i}) {
           @keyframes cutInCharSlide-#{$i}-1 {

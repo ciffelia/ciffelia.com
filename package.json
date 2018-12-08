@@ -6,8 +6,8 @@
     "serve": "gulp serve",
     "build": "gulp build"
   },
-  "repository": "https://github.com/prince0203/ciffelia.com.git",
-  "author": "prince0203 <mc.prince.0203@gmail.com>",
+  "repository": "https://github.com/ciffelia/ciffelia.com.git",
+  "author": "Ciffelia <mc.prince.0203@gmail.com>",
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
