@@ -1,6 +1,7 @@
 {
   "name": "ciffelia.com",
   "scripts": {
+    "test": "standard",
     "watch": "gulp watch",
     "serve": "gulp serve",
     "build": "gulp build"
@@ -16,7 +17,8 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "node-sass-package-importer": "^5.1.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "standard": "^12.0.1"
   },
   "dependencies": {
     "modern-normalize": "^0.5.0"

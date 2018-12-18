@@ -2,7 +2,9 @@ language: node_js
 
 cache: yarn
 
-script: yarn build
+script:
+  - yarn test
+  - yarn build
 
 # greenkeeper-lockfile
 before_install: yarn global add greenkeeper-lockfile@1
