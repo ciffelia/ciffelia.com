@@ -21,6 +21,10 @@ body {
   background: url(../images/background.jpg) no-repeat center / cover;
 }
 
+::selection {
+  background: steelblue;
+}
+
 .fixedWrapper {
   position: fixed;
   top: 0;

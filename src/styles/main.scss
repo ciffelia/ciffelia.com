@@ -45,6 +45,17 @@ main {
     background-color: transparentize(Black, .8);
   }
 
+  p.description {
+    text-align: center;
+
+    span {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-left: 5px;
+      }
+    }
+  }
+
   a {
     color: PowderBlue;
   }
