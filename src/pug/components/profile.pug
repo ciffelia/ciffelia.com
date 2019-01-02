@@ -1,0 +1,13 @@
+include ../mixins/simpleDefList
+
+.h2Wrapper
+  h2 📋 Profile
+
+.centeringWrapper
+  +simpleDefList('table', {
+    Age: '16',
+    Birth: 'February 3, 2002',
+    Gender: 'Male',
+    Country: 'Japan',
+    Affiliation: 'Eiko Gakuen High School'
+  })

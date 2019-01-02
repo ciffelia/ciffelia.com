@@ -1,0 +1,10 @@
+include ../mixins/externalLink
+
+mixin linkList
+  dl.table
+    block
+
+mixin link(service, href, id)
+  dt!= service
+  dd
+    +externalLink(href)!= id

@@ -1,0 +1,10 @@
+include ../mixins/externalLink
+
+mixin workList
+  dl.list
+    block
+
+mixin work(title, href, description)
+  dt
+    +externalLink(href)!= title
+  dd!= description

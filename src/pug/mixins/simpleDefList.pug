@@ -1,0 +1,5 @@
+mixin simpleDefList(className, map)
+  dl(class!=className)
+    each val, key in map
+      dt!= key
+      dd!= val
