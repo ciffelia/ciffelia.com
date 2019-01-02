@@ -18,7 +18,7 @@ body {
   letter-spacing: 0.03em;
   color: white;
 
-  background: url(images/background.jpg) no-repeat center / cover;
+  background: url(../images/background.jpg) no-repeat center / cover;
 }
 
 .fixedWrapper {
@@ -48,6 +48,6 @@ body {
   padding: 25px 0;
 
   filter: drop-shadow(2px 2px black);
-  
+
   background-color: transparentize(white, .9);
 }
