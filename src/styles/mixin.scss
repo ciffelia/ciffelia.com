@@ -1,3 +1,15 @@
+@mixin firefox-mobile {
+  @media screen and (max-width: 768px) and (min--moz-device-pixel-ratio:0) {
+    @content;
+  }
+}
+
 @mixin drop-shadow($offset) {
   filter: drop-shadow($offset $offset black);
+
+  // AndroidのFirefoxにはバグがあり、drop-shadow()を適用すると異常に重くなってしまう
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=1273010
+  @include firefox-mobile {
+    filter: none;
+  }
 }
