@@ -10,12 +10,12 @@
     "modern-normalize": "^0.5.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.3",
-    "node-sass-package-importer": "^5.3.0",
+    "autoprefixer": "^9.6.1",
+    "node-sass-package-importer": "^5.3.2",
     "parcel-bundler": "^1.11.0",
-    "parcel-plugin-static-files-copy": "^2.0.0",
-    "pug": "^2.0.3",
-    "rimraf": "^2.6.2",
-    "sass": "^1.15.2"
+    "parcel-plugin-static-files-copy": "^2.1.2",
+    "pug": "^2.0.4",
+    "rimraf": "^2.6.3",
+    "sass": "^1.22.3"
   }
 }
