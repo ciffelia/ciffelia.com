@@ -7,7 +7,7 @@
   "repository": "https://github.com/ciffelia/ciffelia.com.git",
   "author": "Ciffelia <mc.prince.0203@gmail.com>",
   "dependencies": {
-    "modern-normalize": "^0.5.0"
+    "modern-normalize": "^0.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
