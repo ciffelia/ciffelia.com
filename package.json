@@ -7,15 +7,15 @@
   "repository": "https://github.com/ciffelia/ciffelia.com.git",
   "author": "Ciffelia <mc.prince.0203@gmail.com>",
   "dependencies": {
-    "modern-normalize": "^0.5.0"
+    "modern-normalize": "^0.6.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.7.3",
     "node-sass-package-importer": "^5.3.2",
-    "parcel-bundler": "^1.11.0",
-    "parcel-plugin-static-files-copy": "^2.1.2",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.2.1",
     "pug": "^2.0.4",
-    "rimraf": "^2.6.3",
-    "sass": "^1.22.3"
+    "rimraf": "^3.0.0",
+    "sass": "^1.24.0"
   }
 }
