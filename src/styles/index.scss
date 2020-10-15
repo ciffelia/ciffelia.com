@@ -1,6 +1,5 @@
 @import '~modern-normalize';
 @import 'variables';
-@import 'mixin';
 @import 'cutIn';
 @import 'header';
 @import 'main';
@@ -52,7 +51,7 @@ body {
 
   padding: 25px 0;
 
-  @include drop-shadow(2px);
+  filter: drop-shadow(2px 2px black);
 
   background-color: transparentize(white, .9);
 }

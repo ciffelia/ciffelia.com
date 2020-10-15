@@ -1,5 +1,4 @@
 @import 'variables';
-@import 'mixin';
 
 .cutInWrapper {
   width: 100%;
@@ -49,7 +48,7 @@
     font-size: 120px;
 
     > * {
-      @include drop-shadow(4px);
+      filter: drop-shadow(4px 4px black);
     }
 
     @media screen and (max-width:550px) {
