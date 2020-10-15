@@ -1,1 +1,1 @@
-{"name":"Ciffelia","short_name":"Ciffelia","start_url":"/","background_color":"#356373","theme_color":"#a5a1be","icons":[{"src":"images/icon/256x256.png","sizes":"256x256","type":"image/png"},{"src":"images/icon/1600x1600.png","sizes":"1600x1600","type":"image/png"}]}
+{"name":"Ciffelia","short_name":"Ciffelia","start_url":"/","background_color":"#356373","theme_color":"#a5a1be","icons":[{"src":"./images/icon/256x256.png","sizes":"256x256","type":"image/png"},{"src":"./images/icon/1600x1600.png","sizes":"1600x1600","type":"image/png"}]}
