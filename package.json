@@ -1,11 +1,14 @@
 {
   "name": "ciffelia.com",
+  "private": true,
+  "author": "Ciffelia <mc.prince.0203@gmail.com> (https://ciffelia.com/)",
+  "repository": "github:ciffelia/ciffelia.com",
+  "homepage": "https://github.com/ciffelia/ciffelia.com#readme",
+  "bugs": "https://github.com/ciffelia/ciffelia.com/issues",
   "scripts": {
     "dev": "parcel src/pug/index.pug --open",
     "build": "rimraf dist && parcel build src/pug/index.pug"
   },
-  "repository": "https://github.com/ciffelia/ciffelia.com.git",
-  "author": "Ciffelia <mc.prince.0203@gmail.com>",
   "dependencies": {
     "modern-normalize": "^1.0.0"
   },
