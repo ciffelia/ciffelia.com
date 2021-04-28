@@ -1,6 +1,0 @@
-# Redirect domain aliases to primary domain
-https://prince0203.ml/* https://ciffelia.com/:splat 301!
-https://www.prince0203.ml/* https://ciffelia.com/:splat 301!
-
-# Redirect default Netlify subdomain to primary domain
-https://ciffelia.netlify.com/* https://ciffelia.com/:splat 301!
