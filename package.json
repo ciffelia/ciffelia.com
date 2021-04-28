@@ -1,0 +1,19 @@
+{
+  "name": "ciffelia.com",
+  "private": true,
+  "author": "Ciffelia <mc.prince.0203@gmail.com> (https://ciffelia.com/)",
+  "repository": "github:ciffelia/ciffelia.com",
+  "homepage": "https://ciffelia.com/",
+  "bugs": "https://github.com/ciffelia/ciffelia.com/issues",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^3.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
