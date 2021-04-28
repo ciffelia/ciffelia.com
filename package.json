@@ -6,8 +6,8 @@
   "homepage": "https://github.com/ciffelia/ciffelia.com#readme",
   "bugs": "https://github.com/ciffelia/ciffelia.com/issues",
   "scripts": {
-    "dev": "parcel src/pug/index.pug --open",
-    "build": "rimraf dist && parcel build src/pug/index.pug"
+    "dev": "parcel src/pug/index.pug --out-dir public --open",
+    "build": "rimraf public && parcel build src/pug/index.pug --out-dir public"
   },
   "dependencies": {
     "modern-normalize": "^1.0.0"
