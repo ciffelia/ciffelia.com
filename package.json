@@ -9,11 +9,16 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "prettier --check .",
+    "fix": "prettier --write ."
   },
   "dependencies": {
     "gatsby": "^3.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
   }
 }
