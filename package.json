@@ -10,7 +10,7 @@
     "build": "rimraf public && parcel build src/pug/index.pug --out-dir public"
   },
   "dependencies": {
-    "modern-normalize": "^1.0.0"
+    "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
