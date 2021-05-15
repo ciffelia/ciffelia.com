@@ -1,3 +1,5 @@
 .main {
-  margin-left: 1em;
+  $width: min(90%, 960px);
+  width: $width;
+  margin-left: calc((100% - #{$width}) / 2);
 }

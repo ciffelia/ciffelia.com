@@ -8,7 +8,7 @@ import * as styles from './Hero.module.scss'
 
 export default function Hero() {
   return (
-    <div className={styles.hero}>
+    <header className={styles.hero}>
       <div className={styles.oceanContainer}>
         <Ocean />
       </div>
@@ -38,6 +38,6 @@ export default function Hero() {
           iconPath={githubIcon}
         />
       </div>
-    </div>
+    </header>
   )
 }
