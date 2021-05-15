@@ -19,6 +19,7 @@ export default function Hero() {
           src="../images/ciffelia.png"
           alt=""
           loading="eager"
+          width={130} // Max width
         />
         <span className={styles.name}>Ciffelia</span>
       </div>
