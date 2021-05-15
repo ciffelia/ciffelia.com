@@ -1,0 +1,12 @@
+@import '~modern-normalize';
+@import '~@fontsource/quicksand/600.css';
+@import './variables';
+
+body {
+  background-color: $white;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+}

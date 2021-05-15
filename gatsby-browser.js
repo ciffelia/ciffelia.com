@@ -1,1 +1,1 @@
-import 'modern-normalize'
+import './src/styles/global.scss'
