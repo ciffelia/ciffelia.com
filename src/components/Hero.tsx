@@ -1,10 +1,10 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import Ocean from './ocean'
-import SocialLink from './socialLink'
+import Ocean from './Ocean'
+import SocialLink from './SocialLink'
 import twitterIcon from '../images/twitter.svg'
 import githubIcon from '../images/github.svg'
-import * as styles from './hero.module.scss'
+import * as styles from './Hero.module.scss'
 
 export default function Hero() {
   return (

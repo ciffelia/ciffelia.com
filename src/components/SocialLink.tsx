@@ -1,6 +1,6 @@
 import React from 'react'
-import * as styles from './socialLink.module.scss'
-import ExternalLink from './externalLink'
+import ExternalLink from './ExternalLink'
+import * as styles from './SocialLink.module.scss'
 
 interface Props {
   name: string

@@ -1,5 +1,5 @@
 import React from 'react'
-import * as styles from './ocean.module.scss'
+import * as styles from './Ocean.module.scss'
 
 export default function Ocean() {
   return (

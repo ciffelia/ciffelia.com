@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageProps } from 'gatsby'
-import Hero from '../components/hero'
+import Hero from '../components/Hero'
 import * as styles from './index.module.scss'
 
 export default function IndexRoute(props: PageProps) {
