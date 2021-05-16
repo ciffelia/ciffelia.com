@@ -18,7 +18,6 @@ export default function Head(props: Props) {
       <meta name="description" content="Web開発が好きな大学生です。" />
       <link rel="icon" type="image/png" href={favicon} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
-      <link rel="canonical" href="https://ciffelia.com/" />
     </Helmet>
   )
 }
