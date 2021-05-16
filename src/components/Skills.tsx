@@ -11,7 +11,7 @@ export default function Skills() {
           Skills <small>スキルセット</small>
         </h1>
 
-        <h3>Webフロントエンド</h3>
+        <h2>Webフロントエンド</h2>
         <p>最近はTypeScript + Next.js or Nuxt.jsでSPAを書くことが多いです。</p>
         <ul>
           <li>TypeScript</li>
@@ -22,7 +22,7 @@ export default function Skills() {
           <li>Electron</li>
         </ul>
 
-        <h3>Webバックエンド</h3>
+        <h2>Webバックエンド</h2>
         <p>TypeScript + Node.jsでREST APIサーバーを書くことがほとんどです。</p>
         <ul>
           <li>Node.js / Express / Koa / Fastify</li>
@@ -30,7 +30,7 @@ export default function Skills() {
           <li>Puppeteer</li>
         </ul>
 
-        <h3>Linux</h3>
+        <h2>Linux</h2>
         <p>VPSとRaspberry Piを24/7で3年ほど運用しています。</p>
         <ul>
           <li>Arch Linuxのインストール</li>
@@ -41,7 +41,7 @@ export default function Skills() {
           <li>Mackerel (監視)</li>
         </ul>
 
-        <h3>開発ツール・インフラ</h3>
+        <h2>開発ツール・インフラ</h2>
         <ul>
           <li>
             Git (commit, tag, push, merge, rebase, conflictの修正, interactive
@@ -55,7 +55,7 @@ export default function Skills() {
           <li>JetBrains IDE</li>
         </ul>
 
-        <h3>その他</h3>
+        <h2>その他</h2>
         <ul>
           <li>競技プログラミング (AtCoder 緑)</li>
           <li>OSSへの貢献 (Issueを立てたりPull Requestを送ったり)</li>
@@ -69,7 +69,7 @@ export default function Skills() {
           <li>電子工作 (はんだ付けくらい)</li>
         </ul>
 
-        <h3>自然言語</h3>
+        <h2>自然言語</h2>
         <ul>
           <li>日本語 (ネイティブ)</li>
           <li>English (たいていのドキュメントが読めるくらい)</li>
