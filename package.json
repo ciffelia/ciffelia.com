@@ -13,7 +13,7 @@
     "lint": "prettier --check .",
     "fix": "prettier --write .",
     "typecheck": "tsc",
-    "prepare": "husky install"
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@fontsource/quicksand": "^4.5.0",
@@ -40,6 +40,7 @@
     "@types/react-helmet": "^6.1.2",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.0",
+    "pinst": "^2.1.6",
     "prettier": "^2.3.2"
   },
   "lint-staged": {

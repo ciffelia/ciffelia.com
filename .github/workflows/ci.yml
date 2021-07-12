@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 14
           check-latest: true
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn run build
         env:
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 14
           check-latest: true
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn run lint
 
   typecheck:
@@ -39,5 +39,5 @@ jobs:
         with:
           node-version: 14
           check-latest: true
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn run typecheck

@@ -8,8 +8,14 @@ yarn-error.log*
 # dotenv
 .env
 
-# npm
-node_modules
+# Yarn v2
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
 
 # Gatsby
 /.cache

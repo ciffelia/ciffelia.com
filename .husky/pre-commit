@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run typecheck
-npx --no-install lint-staged
+yarn run typecheck
+yarn run lint-staged
