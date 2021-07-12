@@ -14,6 +14,9 @@ jobs:
           check-latest: true
       - run: yarn install --frozen-lockfile
       - run: yarn run build
+        env:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
 
   lint:
     runs-on: ubuntu-20.04
