@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
 
-  filter: $dropShadow;
+  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.16));
 
   .icon {
     width: clamp(75px, 20vw, 130px);
