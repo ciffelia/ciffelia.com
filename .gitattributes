@@ -1,0 +1,2 @@
+# Mark as binary to prevent git from trying to merge it
+/src/__generated__/** binary linguist-generated

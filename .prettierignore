@@ -5,5 +5,8 @@ node_modules
 /.cache
 /public
 
+# gatsby-plugin-typegen
+/src/__generated__
+
 # WebStorm
 /.idea
