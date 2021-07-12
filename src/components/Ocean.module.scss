@@ -1,9 +1,11 @@
+@use "sass:math";
+
 $oceanWidth: 100%;
 $oceanHeight: 100px;
 
 $waveImageWidth: 1440px;
 $waveImageHeight: 250px;
-$displayedWaveWidth: $oceanHeight * $waveImageWidth / $waveImageHeight;
+$displayedWaveWidth: math.div($oceanHeight * $waveImageWidth, $waveImageHeight);
 
 $waveEasingFunc: cubic-bezier(0.37, 0, 0.63, 1);
 
