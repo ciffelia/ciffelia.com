@@ -4,7 +4,7 @@ import { IGatsbyImageData } from 'gatsby-plugin-image'
 import SectionBox from './SectionBox'
 import Typography from './Typography'
 import WorkCard from './WorkCard'
-import * as styles from './Works.module.scss'
+import * as styles from '../styles/Works.module.scss'
 
 export default function Works() {
   const data = useStaticQuery<GatsbyTypes.WorksQuery>(graphql`

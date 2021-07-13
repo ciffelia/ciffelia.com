@@ -2,7 +2,7 @@ import React from 'react'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import ExternalLink from './ExternalLink'
 import Tag from './Tag'
-import * as styles from './WorkCard.module.scss'
+import * as styles from '../styles/WorkCard.module.scss'
 
 interface Props {
   title: string

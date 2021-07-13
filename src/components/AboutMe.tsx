@@ -2,7 +2,7 @@ import React from 'react'
 import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa'
 import SectionBox from './SectionBox'
 import Typography from './Typography'
-import * as styles from './AboueMe.module.scss'
+import * as styles from '../styles/AboueMe.module.scss'
 
 export default function AboutMe() {
   return (

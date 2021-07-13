@@ -4,7 +4,7 @@ import Ocean from './Ocean'
 import SocialLink from './SocialLink'
 import twitterIcon from '../images/twitter.svg'
 import githubIcon from '../images/github.svg'
-import * as styles from './Hero.module.scss'
+import * as styles from '../styles/Hero.module.scss'
 
 export default function Hero() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import * as styles from './Typography.module.scss'
+import * as styles from '../styles/Typography.module.scss'
 
 interface Props {
   children: React.ReactNode

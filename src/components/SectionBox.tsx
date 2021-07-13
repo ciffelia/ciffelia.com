@@ -1,5 +1,5 @@
 import React from 'react'
-import * as styles from './SectionBox.module.scss'
+import * as styles from '../styles/SectionBox.module.scss'
 
 interface Props {
   children: React.ReactNode
