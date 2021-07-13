@@ -3,21 +3,23 @@ import { Helmet } from 'react-helmet'
 import favicon from '../images/favicon.png'
 import appleTouchIcon from '../images/apple-touch-icon.png'
 
-interface Props {
-  title?: string
-}
-
-const Head: React.FC<Props> = (props) => {
+const Head: React.FC = () => {
   return (
-    <Helmet
-      title={props.title}
-      titleTemplate="%s - Ciffelia"
-      defaultTitle="Ciffelia"
-    >
-      <html lang="ja" />
-      <meta name="description" content="Web開発が好きな大学生です。" />
+    <Helmet>
+      <html lang="ja" prefix="og: https://ogp.me/ns#" />
       <link rel="icon" type="image/png" href={favicon} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
+      <meta name="description" content="About me" />
+      <meta property="og:title" content="Ciffelia" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://ciffelia.com/" />
+      <meta property="og:image" content="https://ciffelia.com/ogp.png" />
+      <meta property="og:description" content="About me" />
+      <meta property="og:locale" content="ja_JP" />
+      <meta property="og:site_name" content="Ciffelia" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ciffelia" />
+      <title>Ciffelia</title>
     </Helmet>
   )
 }
