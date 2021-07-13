@@ -6,7 +6,11 @@ interface Props {
 }
 
 const SectionBox: React.FC<Props> = (props) => {
-  return <section className={styles.sectionBox}>{props.children}</section>
+  return (
+    <section className={styles.sectionBox}>
+      <div className={styles.inner}>{props.children}</div>
+    </section>
+  )
 }
 
 export default SectionBox

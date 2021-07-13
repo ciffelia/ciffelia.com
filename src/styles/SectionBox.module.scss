@@ -1,9 +1,7 @@
 .sectionBox {
   width: 100%;
-
-  $contentWidth: min(90%, 960px);
-
-  padding: 15px calc((100% - #{$contentWidth}) / 2);
+  display: flex;
+  justify-content: center;
 
   &:first-child {
     padding-top: 0;
@@ -12,4 +10,8 @@
   &:nth-child(2n) {
     background-color: #f7f7f7;
   }
+}
+
+.inner {
+  width: min(90%, 960px);
 }
