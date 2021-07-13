@@ -254,8 +254,6 @@ type Directory_ctimeArgs = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly siteMetadata: Maybe<SiteSiteMetadata>;
-  readonly port: Maybe<Scalars['Int']>;
-  readonly host: Maybe<Scalars['String']>;
   readonly polyfill: Maybe<Scalars['Boolean']>;
   readonly pathPrefix: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
@@ -278,8 +276,10 @@ type SiteSiteMetadata = {
 };
 
 type SiteFunction = Node & {
-  readonly apiRoute: Scalars['String'];
-  readonly originalFilePath: Scalars['String'];
+  readonly functionRoute: Scalars['String'];
+  readonly pluginName: Scalars['String'];
+  readonly originalAbsoluteFilePath: Scalars['String'];
+  readonly originalRelativeFilePath: Scalars['String'];
   readonly relativeCompiledFilePath: Scalars['String'];
   readonly absoluteCompiledFilePath: Scalars['String'];
   readonly matchPath: Maybe<Scalars['String']>;
@@ -854,37 +854,6 @@ type ContentfulWorkListSysContentTypeSys = {
   readonly id: Maybe<Scalars['String']>;
 };
 
-type ContentfulContentType = Node & {
-  readonly id: Scalars['ID'];
-  readonly parent: Maybe<Node>;
-  readonly children: ReadonlyArray<Node>;
-  readonly internal: Internal;
-  readonly name: Maybe<Scalars['String']>;
-  readonly displayField: Maybe<Scalars['String']>;
-  readonly description: Maybe<Scalars['String']>;
-  readonly sys: Maybe<ContentfulContentTypeSys>;
-};
-
-type ContentfulContentTypeSys = {
-  readonly type: Maybe<Scalars['String']>;
-};
-
-type SiteBuildMetadata = Node & {
-  readonly id: Scalars['ID'];
-  readonly parent: Maybe<Node>;
-  readonly children: ReadonlyArray<Node>;
-  readonly internal: Internal;
-  readonly buildTime: Maybe<Scalars['Date']>;
-};
-
-
-type SiteBuildMetadata_buildTimeArgs = {
-  formatString: Maybe<Scalars['String']>;
-  fromNow: Maybe<Scalars['Boolean']>;
-  difference: Maybe<Scalars['String']>;
-  locale: Maybe<Scalars['String']>;
-};
-
 type SitePlugin = Node & {
   readonly id: Scalars['ID'];
   readonly parent: Maybe<Node>;
@@ -949,6 +918,37 @@ type SitePluginPackageJsonPeerDependencies = {
   readonly version: Maybe<Scalars['String']>;
 };
 
+type SiteBuildMetadata = Node & {
+  readonly id: Scalars['ID'];
+  readonly parent: Maybe<Node>;
+  readonly children: ReadonlyArray<Node>;
+  readonly internal: Internal;
+  readonly buildTime: Maybe<Scalars['Date']>;
+};
+
+
+type SiteBuildMetadata_buildTimeArgs = {
+  formatString: Maybe<Scalars['String']>;
+  fromNow: Maybe<Scalars['Boolean']>;
+  difference: Maybe<Scalars['String']>;
+  locale: Maybe<Scalars['String']>;
+};
+
+type ContentfulContentType = Node & {
+  readonly id: Scalars['ID'];
+  readonly parent: Maybe<Node>;
+  readonly children: ReadonlyArray<Node>;
+  readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
+  readonly displayField: Maybe<Scalars['String']>;
+  readonly description: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulContentTypeSys>;
+};
+
+type ContentfulContentTypeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
 type Query = {
   readonly file: Maybe<File>;
   readonly allFile: FileConnection;
@@ -970,12 +970,12 @@ type Query = {
   readonly allContentfulWork: ContentfulWorkConnection;
   readonly contentfulWorkList: Maybe<ContentfulWorkList>;
   readonly allContentfulWorkList: ContentfulWorkListConnection;
-  readonly contentfulContentType: Maybe<ContentfulContentType>;
-  readonly allContentfulContentType: ContentfulContentTypeConnection;
-  readonly siteBuildMetadata: Maybe<SiteBuildMetadata>;
-  readonly allSiteBuildMetadata: SiteBuildMetadataConnection;
   readonly sitePlugin: Maybe<SitePlugin>;
   readonly allSitePlugin: SitePluginConnection;
+  readonly siteBuildMetadata: Maybe<SiteBuildMetadata>;
+  readonly allSiteBuildMetadata: SiteBuildMetadataConnection;
+  readonly contentfulContentType: Maybe<ContentfulContentType>;
+  readonly allContentfulContentType: ContentfulContentTypeConnection;
 };
 
 
@@ -1081,8 +1081,6 @@ type Query_allDirectoryArgs = {
 type Query_siteArgs = {
   buildTime: Maybe<DateQueryOperatorInput>;
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  port: Maybe<IntQueryOperatorInput>;
-  host: Maybe<StringQueryOperatorInput>;
   polyfill: Maybe<BooleanQueryOperatorInput>;
   pathPrefix: Maybe<StringQueryOperatorInput>;
   id: Maybe<StringQueryOperatorInput>;
@@ -1101,8 +1099,10 @@ type Query_allSiteArgs = {
 
 
 type Query_siteFunctionArgs = {
-  apiRoute: Maybe<StringQueryOperatorInput>;
-  originalFilePath: Maybe<StringQueryOperatorInput>;
+  functionRoute: Maybe<StringQueryOperatorInput>;
+  pluginName: Maybe<StringQueryOperatorInput>;
+  originalAbsoluteFilePath: Maybe<StringQueryOperatorInput>;
+  originalRelativeFilePath: Maybe<StringQueryOperatorInput>;
   relativeCompiledFilePath: Maybe<StringQueryOperatorInput>;
   absoluteCompiledFilePath: Maybe<StringQueryOperatorInput>;
   matchPath: Maybe<StringQueryOperatorInput>;
@@ -1266,21 +1266,26 @@ type Query_allContentfulWorkListArgs = {
 };
 
 
-type Query_contentfulContentTypeArgs = {
+type Query_sitePluginArgs = {
   id: Maybe<StringQueryOperatorInput>;
   parent: Maybe<NodeFilterInput>;
   children: Maybe<NodeFilterListInput>;
   internal: Maybe<InternalFilterInput>;
+  resolve: Maybe<StringQueryOperatorInput>;
   name: Maybe<StringQueryOperatorInput>;
-  displayField: Maybe<StringQueryOperatorInput>;
-  description: Maybe<StringQueryOperatorInput>;
-  sys: Maybe<ContentfulContentTypeSysFilterInput>;
+  version: Maybe<StringQueryOperatorInput>;
+  pluginOptions: Maybe<SitePluginPluginOptionsFilterInput>;
+  nodeAPIs: Maybe<StringQueryOperatorInput>;
+  browserAPIs: Maybe<StringQueryOperatorInput>;
+  ssrAPIs: Maybe<StringQueryOperatorInput>;
+  pluginFilepath: Maybe<StringQueryOperatorInput>;
+  packageJson: Maybe<SitePluginPackageJsonFilterInput>;
 };
 
 
-type Query_allContentfulContentTypeArgs = {
-  filter: Maybe<ContentfulContentTypeFilterInput>;
-  sort: Maybe<ContentfulContentTypeSortInput>;
+type Query_allSitePluginArgs = {
+  filter: Maybe<SitePluginFilterInput>;
+  sort: Maybe<SitePluginSortInput>;
   skip: Maybe<Scalars['Int']>;
   limit: Maybe<Scalars['Int']>;
 };
@@ -1303,26 +1308,21 @@ type Query_allSiteBuildMetadataArgs = {
 };
 
 
-type Query_sitePluginArgs = {
+type Query_contentfulContentTypeArgs = {
   id: Maybe<StringQueryOperatorInput>;
   parent: Maybe<NodeFilterInput>;
   children: Maybe<NodeFilterListInput>;
   internal: Maybe<InternalFilterInput>;
-  resolve: Maybe<StringQueryOperatorInput>;
   name: Maybe<StringQueryOperatorInput>;
-  version: Maybe<StringQueryOperatorInput>;
-  pluginOptions: Maybe<SitePluginPluginOptionsFilterInput>;
-  nodeAPIs: Maybe<StringQueryOperatorInput>;
-  browserAPIs: Maybe<StringQueryOperatorInput>;
-  ssrAPIs: Maybe<StringQueryOperatorInput>;
-  pluginFilepath: Maybe<StringQueryOperatorInput>;
-  packageJson: Maybe<SitePluginPackageJsonFilterInput>;
+  displayField: Maybe<StringQueryOperatorInput>;
+  description: Maybe<StringQueryOperatorInput>;
+  sys: Maybe<ContentfulContentTypeSysFilterInput>;
 };
 
 
-type Query_allSitePluginArgs = {
-  filter: Maybe<SitePluginFilterInput>;
-  sort: Maybe<SitePluginSortInput>;
+type Query_allContentfulContentTypeArgs = {
+  filter: Maybe<ContentfulContentTypeFilterInput>;
+  sort: Maybe<ContentfulContentTypeSortInput>;
   skip: Maybe<Scalars['Int']>;
   limit: Maybe<Scalars['Int']>;
 };
@@ -2115,8 +2115,6 @@ type SiteFieldsEnum =
   | 'buildTime'
   | 'siteMetadata.title'
   | 'siteMetadata.description'
-  | 'port'
-  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -2218,8 +2216,6 @@ type SiteGroupConnection = {
 type SiteFilterInput = {
   readonly buildTime: Maybe<DateQueryOperatorInput>;
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  readonly port: Maybe<IntQueryOperatorInput>;
-  readonly host: Maybe<StringQueryOperatorInput>;
   readonly polyfill: Maybe<BooleanQueryOperatorInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
   readonly id: Maybe<StringQueryOperatorInput>;
@@ -2279,8 +2275,10 @@ type SiteFunctionEdge = {
 };
 
 type SiteFunctionFieldsEnum =
-  | 'apiRoute'
-  | 'originalFilePath'
+  | 'functionRoute'
+  | 'pluginName'
+  | 'originalAbsoluteFilePath'
+  | 'originalRelativeFilePath'
   | 'relativeCompiledFilePath'
   | 'absoluteCompiledFilePath'
   | 'matchPath'
@@ -2381,8 +2379,10 @@ type SiteFunctionGroupConnection = {
 };
 
 type SiteFunctionFilterInput = {
-  readonly apiRoute: Maybe<StringQueryOperatorInput>;
-  readonly originalFilePath: Maybe<StringQueryOperatorInput>;
+  readonly functionRoute: Maybe<StringQueryOperatorInput>;
+  readonly pluginName: Maybe<StringQueryOperatorInput>;
+  readonly originalAbsoluteFilePath: Maybe<StringQueryOperatorInput>;
+  readonly originalRelativeFilePath: Maybe<StringQueryOperatorInput>;
   readonly relativeCompiledFilePath: Maybe<StringQueryOperatorInput>;
   readonly absoluteCompiledFilePath: Maybe<StringQueryOperatorInput>;
   readonly matchPath: Maybe<StringQueryOperatorInput>;
@@ -4272,328 +4272,6 @@ type ContentfulWorkListSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type ContentfulContentTypeSysFilterInput = {
-  readonly type: Maybe<StringQueryOperatorInput>;
-};
-
-type ContentfulContentTypeConnection = {
-  readonly totalCount: Scalars['Int'];
-  readonly edges: ReadonlyArray<ContentfulContentTypeEdge>;
-  readonly nodes: ReadonlyArray<ContentfulContentType>;
-  readonly pageInfo: PageInfo;
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly group: ReadonlyArray<ContentfulContentTypeGroupConnection>;
-};
-
-
-type ContentfulContentTypeConnection_distinctArgs = {
-  field: ContentfulContentTypeFieldsEnum;
-};
-
-
-type ContentfulContentTypeConnection_maxArgs = {
-  field: ContentfulContentTypeFieldsEnum;
-};
-
-
-type ContentfulContentTypeConnection_minArgs = {
-  field: ContentfulContentTypeFieldsEnum;
-};
-
-
-type ContentfulContentTypeConnection_sumArgs = {
-  field: ContentfulContentTypeFieldsEnum;
-};
-
-
-type ContentfulContentTypeConnection_groupArgs = {
-  skip: Maybe<Scalars['Int']>;
-  limit: Maybe<Scalars['Int']>;
-  field: ContentfulContentTypeFieldsEnum;
-};
-
-type ContentfulContentTypeEdge = {
-  readonly next: Maybe<ContentfulContentType>;
-  readonly node: ContentfulContentType;
-  readonly previous: Maybe<ContentfulContentType>;
-};
-
-type ContentfulContentTypeFieldsEnum =
-  | 'id'
-  | 'parent.id'
-  | 'parent.parent.id'
-  | 'parent.parent.parent.id'
-  | 'parent.parent.parent.children'
-  | 'parent.parent.children'
-  | 'parent.parent.children.id'
-  | 'parent.parent.children.children'
-  | 'parent.parent.internal.content'
-  | 'parent.parent.internal.contentDigest'
-  | 'parent.parent.internal.description'
-  | 'parent.parent.internal.fieldOwners'
-  | 'parent.parent.internal.ignoreType'
-  | 'parent.parent.internal.mediaType'
-  | 'parent.parent.internal.owner'
-  | 'parent.parent.internal.type'
-  | 'parent.children'
-  | 'parent.children.id'
-  | 'parent.children.parent.id'
-  | 'parent.children.parent.children'
-  | 'parent.children.children'
-  | 'parent.children.children.id'
-  | 'parent.children.children.children'
-  | 'parent.children.internal.content'
-  | 'parent.children.internal.contentDigest'
-  | 'parent.children.internal.description'
-  | 'parent.children.internal.fieldOwners'
-  | 'parent.children.internal.ignoreType'
-  | 'parent.children.internal.mediaType'
-  | 'parent.children.internal.owner'
-  | 'parent.children.internal.type'
-  | 'parent.internal.content'
-  | 'parent.internal.contentDigest'
-  | 'parent.internal.description'
-  | 'parent.internal.fieldOwners'
-  | 'parent.internal.ignoreType'
-  | 'parent.internal.mediaType'
-  | 'parent.internal.owner'
-  | 'parent.internal.type'
-  | 'children'
-  | 'children.id'
-  | 'children.parent.id'
-  | 'children.parent.parent.id'
-  | 'children.parent.parent.children'
-  | 'children.parent.children'
-  | 'children.parent.children.id'
-  | 'children.parent.children.children'
-  | 'children.parent.internal.content'
-  | 'children.parent.internal.contentDigest'
-  | 'children.parent.internal.description'
-  | 'children.parent.internal.fieldOwners'
-  | 'children.parent.internal.ignoreType'
-  | 'children.parent.internal.mediaType'
-  | 'children.parent.internal.owner'
-  | 'children.parent.internal.type'
-  | 'children.children'
-  | 'children.children.id'
-  | 'children.children.parent.id'
-  | 'children.children.parent.children'
-  | 'children.children.children'
-  | 'children.children.children.id'
-  | 'children.children.children.children'
-  | 'children.children.internal.content'
-  | 'children.children.internal.contentDigest'
-  | 'children.children.internal.description'
-  | 'children.children.internal.fieldOwners'
-  | 'children.children.internal.ignoreType'
-  | 'children.children.internal.mediaType'
-  | 'children.children.internal.owner'
-  | 'children.children.internal.type'
-  | 'children.internal.content'
-  | 'children.internal.contentDigest'
-  | 'children.internal.description'
-  | 'children.internal.fieldOwners'
-  | 'children.internal.ignoreType'
-  | 'children.internal.mediaType'
-  | 'children.internal.owner'
-  | 'children.internal.type'
-  | 'internal.content'
-  | 'internal.contentDigest'
-  | 'internal.description'
-  | 'internal.fieldOwners'
-  | 'internal.ignoreType'
-  | 'internal.mediaType'
-  | 'internal.owner'
-  | 'internal.type'
-  | 'name'
-  | 'displayField'
-  | 'description'
-  | 'sys.type';
-
-type ContentfulContentTypeGroupConnection = {
-  readonly totalCount: Scalars['Int'];
-  readonly edges: ReadonlyArray<ContentfulContentTypeEdge>;
-  readonly nodes: ReadonlyArray<ContentfulContentType>;
-  readonly pageInfo: PageInfo;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-};
-
-type ContentfulContentTypeFilterInput = {
-  readonly id: Maybe<StringQueryOperatorInput>;
-  readonly parent: Maybe<NodeFilterInput>;
-  readonly children: Maybe<NodeFilterListInput>;
-  readonly internal: Maybe<InternalFilterInput>;
-  readonly name: Maybe<StringQueryOperatorInput>;
-  readonly displayField: Maybe<StringQueryOperatorInput>;
-  readonly description: Maybe<StringQueryOperatorInput>;
-  readonly sys: Maybe<ContentfulContentTypeSysFilterInput>;
-};
-
-type ContentfulContentTypeSortInput = {
-  readonly fields: Maybe<ReadonlyArray<Maybe<ContentfulContentTypeFieldsEnum>>>;
-  readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
-};
-
-type SiteBuildMetadataConnection = {
-  readonly totalCount: Scalars['Int'];
-  readonly edges: ReadonlyArray<SiteBuildMetadataEdge>;
-  readonly nodes: ReadonlyArray<SiteBuildMetadata>;
-  readonly pageInfo: PageInfo;
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly group: ReadonlyArray<SiteBuildMetadataGroupConnection>;
-};
-
-
-type SiteBuildMetadataConnection_distinctArgs = {
-  field: SiteBuildMetadataFieldsEnum;
-};
-
-
-type SiteBuildMetadataConnection_maxArgs = {
-  field: SiteBuildMetadataFieldsEnum;
-};
-
-
-type SiteBuildMetadataConnection_minArgs = {
-  field: SiteBuildMetadataFieldsEnum;
-};
-
-
-type SiteBuildMetadataConnection_sumArgs = {
-  field: SiteBuildMetadataFieldsEnum;
-};
-
-
-type SiteBuildMetadataConnection_groupArgs = {
-  skip: Maybe<Scalars['Int']>;
-  limit: Maybe<Scalars['Int']>;
-  field: SiteBuildMetadataFieldsEnum;
-};
-
-type SiteBuildMetadataEdge = {
-  readonly next: Maybe<SiteBuildMetadata>;
-  readonly node: SiteBuildMetadata;
-  readonly previous: Maybe<SiteBuildMetadata>;
-};
-
-type SiteBuildMetadataFieldsEnum =
-  | 'id'
-  | 'parent.id'
-  | 'parent.parent.id'
-  | 'parent.parent.parent.id'
-  | 'parent.parent.parent.children'
-  | 'parent.parent.children'
-  | 'parent.parent.children.id'
-  | 'parent.parent.children.children'
-  | 'parent.parent.internal.content'
-  | 'parent.parent.internal.contentDigest'
-  | 'parent.parent.internal.description'
-  | 'parent.parent.internal.fieldOwners'
-  | 'parent.parent.internal.ignoreType'
-  | 'parent.parent.internal.mediaType'
-  | 'parent.parent.internal.owner'
-  | 'parent.parent.internal.type'
-  | 'parent.children'
-  | 'parent.children.id'
-  | 'parent.children.parent.id'
-  | 'parent.children.parent.children'
-  | 'parent.children.children'
-  | 'parent.children.children.id'
-  | 'parent.children.children.children'
-  | 'parent.children.internal.content'
-  | 'parent.children.internal.contentDigest'
-  | 'parent.children.internal.description'
-  | 'parent.children.internal.fieldOwners'
-  | 'parent.children.internal.ignoreType'
-  | 'parent.children.internal.mediaType'
-  | 'parent.children.internal.owner'
-  | 'parent.children.internal.type'
-  | 'parent.internal.content'
-  | 'parent.internal.contentDigest'
-  | 'parent.internal.description'
-  | 'parent.internal.fieldOwners'
-  | 'parent.internal.ignoreType'
-  | 'parent.internal.mediaType'
-  | 'parent.internal.owner'
-  | 'parent.internal.type'
-  | 'children'
-  | 'children.id'
-  | 'children.parent.id'
-  | 'children.parent.parent.id'
-  | 'children.parent.parent.children'
-  | 'children.parent.children'
-  | 'children.parent.children.id'
-  | 'children.parent.children.children'
-  | 'children.parent.internal.content'
-  | 'children.parent.internal.contentDigest'
-  | 'children.parent.internal.description'
-  | 'children.parent.internal.fieldOwners'
-  | 'children.parent.internal.ignoreType'
-  | 'children.parent.internal.mediaType'
-  | 'children.parent.internal.owner'
-  | 'children.parent.internal.type'
-  | 'children.children'
-  | 'children.children.id'
-  | 'children.children.parent.id'
-  | 'children.children.parent.children'
-  | 'children.children.children'
-  | 'children.children.children.id'
-  | 'children.children.children.children'
-  | 'children.children.internal.content'
-  | 'children.children.internal.contentDigest'
-  | 'children.children.internal.description'
-  | 'children.children.internal.fieldOwners'
-  | 'children.children.internal.ignoreType'
-  | 'children.children.internal.mediaType'
-  | 'children.children.internal.owner'
-  | 'children.children.internal.type'
-  | 'children.internal.content'
-  | 'children.internal.contentDigest'
-  | 'children.internal.description'
-  | 'children.internal.fieldOwners'
-  | 'children.internal.ignoreType'
-  | 'children.internal.mediaType'
-  | 'children.internal.owner'
-  | 'children.internal.type'
-  | 'internal.content'
-  | 'internal.contentDigest'
-  | 'internal.description'
-  | 'internal.fieldOwners'
-  | 'internal.ignoreType'
-  | 'internal.mediaType'
-  | 'internal.owner'
-  | 'internal.type'
-  | 'buildTime';
-
-type SiteBuildMetadataGroupConnection = {
-  readonly totalCount: Scalars['Int'];
-  readonly edges: ReadonlyArray<SiteBuildMetadataEdge>;
-  readonly nodes: ReadonlyArray<SiteBuildMetadata>;
-  readonly pageInfo: PageInfo;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-};
-
-type SiteBuildMetadataFilterInput = {
-  readonly id: Maybe<StringQueryOperatorInput>;
-  readonly parent: Maybe<NodeFilterInput>;
-  readonly children: Maybe<NodeFilterListInput>;
-  readonly internal: Maybe<InternalFilterInput>;
-  readonly buildTime: Maybe<DateQueryOperatorInput>;
-};
-
-type SiteBuildMetadataSortInput = {
-  readonly fields: Maybe<ReadonlyArray<Maybe<SiteBuildMetadataFieldsEnum>>>;
-  readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
-};
-
 type SitePluginConnection = {
   readonly totalCount: Scalars['Int'];
   readonly edges: ReadonlyArray<SitePluginEdge>;
@@ -4781,13 +4459,327 @@ type SitePluginSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type WorksQueryVariables = Exact<{ [key: string]: never; }>;
+type SiteBuildMetadataConnection = {
+  readonly totalCount: Scalars['Int'];
+  readonly edges: ReadonlyArray<SiteBuildMetadataEdge>;
+  readonly nodes: ReadonlyArray<SiteBuildMetadata>;
+  readonly pageInfo: PageInfo;
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly group: ReadonlyArray<SiteBuildMetadataGroupConnection>;
+};
 
 
-type WorksQuery = { readonly contentfulWorkList: Maybe<{ readonly entries: Maybe<ReadonlyArray<Maybe<(
-      Pick<ContentfulWork, 'id' | 'title' | 'year' | 'tags' | 'url'>
-      & { readonly image: Maybe<{ readonly localFile: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> }> }
-    )>>> }> };
+type SiteBuildMetadataConnection_distinctArgs = {
+  field: SiteBuildMetadataFieldsEnum;
+};
+
+
+type SiteBuildMetadataConnection_maxArgs = {
+  field: SiteBuildMetadataFieldsEnum;
+};
+
+
+type SiteBuildMetadataConnection_minArgs = {
+  field: SiteBuildMetadataFieldsEnum;
+};
+
+
+type SiteBuildMetadataConnection_sumArgs = {
+  field: SiteBuildMetadataFieldsEnum;
+};
+
+
+type SiteBuildMetadataConnection_groupArgs = {
+  skip: Maybe<Scalars['Int']>;
+  limit: Maybe<Scalars['Int']>;
+  field: SiteBuildMetadataFieldsEnum;
+};
+
+type SiteBuildMetadataEdge = {
+  readonly next: Maybe<SiteBuildMetadata>;
+  readonly node: SiteBuildMetadata;
+  readonly previous: Maybe<SiteBuildMetadata>;
+};
+
+type SiteBuildMetadataFieldsEnum =
+  | 'id'
+  | 'parent.id'
+  | 'parent.parent.id'
+  | 'parent.parent.parent.id'
+  | 'parent.parent.parent.children'
+  | 'parent.parent.children'
+  | 'parent.parent.children.id'
+  | 'parent.parent.children.children'
+  | 'parent.parent.internal.content'
+  | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.description'
+  | 'parent.parent.internal.fieldOwners'
+  | 'parent.parent.internal.ignoreType'
+  | 'parent.parent.internal.mediaType'
+  | 'parent.parent.internal.owner'
+  | 'parent.parent.internal.type'
+  | 'parent.children'
+  | 'parent.children.id'
+  | 'parent.children.parent.id'
+  | 'parent.children.parent.children'
+  | 'parent.children.children'
+  | 'parent.children.children.id'
+  | 'parent.children.children.children'
+  | 'parent.children.internal.content'
+  | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.description'
+  | 'parent.children.internal.fieldOwners'
+  | 'parent.children.internal.ignoreType'
+  | 'parent.children.internal.mediaType'
+  | 'parent.children.internal.owner'
+  | 'parent.children.internal.type'
+  | 'parent.internal.content'
+  | 'parent.internal.contentDigest'
+  | 'parent.internal.description'
+  | 'parent.internal.fieldOwners'
+  | 'parent.internal.ignoreType'
+  | 'parent.internal.mediaType'
+  | 'parent.internal.owner'
+  | 'parent.internal.type'
+  | 'children'
+  | 'children.id'
+  | 'children.parent.id'
+  | 'children.parent.parent.id'
+  | 'children.parent.parent.children'
+  | 'children.parent.children'
+  | 'children.parent.children.id'
+  | 'children.parent.children.children'
+  | 'children.parent.internal.content'
+  | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.description'
+  | 'children.parent.internal.fieldOwners'
+  | 'children.parent.internal.ignoreType'
+  | 'children.parent.internal.mediaType'
+  | 'children.parent.internal.owner'
+  | 'children.parent.internal.type'
+  | 'children.children'
+  | 'children.children.id'
+  | 'children.children.parent.id'
+  | 'children.children.parent.children'
+  | 'children.children.children'
+  | 'children.children.children.id'
+  | 'children.children.children.children'
+  | 'children.children.internal.content'
+  | 'children.children.internal.contentDigest'
+  | 'children.children.internal.description'
+  | 'children.children.internal.fieldOwners'
+  | 'children.children.internal.ignoreType'
+  | 'children.children.internal.mediaType'
+  | 'children.children.internal.owner'
+  | 'children.children.internal.type'
+  | 'children.internal.content'
+  | 'children.internal.contentDigest'
+  | 'children.internal.description'
+  | 'children.internal.fieldOwners'
+  | 'children.internal.ignoreType'
+  | 'children.internal.mediaType'
+  | 'children.internal.owner'
+  | 'children.internal.type'
+  | 'internal.content'
+  | 'internal.contentDigest'
+  | 'internal.description'
+  | 'internal.fieldOwners'
+  | 'internal.ignoreType'
+  | 'internal.mediaType'
+  | 'internal.owner'
+  | 'internal.type'
+  | 'buildTime';
+
+type SiteBuildMetadataGroupConnection = {
+  readonly totalCount: Scalars['Int'];
+  readonly edges: ReadonlyArray<SiteBuildMetadataEdge>;
+  readonly nodes: ReadonlyArray<SiteBuildMetadata>;
+  readonly pageInfo: PageInfo;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+};
+
+type SiteBuildMetadataFilterInput = {
+  readonly id: Maybe<StringQueryOperatorInput>;
+  readonly parent: Maybe<NodeFilterInput>;
+  readonly children: Maybe<NodeFilterListInput>;
+  readonly internal: Maybe<InternalFilterInput>;
+  readonly buildTime: Maybe<DateQueryOperatorInput>;
+};
+
+type SiteBuildMetadataSortInput = {
+  readonly fields: Maybe<ReadonlyArray<Maybe<SiteBuildMetadataFieldsEnum>>>;
+  readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
+};
+
+type ContentfulContentTypeSysFilterInput = {
+  readonly type: Maybe<StringQueryOperatorInput>;
+};
+
+type ContentfulContentTypeConnection = {
+  readonly totalCount: Scalars['Int'];
+  readonly edges: ReadonlyArray<ContentfulContentTypeEdge>;
+  readonly nodes: ReadonlyArray<ContentfulContentType>;
+  readonly pageInfo: PageInfo;
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly group: ReadonlyArray<ContentfulContentTypeGroupConnection>;
+};
+
+
+type ContentfulContentTypeConnection_distinctArgs = {
+  field: ContentfulContentTypeFieldsEnum;
+};
+
+
+type ContentfulContentTypeConnection_maxArgs = {
+  field: ContentfulContentTypeFieldsEnum;
+};
+
+
+type ContentfulContentTypeConnection_minArgs = {
+  field: ContentfulContentTypeFieldsEnum;
+};
+
+
+type ContentfulContentTypeConnection_sumArgs = {
+  field: ContentfulContentTypeFieldsEnum;
+};
+
+
+type ContentfulContentTypeConnection_groupArgs = {
+  skip: Maybe<Scalars['Int']>;
+  limit: Maybe<Scalars['Int']>;
+  field: ContentfulContentTypeFieldsEnum;
+};
+
+type ContentfulContentTypeEdge = {
+  readonly next: Maybe<ContentfulContentType>;
+  readonly node: ContentfulContentType;
+  readonly previous: Maybe<ContentfulContentType>;
+};
+
+type ContentfulContentTypeFieldsEnum =
+  | 'id'
+  | 'parent.id'
+  | 'parent.parent.id'
+  | 'parent.parent.parent.id'
+  | 'parent.parent.parent.children'
+  | 'parent.parent.children'
+  | 'parent.parent.children.id'
+  | 'parent.parent.children.children'
+  | 'parent.parent.internal.content'
+  | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.description'
+  | 'parent.parent.internal.fieldOwners'
+  | 'parent.parent.internal.ignoreType'
+  | 'parent.parent.internal.mediaType'
+  | 'parent.parent.internal.owner'
+  | 'parent.parent.internal.type'
+  | 'parent.children'
+  | 'parent.children.id'
+  | 'parent.children.parent.id'
+  | 'parent.children.parent.children'
+  | 'parent.children.children'
+  | 'parent.children.children.id'
+  | 'parent.children.children.children'
+  | 'parent.children.internal.content'
+  | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.description'
+  | 'parent.children.internal.fieldOwners'
+  | 'parent.children.internal.ignoreType'
+  | 'parent.children.internal.mediaType'
+  | 'parent.children.internal.owner'
+  | 'parent.children.internal.type'
+  | 'parent.internal.content'
+  | 'parent.internal.contentDigest'
+  | 'parent.internal.description'
+  | 'parent.internal.fieldOwners'
+  | 'parent.internal.ignoreType'
+  | 'parent.internal.mediaType'
+  | 'parent.internal.owner'
+  | 'parent.internal.type'
+  | 'children'
+  | 'children.id'
+  | 'children.parent.id'
+  | 'children.parent.parent.id'
+  | 'children.parent.parent.children'
+  | 'children.parent.children'
+  | 'children.parent.children.id'
+  | 'children.parent.children.children'
+  | 'children.parent.internal.content'
+  | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.description'
+  | 'children.parent.internal.fieldOwners'
+  | 'children.parent.internal.ignoreType'
+  | 'children.parent.internal.mediaType'
+  | 'children.parent.internal.owner'
+  | 'children.parent.internal.type'
+  | 'children.children'
+  | 'children.children.id'
+  | 'children.children.parent.id'
+  | 'children.children.parent.children'
+  | 'children.children.children'
+  | 'children.children.children.id'
+  | 'children.children.children.children'
+  | 'children.children.internal.content'
+  | 'children.children.internal.contentDigest'
+  | 'children.children.internal.description'
+  | 'children.children.internal.fieldOwners'
+  | 'children.children.internal.ignoreType'
+  | 'children.children.internal.mediaType'
+  | 'children.children.internal.owner'
+  | 'children.children.internal.type'
+  | 'children.internal.content'
+  | 'children.internal.contentDigest'
+  | 'children.internal.description'
+  | 'children.internal.fieldOwners'
+  | 'children.internal.ignoreType'
+  | 'children.internal.mediaType'
+  | 'children.internal.owner'
+  | 'children.internal.type'
+  | 'internal.content'
+  | 'internal.contentDigest'
+  | 'internal.description'
+  | 'internal.fieldOwners'
+  | 'internal.ignoreType'
+  | 'internal.mediaType'
+  | 'internal.owner'
+  | 'internal.type'
+  | 'name'
+  | 'displayField'
+  | 'description'
+  | 'sys.type';
+
+type ContentfulContentTypeGroupConnection = {
+  readonly totalCount: Scalars['Int'];
+  readonly edges: ReadonlyArray<ContentfulContentTypeEdge>;
+  readonly nodes: ReadonlyArray<ContentfulContentType>;
+  readonly pageInfo: PageInfo;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+};
+
+type ContentfulContentTypeFilterInput = {
+  readonly id: Maybe<StringQueryOperatorInput>;
+  readonly parent: Maybe<NodeFilterInput>;
+  readonly children: Maybe<NodeFilterListInput>;
+  readonly internal: Maybe<InternalFilterInput>;
+  readonly name: Maybe<StringQueryOperatorInput>;
+  readonly displayField: Maybe<StringQueryOperatorInput>;
+  readonly description: Maybe<StringQueryOperatorInput>;
+  readonly sys: Maybe<ContentfulContentTypeSysFilterInput>;
+};
+
+type ContentfulContentTypeSortInput = {
+  readonly fields: Maybe<ReadonlyArray<Maybe<ContentfulContentTypeFieldsEnum>>>;
+  readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
+};
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -4835,9 +4827,12 @@ type GatsbyContentfulFluid_withWebpFragment = Pick<ContentfulFluid, 'base64' | '
 
 type GatsbyContentfulFluid_withWebp_noBase64Fragment = Pick<ContentfulFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+type WorksQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'apiRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+type WorksQuery = { readonly contentfulWorkList: Maybe<{ readonly entries: Maybe<ReadonlyArray<Maybe<(
+      Pick<ContentfulWork, 'id' | 'title' | 'year' | 'tags' | 'url'>
+      & { readonly image: Maybe<{ readonly localFile: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> }> }
+    )>>> }> };
 
 }
