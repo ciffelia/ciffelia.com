@@ -1,7 +1,6 @@
 import React from 'react'
 import SectionBox from './SectionBox'
 import Typography from './Typography'
-import * as styles from './Skills.module.scss'
 
 export default function Skills() {
   return (
@@ -12,33 +11,24 @@ export default function Skills() {
         </h1>
 
         <h2>Webフロントエンド</h2>
-        <p>最近はTypeScript + Next.js or Nuxt.jsでSPAを書くことが多いです。</p>
         <ul>
           <li>TypeScript</li>
-          <li>React / Next.js / Gatsby (このページはGatsbyで作られています)</li>
+          <li>React / Next.js / Gatsby</li>
           <li>Vue / Nuxt.js</li>
-          <li>SCSS</li>
-          <li>ESLint / Stylelint / Prettier</li>
-          <li>Electron</li>
         </ul>
 
         <h2>Webバックエンド</h2>
-        <p>TypeScript + Node.jsでREST APIサーバーを書くことがほとんどです。</p>
         <ul>
           <li>Node.js / Express / Koa / Fastify</li>
-          <li>SQL / Prisma</li>
-          <li>Puppeteer</li>
+          <li>Rust / warp</li>
+          <li>SQL</li>
         </ul>
 
         <h2>Linux</h2>
-        <p>VPSとRaspberry Piを24/7で3年ほど運用しています。</p>
+        <p>VPSとRaspberry Piを3年ほど運用しています。</p>
         <ul>
           <li>Arch Linuxのインストール</li>
           <li>docker-composeでアプリケーション運用</li>
-          <li>Traefik / Caddy (HTTPルーティング)</li>
-          <li>dmcrypt + LUKS (フルシステム暗号化)</li>
-          <li>ufw (アクセス制限)</li>
-          <li>Mackerel (監視)</li>
         </ul>
 
         <h2>開発ツール・インフラ</h2>
@@ -51,8 +41,6 @@ export default function Skills() {
           <li>
             Docker (build, run, push, container/image/volume/networkの管理 など)
           </li>
-          <li>Travis CI / CircleCI / Appveyor</li>
-          <li>JetBrains IDE</li>
         </ul>
 
         <h2>その他</h2>
