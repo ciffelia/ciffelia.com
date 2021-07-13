@@ -2,12 +2,9 @@
 
 .hero {
   position: relative;
-
   padding-top: 53px;
   padding-bottom: 75px;
-
   font-family: 'Quicksand', sans-serif;
-
   background-color: $ocean;
   color: $white;
 }
@@ -22,7 +19,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.16));
 
   .icon {

@@ -2,6 +2,7 @@
   width: 100%;
 
   $contentWidth: min(90%, 960px);
+
   padding: 15px calc((100% - #{$contentWidth}) / 2);
 
   &:first-child {
