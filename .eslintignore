@@ -1,0 +1,10 @@
+# Yarn v2
+/.yarn
+/.pnp.*
+
+# Gatsby
+/.cache
+/public
+
+# WebStorm
+/.idea
