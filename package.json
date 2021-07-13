@@ -12,10 +12,12 @@
     "clean": "gatsby clean",
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint --ext .js,.ts,.jsx,.tsx .",
-    "lint": "yarn lint:prettier && yarn lint:eslint",
+    "lint:stylelint": "stylelint ./src/styles/**/*.{css,scss}",
+    "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint",
     "fix:prettier": "prettier --write .",
     "fix:eslint": "eslint --ext .js,.ts,.jsx,.tsx --fix .",
-    "fix": "yarn fix:prettier && yarn fix:eslint",
+    "fix:stylelint": "stylelint ./src/styles/**/*.{css,scss} --fix",
+    "fix": "yarn fix:prettier && yarn fix:eslint && yarn fix:stylelint",
     "typecheck": "tsc",
     "postinstall": "husky install"
   },
@@ -53,10 +55,15 @@
     "husky": "^7.0.1",
     "lint-staged": "^11.0.0",
     "pinst": "^2.1.6",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.19.0"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,json,yml,yaml,css,scss,md}": "prettier --check",
-    "*.{js,ts,jsx,tsx}": "eslint"
+    "*.{js,ts,jsx,tsx}": "eslint",
+    "*.{css,scss}": "stylelint"
   }
 }
