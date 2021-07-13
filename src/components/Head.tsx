@@ -7,7 +7,7 @@ interface Props {
   title?: string
 }
 
-export default function Head(props: Props) {
+const Head: React.FC<Props> = (props) => {
   return (
     <Helmet
       title={props.title}
@@ -21,3 +21,5 @@ export default function Head(props: Props) {
     </Helmet>
   )
 }
+
+export default Head

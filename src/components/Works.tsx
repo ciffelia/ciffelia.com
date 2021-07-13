@@ -1,12 +1,11 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
 import SectionBox from './SectionBox'
 import Typography from './Typography'
 import WorkCard from './WorkCard'
 import * as styles from '../styles/Works.module.scss'
 
-export default function Works() {
+const Works: React.FC = () => {
   const data = useStaticQuery<GatsbyTypes.WorksQuery>(graphql`
     query Works {
       contentfulWorkList(name: { eq: "FeaturedWorks" }) {
@@ -42,6 +41,7 @@ export default function Works() {
 
         <ul className={styles.workList}>
           {works.map((work) => (
+            /* eslint-disable @typescript-eslint/no-non-null-assertion */
             <li key={work!.id}>
               <WorkCard
                 title={work!.title!}
@@ -49,13 +49,16 @@ export default function Works() {
                   work!.image!.localFile!.childImageSharp!.gatsbyImageData
                 }
                 year={work!.year!}
-                tags={work!.tags as string[]}
+                tags={(work!.tags ?? []) as string[]}
                 url={work!.url!}
               />
             </li>
+            /* eslint-enable @typescript-eslint/no-non-null-assertion */
           ))}
         </ul>
       </Typography>
     </SectionBox>
   )
 }
+
+export default Works

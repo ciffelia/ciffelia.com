@@ -5,10 +5,12 @@ interface Props {
   name: string
 }
 
-export default function Tag({ name }: Props) {
+const Tag: React.FC<Props> = ({ name }) => {
   return (
     <div className={styles.tag}>
       <span>{name}</span>
     </div>
   )
 }
+
+export default Tag

@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from '../styles/Ocean.module.scss'
 
-export default function Ocean() {
+const Ocean: React.FC = () => {
   return (
     <div className={styles.ocean}>
       <div className={styles.wave} />
@@ -11,3 +11,5 @@ export default function Ocean() {
     </div>
   )
 }
+
+export default Ocean

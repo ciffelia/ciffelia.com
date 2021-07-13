@@ -2,7 +2,7 @@ import React from 'react'
 import SectionBox from './SectionBox'
 import Typography from './Typography'
 
-export default function Skills() {
+const Skills: React.FC = () => {
   return (
     <SectionBox>
       <Typography>
@@ -66,3 +66,5 @@ export default function Skills() {
     </SectionBox>
   )
 }
+
+export default Skills

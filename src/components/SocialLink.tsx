@@ -9,7 +9,7 @@ interface Props {
   iconPath: string
 }
 
-export default function SocialLink(props: Props) {
+const SocialLink: React.FC<Props> = (props) => {
   return (
     <ExternalLink to={props.url}>
       <div
@@ -22,3 +22,5 @@ export default function SocialLink(props: Props) {
     </ExternalLink>
   )
 }
+
+export default SocialLink

@@ -6,7 +6,7 @@ import twitterIcon from '../images/twitter.svg'
 import githubIcon from '../images/github.svg'
 import * as styles from '../styles/Hero.module.scss'
 
-export default function Hero() {
+const Hero: React.FC = () => {
   return (
     <header className={styles.hero}>
       <div className={styles.oceanContainer}>
@@ -41,3 +41,5 @@ export default function Hero() {
     </header>
   )
 }
+
+export default Hero

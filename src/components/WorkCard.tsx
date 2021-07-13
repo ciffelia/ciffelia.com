@@ -12,7 +12,7 @@ interface Props {
   url: string
 }
 
-export default function WorkCard({ title, imageData, year, tags, url }: Props) {
+const WorkCard: React.FC<Props> = ({ title, imageData, year, tags, url }) => {
   return (
     <ExternalLink to={url}>
       <article className={styles.card}>
@@ -32,3 +32,5 @@ export default function WorkCard({ title, imageData, year, tags, url }: Props) {
     </ExternalLink>
   )
 }
+
+export default WorkCard

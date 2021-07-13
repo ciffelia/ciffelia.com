@@ -5,10 +5,12 @@ interface Props {
   children: React.ReactNode
 }
 
-export default function ExternalLink(props: Props) {
+const ExternalLink: React.FC<Props> = (props) => {
   return (
     <a href={props.to} target="_blank" rel="noopener">
       {props.children}
     </a>
   )
 }
+
+export default ExternalLink

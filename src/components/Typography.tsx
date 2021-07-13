@@ -5,6 +5,8 @@ interface Props {
   children: React.ReactNode
 }
 
-export default function Typography(props: Props) {
+const Typography: React.FC<Props> = (props) => {
   return <div className={styles.typography}>{props.children}</div>
 }
+
+export default Typography

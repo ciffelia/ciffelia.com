@@ -6,7 +6,7 @@ import AboutMe from '../components/AboutMe'
 import Skills from '../components/Skills'
 import Works from '../components/Works'
 
-export default function IndexRoute(props: PageProps) {
+const IndexPage: React.FC<PageProps> = (props) => {
   return (
     <>
       <Head />
@@ -19,3 +19,5 @@ export default function IndexRoute(props: PageProps) {
     </>
   )
 }
+
+export default IndexPage

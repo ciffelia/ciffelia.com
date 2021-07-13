@@ -5,6 +5,8 @@ interface Props {
   children: React.ReactNode
 }
 
-export default function SectionBox(props: Props) {
+const SectionBox: React.FC<Props> = (props) => {
   return <section className={styles.sectionBox}>{props.children}</section>
 }
+
+export default SectionBox

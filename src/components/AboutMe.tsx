@@ -4,7 +4,7 @@ import SectionBox from './SectionBox'
 import Typography from './Typography'
 import * as styles from '../styles/AboueMe.module.scss'
 
-export default function AboutMe() {
+const AboutMe: React.FC = () => {
   return (
     <SectionBox>
       <Typography>
@@ -44,3 +44,5 @@ export default function AboutMe() {
     </SectionBox>
   )
 }
+
+export default AboutMe
