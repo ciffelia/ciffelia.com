@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/ciffelia/ciffelia.com/actions?query=workflow%3ACI+branch%3Amaster"><img src="https://github.com/ciffelia/ciffelia.com/workflows/CI/badge.svg?branch=master" alt="CI status"></a>
+  <a href="https://github.com/ciffelia/ciffelia.com/actions?query=workflow%3ACI+branch%3Av2021"><img src="https://github.com/ciffelia/ciffelia.com/workflows/CI/badge.svg?branch=v2021" alt="CI status"></a>
 </p>
 
 <p align="center">
