@@ -15,28 +15,28 @@ const AboutMe: React.FC = () => {
         <div className={styles.listWrapper}>
           <div className={styles.list}>
             <p>
-              <div className={styles.icon}>
+              <span className={styles.icon}>
                 <FaGraduationCap />
-              </div>
-              <div className={styles.description}>
+              </span>
+              <span className={styles.description}>
                 Web開発が好きな大学生です。プログラミングを始めて10年になります。
-              </div>
+              </span>
             </p>
             <p>
-              <div className={styles.icon}>
+              <span className={styles.icon}>
                 <FaLayerGroup />
-              </div>
-              <div className={styles.description}>
+              </span>
+              <span className={styles.description}>
                 Web以外にも、ゲーム制作、電子工作、OS開発など様々な分野で遊んでいます。
-              </div>
+              </span>
             </p>
             <p>
-              <div className={styles.icon}>
+              <span className={styles.icon}>
                 <FaRegLightbulb />
-              </div>
-              <div className={styles.description}>
+              </span>
+              <span className={styles.description}>
                 新しい技術に触れるのが好きで、積極的に情報収集しています。
-              </div>
+              </span>
             </p>
           </div>
         </div>
