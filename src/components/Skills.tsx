@@ -17,7 +17,7 @@ const Skills: React.FC = () => {
           <li>Vue / Nuxt.js</li>
         </ul>
 
-        <h2>Webバックエンド</h2>
+        <h2>バックエンド</h2>
         <ul>
           <li>Node.js / Express / Koa / Fastify</li>
           <li>Rust / warp</li>
