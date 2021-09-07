@@ -615,6 +615,7 @@ type ContentfulAsset_fixedArgs = {
   toFormat?: Maybe<ContentfulImageFormat>;
   resizingBehavior: Maybe<ImageResizingBehavior>;
   cropFocus?: Maybe<ContentfulImageCropFocus>;
+  cornerRadius?: Maybe<Scalars['Int']>;
   background?: Maybe<Scalars['String']>;
 };
 
@@ -626,6 +627,7 @@ type ContentfulAsset_fluidArgs = {
   toFormat?: Maybe<ContentfulImageFormat>;
   resizingBehavior: Maybe<ImageResizingBehavior>;
   cropFocus?: Maybe<ContentfulImageCropFocus>;
+  cornerRadius?: Maybe<Scalars['Int']>;
   background?: Maybe<Scalars['String']>;
   sizes: Maybe<Scalars['String']>;
 };
@@ -645,6 +647,7 @@ type ContentfulAsset_gatsbyImageDataArgs = {
   jpegProgressive?: Maybe<Scalars['Boolean']>;
   resizingBehavior: Maybe<ImageResizingBehavior>;
   cropFocus: Maybe<ContentfulImageCropFocus>;
+  cornerRadius?: Maybe<Scalars['Int']>;
   quality?: Maybe<Scalars['Int']>;
 };
 
@@ -658,6 +661,7 @@ type ContentfulAsset_resizeArgs = {
   toFormat?: Maybe<ContentfulImageFormat>;
   cropFocus?: Maybe<ContentfulImageCropFocus>;
   background?: Maybe<Scalars['String']>;
+  cornerRadius?: Maybe<Scalars['Int']>;
 };
 
 type ContentfulAssetFile = {
