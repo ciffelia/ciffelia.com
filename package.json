@@ -65,5 +65,6 @@
     "*.{js,ts,jsx,tsx,json,yml,yaml,css,scss,md}": "prettier --check",
     "*.{js,ts,jsx,tsx}": "eslint",
     "*.{css,scss}": "stylelint"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
