@@ -1,8 +1,10 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
-  plugins: ['stylelint-scss'],
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier'],
   rules: {
-    'at-rule-no-unknown': null,
-    'scss/at-rule-no-unknown': true
+    'color-function-notation': null,
+    'keyframes-name-pattern': null,
+    'selector-class-pattern': null,
+    'shorthand-property-no-redundant-values': null,
+    'scss/dollar-variable-pattern': null
   }
 }
