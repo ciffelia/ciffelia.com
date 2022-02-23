@@ -4,7 +4,8 @@
     "target": "esnext",
     "module": "esnext",
     "lib": ["esnext", "dom"],
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "noEmit": true,
 
     /* Strict Type-Checking Options */

@@ -6,6 +6,7 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
+    'gatsby-plugin-emotion',
     'gatsby-plugin-typegen',
     'gatsby-transformer-sharp',
     {
