@@ -6,41 +6,13 @@ import Wave from './Wave'
 const Ocean: React.VFC = () => {
   return (
     <div css={oceanStyle}>
+      <Wave animation={{ from: 0, to: 1, duration: '9s', delay: '0s' }} />
       <Wave
-        animation={{
-          from: 0,
-          to: 1,
-          duration: '9s',
-          delay: '0s',
-          direction: 'normal'
-        }}
+        animation={{ from: 1.25, to: 0.25, duration: '13s', delay: '-3s' }}
       />
+      <Wave animation={{ from: 1.5, to: 0.5, duration: '7s', delay: '-6s' }} />
       <Wave
-        animation={{
-          from: 1.25,
-          to: 0.25,
-          duration: '13s',
-          delay: '-3s',
-          direction: 'normal'
-        }}
-      />
-      <Wave
-        animation={{
-          from: 0.5,
-          to: 1.5,
-          duration: '7s',
-          delay: '-6s',
-          direction: 'reverse'
-        }}
-      />
-      <Wave
-        animation={{
-          from: 1.75,
-          to: 0.75,
-          duration: '5s',
-          delay: '-2s',
-          direction: 'normal'
-        }}
+        animation={{ from: 1.75, to: 0.75, duration: '5s', delay: '-2s' }}
       />
     </div>
   )

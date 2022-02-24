@@ -12,7 +12,6 @@ export interface WaveAnimationParams {
   to: number
   duration: `${number}s`
   delay: `${number}s`
-  direction: 'normal' | 'reverse'
 }
 
 const Wave: React.VFC<Props> = ({ animation }: Props) => (
@@ -25,8 +24,7 @@ const waveStyle = ({
   from,
   to,
   duration,
-  delay,
-  direction
+  delay
 }: WaveAnimationParams): SerializedStyles => css`
   position: absolute;
   width: 100%;
@@ -35,7 +33,7 @@ const waveStyle = ({
   background-size: auto 100%;
   background-repeat: repeat-x;
   animation: ${waveKeyframes(from, to)} ${duration} ${waveEasingFunc} ${delay}
-    infinite ${direction};
+    infinite;
 `
 
 const waveKeyframes = (from: number, to: number): Keyframes => keyframes`
