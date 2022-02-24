@@ -36,11 +36,10 @@ export default AboutMe;
 const listWrapperStyle = css`
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 const listStyle = css`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.4em;
 `;

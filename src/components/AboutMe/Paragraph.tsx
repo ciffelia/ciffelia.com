@@ -21,11 +21,11 @@ const paragraphStyle = css`
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.75em;
 `;
 
 const iconStyle = css`
-  font-size: 1.5em;
+  font-size: 1.75em;
 `;
 
 const descriptionStyle = css`
