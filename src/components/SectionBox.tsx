@@ -1,5 +1,5 @@
 import React from 'react'
-import * as styles from '../styles/SectionBox.module.scss'
+import { css } from '@emotion/react'
 
 interface Props {
   children: React.ReactNode
@@ -7,10 +7,29 @@ interface Props {
 
 const SectionBox: React.FC<Props> = (props) => {
   return (
-    <section className={styles.sectionBox}>
-      <div className={styles.inner}>{props.children}</div>
+    <section css={sectionStyle}>
+      <div css={containerStyle}>{props.children}</div>
     </section>
   )
 }
+
+const sectionStyle = css`
+  width: 100%;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+
+  :first-child {
+    padding-top: 0;
+  }
+
+  :nth-child(2n) {
+    background-color: #f7f7f7;
+  }
+`
+
+const containerStyle = css`
+  width: min(90%, 960px);
+`
 
 export default SectionBox

@@ -23,5 +23,5 @@
     "skipLibCheck": true
   },
 
-  "include": ["./@types/**/*", "./src/**/*"]
+  "include": ["./src/**/*"]
 }

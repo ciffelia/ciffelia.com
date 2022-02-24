@@ -1,9 +1,9 @@
 import React from 'react'
+import { css } from '@emotion/react'
 import { graphql, useStaticQuery } from 'gatsby'
 import SectionBox from './SectionBox'
 import Typography from './Typography'
 import WorkCard from './WorkCard'
-import * as styles from '../styles/Works.module.scss'
 
 const Works: React.FC = () => {
   const data = useStaticQuery<GatsbyTypes.WorksQuery>(graphql`
@@ -39,10 +39,10 @@ const Works: React.FC = () => {
           Works <small>制作物</small>
         </h1>
 
-        <ul className={styles.workList}>
+        <ul css={listStyle}>
           {works.map((work) => (
             /* eslint-disable @typescript-eslint/no-non-null-assertion */
-            <li key={work!.id}>
+            <li key={work!.id} css={itemStyle}>
               <WorkCard
                 title={work!.title!}
                 imageData={
@@ -60,5 +60,27 @@ const Works: React.FC = () => {
     </SectionBox>
   )
 }
+
+const listStyle = css`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0;
+`
+
+const itemStyle = css`
+  list-style: none;
+  width: 31%;
+
+  @media screen and (max-width: 880px) {
+    width: 48%;
+  }
+
+  @media screen and (max-width: 560px) {
+    width: 100%;
+  }
+`
 
 export default Works
