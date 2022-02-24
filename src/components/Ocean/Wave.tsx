@@ -34,6 +34,10 @@ const waveStyle = ({
   background-repeat: repeat-x;
   animation: ${waveKeyframes(from, to)} ${duration} ${waveEasingFunc} ${delay}
     infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-play-state: paused;
+  }
 `;
 
 const waveKeyframes = (from: number, to: number): Keyframes => keyframes`
