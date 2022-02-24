@@ -64,9 +64,9 @@
     "stylelint-config-standard": "^25.0.0"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx,json,yml,yaml,css,scss,md}": "prettier --check",
+    "*.{js,ts,jsx,tsx,json,yml,yaml,css,md}": "prettier --check",
     "*.{js,ts,jsx,tsx}": "eslint",
-    "*.{css,scss}": "stylelint"
+    "*.css": "stylelint"
   },
   "packageManager": "yarn@3.2.0"
 }
