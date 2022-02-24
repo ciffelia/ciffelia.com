@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import { rgba } from 'polished';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import ExternalLink from './ExternalLink';
 import Tag from './Tag';
@@ -46,7 +47,7 @@ const cardStyle = css`
 
   :hover {
     border-color: #979797;
-    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 16%));
+    filter: drop-shadow(0 0 6px ${rgba('black', 0.16)});
   }
 `;
 

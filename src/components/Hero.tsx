@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import { rgba } from 'polished';
 import { StaticImage } from 'gatsby-plugin-image';
 import Ocean from './Ocean';
 import SocialLink from './SocialLink';
@@ -63,7 +64,7 @@ const myselfStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 16%));
+  filter: drop-shadow(0 4px 7px ${rgba('black', 0.16)});
 `;
 
 const iconStyle = css`
