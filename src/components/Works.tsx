@@ -5,7 +5,7 @@ import SectionBox from './SectionBox'
 import Typography from './Typography'
 import WorkCard from './WorkCard'
 
-const Works: React.FC = () => {
+const Works: React.VFC = () => {
   const data = useStaticQuery<GatsbyTypes.WorksQuery>(graphql`
     query Works {
       contentfulWorkList(name: { eq: "FeaturedWorks" }) {

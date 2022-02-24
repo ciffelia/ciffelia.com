@@ -2,7 +2,7 @@ import React from 'react'
 import SectionBox from './SectionBox'
 import Typography from './Typography'
 
-const Skills: React.FC = () => {
+const Skills: React.VFC = () => {
   return (
     <SectionBox>
       <Typography>

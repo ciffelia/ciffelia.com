@@ -12,7 +12,7 @@ interface Props {
   url: string
 }
 
-const WorkCard: React.FC<Props> = ({ title, imageData, year, tags, url }) => {
+const WorkCard: React.VFC<Props> = ({ title, imageData, year, tags, url }) => {
   return (
     <ExternalLink to={url}>
       <article css={cardStyle}>

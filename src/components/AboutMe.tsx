@@ -4,7 +4,7 @@ import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa'
 import SectionBox from './SectionBox'
 import Typography from './Typography'
 
-const AboutMe: React.FC = () => {
+const AboutMe: React.VFC = () => {
   return (
     <SectionBox>
       <Typography>

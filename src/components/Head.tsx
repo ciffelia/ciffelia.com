@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import favicon from '../images/favicon.png'
 import appleTouchIcon from '../images/apple-touch-icon.png'
 
-const Head: React.FC = () => {
+const Head: React.VFC = () => {
   return (
     <Helmet>
       <html lang="ja" prefix="og: https://ogp.me/ns#" />

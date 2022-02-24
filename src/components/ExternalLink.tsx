@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const ExternalLink: React.FC<Props> = (props) => {
+const ExternalLink: React.VFC<Props> = (props) => {
   return (
     <a href={props.to} target="_blank" rel="noopener">
       {props.children}

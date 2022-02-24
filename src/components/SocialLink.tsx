@@ -9,7 +9,7 @@ interface Props {
   iconPath: string
 }
 
-const SocialLink: React.FC<Props> = (props) => {
+const SocialLink: React.VFC<Props> = (props) => {
   return (
     <ExternalLink to={props.url}>
       <div css={style} style={{ backgroundColor: props.color }}>

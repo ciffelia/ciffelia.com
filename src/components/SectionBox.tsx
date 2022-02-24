@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const SectionBox: React.FC<Props> = (props) => {
+const SectionBox: React.VFC<Props> = (props) => {
   return (
     <section css={sectionStyle}>
       <div css={containerStyle}>{props.children}</div>

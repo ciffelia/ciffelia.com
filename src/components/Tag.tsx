@@ -5,7 +5,7 @@ interface Props {
   name: string
 }
 
-const Tag: React.FC<Props> = ({ name }) => {
+const Tag: React.VFC<Props> = ({ name }) => {
   return (
     <div css={style}>
       <span>{name}</span>

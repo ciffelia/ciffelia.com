@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import { oceanHeight, oceanWidth } from './constants'
 import Wave from './Wave'
 
-const Ocean: React.FC = () => {
+const Ocean: React.VFC = () => {
   return (
     <div css={oceanStyle}>
       <Wave

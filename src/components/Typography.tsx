@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const Typography: React.FC<Props> = (props) => {
+const Typography: React.VFC<Props> = (props) => {
   return <div css={style}>{props.children}</div>
 }
 

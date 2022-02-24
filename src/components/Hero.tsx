@@ -6,7 +6,7 @@ import SocialLink from './SocialLink'
 import twitterIcon from '../images/twitter.svg'
 import githubIcon from '../images/github.svg'
 
-const Hero: React.FC = () => {
+const Hero: React.VFC = () => {
   return (
     <header css={heroStyle}>
       <div css={oceanContainerStyle}>
