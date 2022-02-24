@@ -16,10 +16,10 @@ const AboutMe: React.VFC = () => {
         <div css={listWrapperStyle}>
           <div css={listStyle}>
             <Paragraph icon={<FaGraduationCap />}>
-              Web開発が好きな大学生です。プログラミングを始めて10年になります。
+              Web開発が大好きな大学生です。プログラミングを始めて10年になります。
             </Paragraph>
             <Paragraph icon={<FaLayerGroup />}>
-              Web以外にも、ゲーム制作、電子工作、OS開発など様々な分野で遊んでいます。
+              ゲーム制作、電子工作、OS開発など様々な分野で活動しています。
             </Paragraph>
             <Paragraph icon={<FaRegLightbulb />}>
               新しい技術に触れるのが好きで、積極的に情報収集しています。
