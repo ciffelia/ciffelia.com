@@ -29,13 +29,13 @@ const Hero: React.VFC = () => {
         <SocialLink
           name="Twitter"
           url="https://twitter.com/ciffelia"
-          color="#1da1f2"
+          color="var(--color-twitter)"
           iconPath={twitterIcon}
         />
         <SocialLink
           name="GitHub"
           url="https://github.com/ciffelia"
-          color="#231f20"
+          color="var(--color-github)"
           iconPath={githubIcon}
         />
       </div>
