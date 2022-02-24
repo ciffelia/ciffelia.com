@@ -1,6 +1,6 @@
-import React from 'react'
-import SectionBox from './SectionBox'
-import Typography from './Typography'
+import React from 'react';
+import SectionBox from './SectionBox';
+import Typography from './Typography';
 
 const Skills: React.VFC = () => {
   return (
@@ -64,7 +64,7 @@ const Skills: React.VFC = () => {
         </ul>
       </Typography>
     </SectionBox>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

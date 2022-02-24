@@ -1,8 +1,8 @@
-import React from 'react'
-import { css } from '@emotion/react'
+import React from 'react';
+import { css } from '@emotion/react';
 
 export interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const SectionBox: React.VFC<Props> = (props) => {
@@ -10,10 +10,10 @@ const SectionBox: React.VFC<Props> = (props) => {
     <section css={sectionStyle}>
       <div css={containerStyle}>{props.children}</div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionBox
+export default SectionBox;
 
 const sectionStyle = css`
   width: 100%;
@@ -28,8 +28,8 @@ const sectionStyle = css`
   :nth-child(2n) {
     background-color: #f7f7f7;
   }
-`
+`;
 
 const containerStyle = css`
   width: min(90%, 960px);
-`
+`;

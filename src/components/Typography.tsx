@@ -1,16 +1,16 @@
-import React from 'react'
-import { css } from '@emotion/react'
-import { rgba } from 'polished'
+import React from 'react';
+import { css } from '@emotion/react';
+import { rgba } from 'polished';
 
 export interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const Typography: React.VFC<Props> = (props) => {
-  return <div css={style}>{props.children}</div>
-}
+  return <div css={style}>{props.children}</div>;
+};
 
-export default Typography
+export default Typography;
 
 const style = css`
   font-size: 1.07rem;
@@ -35,4 +35,4 @@ const style = css`
     font-size: 50%;
     opacity: 0.5;
   }
-`
+`;

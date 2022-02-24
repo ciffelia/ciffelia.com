@@ -1,10 +1,10 @@
-import React from 'react'
-import { PageProps } from 'gatsby'
-import Head from '../components/Head'
-import Hero from '../components/Hero'
-import AboutMe from '../components/AboutMe'
-import Skills from '../components/Skills'
-import Works from '../components/Works'
+import React from 'react';
+import { PageProps } from 'gatsby';
+import Head from '../components/Head';
+import Hero from '../components/Hero';
+import AboutMe from '../components/AboutMe';
+import Skills from '../components/Skills';
+import Works from '../components/Works';
 
 const IndexPage: React.FC<PageProps> = (props) => {
   return (
@@ -17,7 +17,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
         <Works />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

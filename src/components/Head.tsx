@@ -1,7 +1,7 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import favicon from '../images/favicon.png'
-import appleTouchIcon from '../images/apple-touch-icon.png'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import favicon from '../images/favicon.png';
+import appleTouchIcon from '../images/apple-touch-icon.png';
 
 const Head: React.VFC = () => {
   return (
@@ -21,7 +21,7 @@ const Head: React.VFC = () => {
       <meta name="twitter:site" content="@ciffelia" />
       <title>Ciffelia</title>
     </Helmet>
-  )
-}
+  );
+};
 
-export default Head
+export default Head;

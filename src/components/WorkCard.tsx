@@ -1,15 +1,15 @@
-import React from 'react'
-import { css } from '@emotion/react'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-import ExternalLink from './ExternalLink'
-import Tag from './Tag'
+import React from 'react';
+import { css } from '@emotion/react';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import ExternalLink from './ExternalLink';
+import Tag from './Tag';
 
 export interface Props {
-  title: string
-  imageData: IGatsbyImageData
-  year: number
-  tags: string[]
-  url: string
+  title: string;
+  imageData: IGatsbyImageData;
+  year: number;
+  tags: string[];
+  url: string;
 }
 
 const WorkCard: React.VFC<Props> = ({ title, imageData, year, tags, url }) => {
@@ -30,10 +30,10 @@ const WorkCard: React.VFC<Props> = ({ title, imageData, year, tags, url }) => {
         </div>
       </article>
     </ExternalLink>
-  )
-}
+  );
+};
 
-export default WorkCard
+export default WorkCard;
 
 const cardStyle = css`
   width: 100%;
@@ -48,21 +48,21 @@ const cardStyle = css`
     border-color: #979797;
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 16%));
   }
-`
+`;
 
 const descriptionStyle = css`
   padding: 10px 20px 20px 20px;
   width: 100%;
-`
+`;
 
 const titleStyle = css`
   margin: 0;
-`
+`;
 
 const yearStyle = css`
   margin: 4px 0 10px 0;
   opacity: 0.8;
-`
+`;
 
 const tagListStyle = css`
   margin: 0;
@@ -71,8 +71,8 @@ const tagListStyle = css`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-`
+`;
 
 const tagStyle = css`
   list-style: none;
-`
+`;

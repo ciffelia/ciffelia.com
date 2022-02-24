@@ -1,10 +1,10 @@
-import React from 'react'
-import { css } from '@emotion/react'
-import { StaticImage } from 'gatsby-plugin-image'
-import Ocean from './Ocean'
-import SocialLink from './SocialLink'
-import twitterIcon from '../images/twitter.svg'
-import githubIcon from '../images/github.svg'
+import React from 'react';
+import { css } from '@emotion/react';
+import { StaticImage } from 'gatsby-plugin-image';
+import Ocean from './Ocean';
+import SocialLink from './SocialLink';
+import twitterIcon from '../images/twitter.svg';
+import githubIcon from '../images/github.svg';
 
 const Hero: React.VFC = () => {
   return (
@@ -39,10 +39,10 @@ const Hero: React.VFC = () => {
         />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
 
 const heroStyle = css`
   position: relative;
@@ -51,36 +51,36 @@ const heroStyle = css`
   font-family: Quicksand, sans-serif;
   background-color: var(--color-ocean);
   color: var(--color-white);
-`
+`;
 
 const oceanContainerStyle = css`
   position: absolute;
   bottom: 0;
   width: 100%;
-`
+`;
 
 const myselfStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
   filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 16%));
-`
+`;
 
 const iconStyle = css`
   width: clamp(75px, 20vw, 130px);
   height: clamp(75px, 20vw, 130px);
   border-radius: 50%;
-`
+`;
 
 const nameStyle = css`
   margin-left: clamp(20px, 6vw, 40px);
   font-weight: 600;
   font-size: clamp(64px, 16vw, 97px);
-`
+`;
 
 const socialLinkListStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 42px;
-`
+`;

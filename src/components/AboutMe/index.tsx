@@ -1,9 +1,9 @@
-import React from 'react'
-import { css } from '@emotion/react'
-import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa'
-import SectionBox from '../SectionBox'
-import Typography from '../Typography'
-import Paragraph from './Paragraph'
+import React from 'react';
+import { css } from '@emotion/react';
+import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa';
+import SectionBox from '../SectionBox';
+import Typography from '../Typography';
+import Paragraph from './Paragraph';
 
 const AboutMe: React.VFC = () => {
   return (
@@ -28,19 +28,19 @@ const AboutMe: React.VFC = () => {
         </div>
       </Typography>
     </SectionBox>
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;
 
 const listWrapperStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const listStyle = css`
   display: flex;
   flex-direction: column;
   gap: 5px;
-`
+`;

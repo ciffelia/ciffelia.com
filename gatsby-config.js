@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 module.exports = {
   plugins: [
@@ -14,8 +14,8 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        downloadLocal: true
-      }
-    }
-  ]
-}
+        downloadLocal: true,
+      },
+    },
+  ],
+};

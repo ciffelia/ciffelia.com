@@ -1,12 +1,12 @@
-import React from 'react'
-import { css } from '@emotion/react'
-import ExternalLink from './ExternalLink'
+import React from 'react';
+import { css } from '@emotion/react';
+import ExternalLink from './ExternalLink';
 
 export interface Props {
-  name: string
-  url: string
-  color: string
-  iconPath: string
+  name: string;
+  url: string;
+  color: string;
+  iconPath: string;
 }
 
 const SocialLink: React.VFC<Props> = (props) => {
@@ -17,10 +17,10 @@ const SocialLink: React.VFC<Props> = (props) => {
         <span css={nameStyle}>{props.name}</span>
       </div>
     </ExternalLink>
-  )
-}
+  );
+};
 
-export default SocialLink
+export default SocialLink;
 
 const style = css`
   display: flex;
@@ -37,15 +37,15 @@ const style = css`
     filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 32%));
     transform: scale(1.02);
   }
-`
+`;
 
 const iconStyle = css`
   width: clamp(29px, 6vw, 36px);
-`
+`;
 
 const nameStyle = css`
   margin-left: clamp(9px, 17vw, 11px);
   color: var(--color-white);
   font-weight: 600;
   font-size: clamp(22px, 4vw, 27px);
-`
+`;

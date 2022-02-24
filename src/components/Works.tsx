@@ -1,9 +1,9 @@
-import React from 'react'
-import { css } from '@emotion/react'
-import { graphql, useStaticQuery } from 'gatsby'
-import SectionBox from './SectionBox'
-import Typography from './Typography'
-import WorkCard from './WorkCard'
+import React from 'react';
+import { css } from '@emotion/react';
+import { graphql, useStaticQuery } from 'gatsby';
+import SectionBox from './SectionBox';
+import Typography from './Typography';
+import WorkCard from './WorkCard';
 
 const Works: React.VFC = () => {
   const data = useStaticQuery<GatsbyTypes.WorksQuery>(graphql`
@@ -25,12 +25,12 @@ const Works: React.VFC = () => {
         }
       }
     }
-  `)
+  `);
 
   if (typeof data.contentfulWorkList === 'undefined') {
-    throw new Error('No entry named "FeaturedWorks" found.')
+    throw new Error('No entry named "FeaturedWorks" found.');
   }
-  const works = data.contentfulWorkList.entries ?? []
+  const works = data.contentfulWorkList.entries ?? [];
 
   return (
     <SectionBox>
@@ -58,10 +58,10 @@ const Works: React.VFC = () => {
         </ul>
       </Typography>
     </SectionBox>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;
 
 const listStyle = css`
   display: flex;
@@ -70,7 +70,7 @@ const listStyle = css`
   row-gap: 20px;
   margin: 0;
   padding: 0;
-`
+`;
 
 const itemStyle = css`
   list-style: none;
@@ -83,4 +83,4 @@ const itemStyle = css`
   @media screen and (max-width: 560px) {
     width: 100%;
   }
-`
+`;

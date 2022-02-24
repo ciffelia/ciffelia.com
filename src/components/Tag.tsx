@@ -1,8 +1,8 @@
-import React from 'react'
-import { css } from '@emotion/react'
+import React from 'react';
+import { css } from '@emotion/react';
 
 export interface Props {
-  name: string
+  name: string;
 }
 
 const Tag: React.VFC<Props> = ({ name }) => {
@@ -10,10 +10,10 @@ const Tag: React.VFC<Props> = ({ name }) => {
     <div css={style}>
       <span>{name}</span>
     </div>
-  )
-}
+  );
+};
 
-export default Tag
+export default Tag;
 
 const style = css`
   padding: 0.2em 0.8em;
@@ -23,4 +23,4 @@ const style = css`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;

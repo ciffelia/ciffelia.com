@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 export interface Props {
-  to: string
-  children: React.ReactNode
+  to: string;
+  children: React.ReactNode;
 }
 
 const ExternalLink: React.VFC<Props> = (props) => {
@@ -10,7 +10,7 @@ const ExternalLink: React.VFC<Props> = (props) => {
     <a href={props.to} target="_blank" rel="noopener">
       {props.children}
     </a>
-  )
-}
+  );
+};
 
-export default ExternalLink
+export default ExternalLink;

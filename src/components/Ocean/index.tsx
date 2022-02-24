@@ -1,7 +1,7 @@
-import React from 'react'
-import { css } from '@emotion/react'
-import { oceanHeight, oceanWidth } from './constants'
-import Wave from './Wave'
+import React from 'react';
+import { css } from '@emotion/react';
+import { oceanHeight, oceanWidth } from './constants';
+import Wave from './Wave';
 
 const Ocean: React.VFC = () => {
   return (
@@ -15,13 +15,13 @@ const Ocean: React.VFC = () => {
         animation={{ from: 1.75, to: 0.75, duration: '5s', delay: '-2s' }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Ocean
+export default Ocean;
 
 const oceanStyle = css`
   position: relative;
   width: ${oceanWidth};
   height: ${oceanHeight};
-`
+`;
