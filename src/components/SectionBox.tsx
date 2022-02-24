@@ -21,11 +21,11 @@ const sectionStyle = css`
   display: flex;
   justify-content: center;
 
-  :first-child {
+  :first-of-type {
     padding-top: 0;
   }
 
-  :nth-child(2n) {
+  :nth-of-type(2n) {
     background-color: #f7f7f7;
   }
 `;
