@@ -18,10 +18,10 @@ const Ocean: React.VFC = () => {
   )
 }
 
+export default Ocean
+
 const oceanStyle = css`
   position: relative;
   width: ${oceanWidth};
   height: ${oceanHeight};
 `
-
-export default Ocean

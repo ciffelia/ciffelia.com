@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 
-interface Props {
+export interface Props {
   children: React.ReactNode
 }
 
@@ -12,6 +12,8 @@ const SectionBox: React.VFC<Props> = (props) => {
     </section>
   )
 }
+
+export default SectionBox
 
 const sectionStyle = css`
   width: 100%;
@@ -31,5 +33,3 @@ const sectionStyle = css`
 const containerStyle = css`
   width: min(90%, 960px);
 `
-
-export default SectionBox

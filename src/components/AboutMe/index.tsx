@@ -31,6 +31,8 @@ const AboutMe: React.VFC = () => {
   )
 }
 
+export default AboutMe
+
 const listWrapperStyle = css`
   display: flex;
   justify-content: center;
@@ -42,5 +44,3 @@ const listStyle = css`
   flex-direction: column;
   gap: 5px;
 `
-
-export default AboutMe

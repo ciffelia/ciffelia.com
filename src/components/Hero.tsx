@@ -42,6 +42,8 @@ const Hero: React.VFC = () => {
   )
 }
 
+export default Hero
+
 const heroStyle = css`
   position: relative;
   padding-top: 53px;
@@ -82,5 +84,3 @@ const socialLinkListStyle = css`
   align-items: center;
   margin-top: 42px;
 `
-
-export default Hero

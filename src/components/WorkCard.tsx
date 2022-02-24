@@ -4,7 +4,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import ExternalLink from './ExternalLink'
 import Tag from './Tag'
 
-interface Props {
+export interface Props {
   title: string
   imageData: IGatsbyImageData
   year: number
@@ -32,6 +32,8 @@ const WorkCard: React.VFC<Props> = ({ title, imageData, year, tags, url }) => {
     </ExternalLink>
   )
 }
+
+export default WorkCard
 
 const cardStyle = css`
   width: 100%;
@@ -74,5 +76,3 @@ const tagListStyle = css`
 const tagStyle = css`
   list-style: none;
 `
-
-export default WorkCard

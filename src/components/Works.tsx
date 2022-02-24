@@ -61,6 +61,8 @@ const Works: React.VFC = () => {
   )
 }
 
+export default Works
+
 const listStyle = css`
   display: flex;
   flex-wrap: wrap;
@@ -82,5 +84,3 @@ const itemStyle = css`
     width: 100%;
   }
 `
-
-export default Works

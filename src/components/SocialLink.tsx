@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/react'
 import ExternalLink from './ExternalLink'
 
-interface Props {
+export interface Props {
   name: string
   url: string
   color: string
@@ -19,6 +19,8 @@ const SocialLink: React.VFC<Props> = (props) => {
     </ExternalLink>
   )
 }
+
+export default SocialLink
 
 const style = css`
   display: flex;
@@ -47,5 +49,3 @@ const nameStyle = css`
   font-weight: 600;
   font-size: clamp(22px, 4vw, 27px);
 `
-
-export default SocialLink
