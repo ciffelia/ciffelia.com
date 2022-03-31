@@ -1,28 +1,24 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { rgba } from 'polished';
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { Work } from '@/contents/work';
 import ExternalLink from '@/components/ExternalLink';
 import Tag from './Tag';
 
 export interface Props {
-  title: string;
-  imageData: IGatsbyImageData;
-  year: number;
-  tags: string[];
-  url: string;
+  work: Work;
 }
 
-const WorkCard: React.VFC<Props> = ({ title, imageData, year, tags, url }) => {
+const WorkCard: React.VFC<Props> = ({ work }) => {
   return (
-    <ExternalLink to={url}>
+    <ExternalLink to={work.url}>
       <Container>
-        <GatsbyImage image={imageData} alt={title} />
+        <Image src={work.imageSrc} alt={work.title} />
         <Description>
-          <Title>{title}</Title>
-          <Year>{year}</Year>
+          <Title>{work.title}</Title>
+          <Year>{work.year}</Year>
           <TagList>
-            {tags.map((tag) => (
+            {work.tags.map((tag) => (
               <TagContainer key={tag}>
                 <Tag name={tag} />
               </TagContainer>
@@ -49,6 +45,12 @@ const Container = styled.article`
     border-color: #979797;
     filter: drop-shadow(0 0 6px ${rgba('black', 0.16)});
   }
+`;
+
+const Image = styled.img`
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
 `;
 
 const Description = styled.div`

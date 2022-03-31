@@ -1,65 +1,27 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { graphql, useStaticQuery } from 'gatsby';
+import { workList } from '@/contents/work';
 import Section from '@/components/Section';
 import Typography from '@/components/Typography';
 import WorkCard from './WorkCard';
 
-const WorksSection: React.VFC = () => {
-  const data = useStaticQuery<GatsbyTypes.WorksQuery>(graphql`
-    query Works {
-      contentfulWorkList(name: { eq: "FeaturedWorks" }) {
-        entries {
-          id
-          title
-          image {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(width: 512, quality: 80)
-              }
-            }
-          }
-          year
-          tags
-          url
-        }
-      }
-    }
-  `);
+const WorksSection: React.VFC = () => (
+  <Section>
+    <Typography>
+      <h1>
+        Works <small>制作物</small>
+      </h1>
 
-  if (typeof data.contentfulWorkList === 'undefined') {
-    throw new Error('No entry named "FeaturedWorks" found.');
-  }
-  const works = data.contentfulWorkList.entries ?? [];
-
-  return (
-    <Section>
-      <Typography>
-        <h1>
-          Works <small>制作物</small>
-        </h1>
-
-        <List>
-          {works.map((work) => (
-            /* eslint-disable @typescript-eslint/no-non-null-assertion */
-            <ListItem key={work!.id}>
-              <WorkCard
-                title={work!.title!}
-                imageData={
-                  work!.image!.localFile!.childImageSharp!.gatsbyImageData
-                }
-                year={work!.year!}
-                tags={(work!.tags ?? []) as string[]}
-                url={work!.url!}
-              />
-            </ListItem>
-            /* eslint-enable @typescript-eslint/no-non-null-assertion */
-          ))}
-        </List>
-      </Typography>
-    </Section>
-  );
-};
+      <List>
+        {workList.map((work) => (
+          <ListItem key={work.id}>
+            <WorkCard work={work} />
+          </ListItem>
+        ))}
+      </List>
+    </Typography>
+  </Section>
+);
 
 export default WorksSection;
 
