@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa';
 import Section from '@/components/Section';
 import Typography from '@/components/Typography';
@@ -13,8 +13,8 @@ const AboutMeSection: React.VFC = () => {
           About me <small>自己紹介</small>
         </h1>
 
-        <div css={listWrapperStyle}>
-          <div css={listStyle}>
+        <ListWrapper>
+          <List>
             <Paragraph icon={<FaGraduationCap />}>
               Web開発が大好きな大学生です。プログラミングを始めて10年になります。
             </Paragraph>
@@ -24,8 +24,8 @@ const AboutMeSection: React.VFC = () => {
             <Paragraph icon={<FaRegLightbulb />}>
               新しい技術に触れるのが好きで、積極的に情報収集しています。
             </Paragraph>
-          </div>
-        </div>
+          </List>
+        </ListWrapper>
       </Typography>
     </Section>
   );
@@ -33,12 +33,12 @@ const AboutMeSection: React.VFC = () => {
 
 export default AboutMeSection;
 
-const listWrapperStyle = css`
+const ListWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-const listStyle = css`
+const List = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.4em;

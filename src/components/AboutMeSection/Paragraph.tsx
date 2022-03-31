@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 export interface Props {
   icon: React.ReactNode;
@@ -8,26 +8,26 @@ export interface Props {
 
 const Paragraph: React.VFC<Props> = ({ icon, children }) => {
   return (
-    <p css={paragraphStyle}>
-      <span css={iconStyle}>{icon}</span>
-      <span css={descriptionStyle}>{children}</span>
-    </p>
+    <Container>
+      <Icon>{icon}</Icon>
+      <Description>{children}</Description>
+    </Container>
   );
 };
 
 export default Paragraph;
 
-const paragraphStyle = css`
+const Container = styled.p`
   margin: 0;
   display: flex;
   align-items: center;
   gap: 0.75em;
 `;
 
-const iconStyle = css`
+const Icon = styled.span`
   font-size: 1.75em;
 `;
 
-const descriptionStyle = css`
+const Description = styled.span`
   text-align: justify;
 `;

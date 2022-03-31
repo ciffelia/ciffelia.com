@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 export interface Props {
   children: React.ReactNode;
@@ -7,15 +7,15 @@ export interface Props {
 
 const Section: React.VFC<Props> = (props) => {
   return (
-    <section css={sectionStyle}>
-      <div css={containerStyle}>{props.children}</div>
-    </section>
+    <Wrapper>
+      <Container>{props.children}</Container>
+    </Wrapper>
   );
 };
 
 export default Section;
 
-const sectionStyle = css`
+const Wrapper = styled.section`
   width: 100%;
   padding: 25px 0;
   display: flex;
@@ -30,6 +30,6 @@ const sectionStyle = css`
   }
 `;
 
-const containerStyle = css`
+const Container = styled.div`
   width: min(90%, 960px);
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import Section from '@/components/Section';
 import Typography from '@/components/Typography';
@@ -39,10 +39,10 @@ const WorksSection: React.VFC = () => {
           Works <small>制作物</small>
         </h1>
 
-        <ul css={listStyle}>
+        <List>
           {works.map((work) => (
             /* eslint-disable @typescript-eslint/no-non-null-assertion */
-            <li key={work!.id} css={itemStyle}>
+            <ListItem key={work!.id}>
               <WorkCard
                 title={work!.title!}
                 imageData={
@@ -52,10 +52,10 @@ const WorksSection: React.VFC = () => {
                 tags={(work!.tags ?? []) as string[]}
                 url={work!.url!}
               />
-            </li>
+            </ListItem>
             /* eslint-enable @typescript-eslint/no-non-null-assertion */
           ))}
-        </ul>
+        </List>
       </Typography>
     </Section>
   );
@@ -63,7 +63,7 @@ const WorksSection: React.VFC = () => {
 
 export default WorksSection;
 
-const listStyle = css`
+const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -72,7 +72,7 @@ const listStyle = css`
   padding: 0;
 `;
 
-const itemStyle = css`
+const ListItem = styled.li`
   list-style: none;
   width: 31%;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { rgba } from 'polished';
 import { StaticImage } from 'gatsby-plugin-image';
 import Ocean from './Ocean';
@@ -9,12 +10,12 @@ import githubIcon from '@/images/github.svg';
 
 const HeroSection: React.VFC = () => {
   return (
-    <header css={heroStyle}>
-      <div css={oceanContainerStyle}>
+    <Header>
+      <OceanContainer>
         <Ocean />
-      </div>
+      </OceanContainer>
 
-      <div css={myselfStyle}>
+      <Myself>
         <StaticImage
           css={iconStyle}
           src="../../images/ciffelia.png"
@@ -22,10 +23,10 @@ const HeroSection: React.VFC = () => {
           loading="eager"
           width={130} // Max width
         />
-        <span css={nameStyle}>Ciffelia</span>
-      </div>
+        <Name>Ciffelia</Name>
+      </Myself>
 
-      <div css={socialLinkListStyle}>
+      <Links>
         <SocialLink
           name="Twitter"
           url="https://twitter.com/ciffelia"
@@ -38,14 +39,14 @@ const HeroSection: React.VFC = () => {
           color="var(--color-github)"
           iconPath={githubIcon}
         />
-      </div>
-    </header>
+      </Links>
+    </Header>
   );
 };
 
 export default HeroSection;
 
-const heroStyle = css`
+const Header = styled.header`
   position: relative;
   padding-top: 53px;
   padding-bottom: 75px;
@@ -54,13 +55,13 @@ const heroStyle = css`
   color: var(--color-white);
 `;
 
-const oceanContainerStyle = css`
+const OceanContainer = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
 `;
 
-const myselfStyle = css`
+const Myself = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,13 +74,13 @@ const iconStyle = css`
   border-radius: 50%;
 `;
 
-const nameStyle = css`
+const Name = styled.span`
   margin-left: clamp(20px, 6vw, 40px);
   font-weight: 600;
   font-size: clamp(64px, 16vw, 97px);
 `;
 
-const socialLinkListStyle = css`
+const Links = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

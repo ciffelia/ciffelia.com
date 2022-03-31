@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { rgba } from 'polished';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import ExternalLink from '@/components/ExternalLink';
@@ -16,27 +16,27 @@ export interface Props {
 const WorkCard: React.VFC<Props> = ({ title, imageData, year, tags, url }) => {
   return (
     <ExternalLink to={url}>
-      <article css={cardStyle}>
+      <Container>
         <GatsbyImage image={imageData} alt={title} />
-        <div css={descriptionStyle}>
-          <h2 css={titleStyle}>{title}</h2>
-          <p css={yearStyle}>{year}</p>
-          <ul css={tagListStyle}>
+        <Description>
+          <Title>{title}</Title>
+          <Year>{year}</Year>
+          <TagList>
             {tags.map((tag) => (
-              <li key={tag} css={tagStyle}>
+              <TagContainer key={tag}>
                 <Tag name={tag} />
-              </li>
+              </TagContainer>
             ))}
-          </ul>
-        </div>
-      </article>
+          </TagList>
+        </Description>
+      </Container>
     </ExternalLink>
   );
 };
 
 export default WorkCard;
 
-const cardStyle = css`
+const Container = styled.article`
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -51,21 +51,21 @@ const cardStyle = css`
   }
 `;
 
-const descriptionStyle = css`
+const Description = styled.div`
   padding: 10px 20px 20px 20px;
   width: 100%;
 `;
 
-const titleStyle = css`
+const Title = styled.h2`
   margin: 0;
 `;
 
-const yearStyle = css`
+const Year = styled.p`
   margin: 4px 0 10px 0;
   opacity: 0.8;
 `;
 
-const tagListStyle = css`
+const TagList = styled.ul`
   margin: 0;
   padding: 0;
   width: 100%;
@@ -74,6 +74,6 @@ const tagListStyle = css`
   gap: 5px;
 `;
 
-const tagStyle = css`
+const TagContainer = styled.li`
   list-style: none;
 `;

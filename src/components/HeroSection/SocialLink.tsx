@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { rgba } from 'polished';
 import ExternalLink from '@/components/ExternalLink';
 
@@ -10,20 +10,20 @@ export interface Props {
   iconPath: string;
 }
 
-const SocialLink: React.VFC<Props> = (props) => {
+const SocialLink: React.VFC<Props> = ({ name, url, color, iconPath }) => {
   return (
-    <ExternalLink to={props.url}>
-      <div css={style} style={{ backgroundColor: props.color }}>
-        <img css={iconStyle} src={props.iconPath} alt="" />
-        <span css={nameStyle}>{props.name}</span>
-      </div>
+    <ExternalLink to={url}>
+      <Container color={color}>
+        <Icon src={iconPath} alt="" />
+        <Name>{name}</Name>
+      </Container>
     </ExternalLink>
   );
 };
 
 export default SocialLink;
 
-const style = css`
+const Container = styled.div<{ color: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +33,7 @@ const style = css`
   border-radius: 12px;
   filter: drop-shadow(0 4px 7px ${rgba('black', 0.16)});
   transition: filter 0.5s ease-out, transform 0.5s ease-out;
+  background-color: ${({ color }) => color};
 
   :hover {
     filter: drop-shadow(0 4px 7px ${rgba('black', 0.32)});
@@ -40,11 +41,11 @@ const style = css`
   }
 `;
 
-const iconStyle = css`
+const Icon = styled.img`
   width: clamp(29px, 6vw, 36px);
 `;
 
-const nameStyle = css`
+const Name = styled.span`
   margin-left: clamp(9px, 17vw, 11px);
   color: var(--color-white);
   font-weight: 600;

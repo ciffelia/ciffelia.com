@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { rgba } from 'polished';
 
 export interface Props {
@@ -7,12 +7,12 @@ export interface Props {
 }
 
 const Typography: React.VFC<Props> = (props) => {
-  return <div css={style}>{props.children}</div>;
+  return <Container>{props.children}</Container>;
 };
 
 export default Typography;
 
-const style = css`
+const Container = styled.div`
   font-size: 1.07rem;
   line-height: 1.5;
 

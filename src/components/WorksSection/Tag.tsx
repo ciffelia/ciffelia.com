@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 export interface Props {
   name: string;
@@ -7,15 +7,15 @@ export interface Props {
 
 const Tag: React.VFC<Props> = ({ name }) => {
   return (
-    <div css={style}>
+    <Container>
       <span>{name}</span>
-    </div>
+    </Container>
   );
 };
 
 export default Tag;
 
-const style = css`
+const Container = styled.div`
   padding: 0.2em 0.8em;
   border-radius: 5px;
   border: #e1e4e8 solid 1px;
