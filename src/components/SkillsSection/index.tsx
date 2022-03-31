@@ -1,10 +1,10 @@
 import React from 'react';
-import SectionBox from './SectionBox';
-import Typography from './Typography';
+import Section from '@/components/Section';
+import Typography from '@/components/Typography';
 
-const Skills: React.VFC = () => {
+const SkillsSection: React.VFC = () => {
   return (
-    <SectionBox>
+    <Section>
       <Typography>
         <h1>
           Skills <small>スキルセット</small>
@@ -63,8 +63,8 @@ const Skills: React.VFC = () => {
           <li>English (たいていのドキュメントが読めるくらい)</li>
         </ul>
       </Typography>
-    </SectionBox>
+    </Section>
   );
 };
 
-export default Skills;
+export default SkillsSection;

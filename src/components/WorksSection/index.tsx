@@ -1,11 +1,11 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { graphql, useStaticQuery } from 'gatsby';
-import SectionBox from './SectionBox';
-import Typography from './Typography';
+import Section from '@/components/Section';
+import Typography from '@/components/Typography';
 import WorkCard from './WorkCard';
 
-const Works: React.VFC = () => {
+const WorksSection: React.VFC = () => {
   const data = useStaticQuery<GatsbyTypes.WorksQuery>(graphql`
     query Works {
       contentfulWorkList(name: { eq: "FeaturedWorks" }) {
@@ -33,7 +33,7 @@ const Works: React.VFC = () => {
   const works = data.contentfulWorkList.entries ?? [];
 
   return (
-    <SectionBox>
+    <Section>
       <Typography>
         <h1>
           Works <small>制作物</small>
@@ -57,11 +57,11 @@ const Works: React.VFC = () => {
           ))}
         </ul>
       </Typography>
-    </SectionBox>
+    </Section>
   );
 };
 
-export default Works;
+export default WorksSection;
 
 const listStyle = css`
   display: flex;

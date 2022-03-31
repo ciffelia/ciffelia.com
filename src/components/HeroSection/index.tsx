@@ -4,10 +4,10 @@ import { rgba } from 'polished';
 import { StaticImage } from 'gatsby-plugin-image';
 import Ocean from './Ocean';
 import SocialLink from './SocialLink';
-import twitterIcon from '../images/twitter.svg';
-import githubIcon from '../images/github.svg';
+import twitterIcon from '@/images/twitter.svg';
+import githubIcon from '@/images/github.svg';
 
-const Hero: React.VFC = () => {
+const HeroSection: React.VFC = () => {
   return (
     <header css={heroStyle}>
       <div css={oceanContainerStyle}>
@@ -17,7 +17,7 @@ const Hero: React.VFC = () => {
       <div css={myselfStyle}>
         <StaticImage
           css={iconStyle}
-          src="../images/ciffelia.png"
+          src="../../images/ciffelia.png"
           alt=""
           loading="eager"
           width={130} // Max width
@@ -43,7 +43,7 @@ const Hero: React.VFC = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
 
 const heroStyle = css`
   position: relative;

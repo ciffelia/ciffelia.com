@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { rgba } from 'polished';
-import ExternalLink from './ExternalLink';
+import ExternalLink from '@/components/ExternalLink';
 
 export interface Props {
   name: string;

@@ -1,13 +1,13 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa';
-import SectionBox from '../SectionBox';
-import Typography from '../Typography';
+import Section from '@/components/Section';
+import Typography from '@/components/Typography';
 import Paragraph from './Paragraph';
 
-const AboutMe: React.VFC = () => {
+const AboutMeSection: React.VFC = () => {
   return (
-    <SectionBox>
+    <Section>
       <Typography>
         <h1>
           About me <small>自己紹介</small>
@@ -27,11 +27,11 @@ const AboutMe: React.VFC = () => {
           </div>
         </div>
       </Typography>
-    </SectionBox>
+    </Section>
   );
 };
 
-export default AboutMe;
+export default AboutMeSection;
 
 const listWrapperStyle = css`
   display: flex;

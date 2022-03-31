@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { rgba } from 'polished';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import ExternalLink from './ExternalLink';
+import ExternalLink from '@/components/ExternalLink';
 import Tag from './Tag';
 
 export interface Props {

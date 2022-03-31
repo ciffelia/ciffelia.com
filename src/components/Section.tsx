@@ -5,7 +5,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const SectionBox: React.VFC<Props> = (props) => {
+const Section: React.VFC<Props> = (props) => {
   return (
     <section css={sectionStyle}>
       <div css={containerStyle}>{props.children}</div>
@@ -13,7 +13,7 @@ const SectionBox: React.VFC<Props> = (props) => {
   );
 };
 
-export default SectionBox;
+export default Section;
 
 const sectionStyle = css`
   width: 100%;

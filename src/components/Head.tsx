@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import favicon from '../images/favicon.png';
-import appleTouchIcon from '../images/apple-touch-icon.png';
+import favicon from '@/images/favicon.png';
+import appleTouchIcon from '@/images/apple-touch-icon.png';
 
 const Head: React.VFC = () => {
   return (

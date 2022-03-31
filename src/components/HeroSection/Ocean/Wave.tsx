@@ -1,7 +1,7 @@
 import React from 'react';
 import { css, Keyframes, keyframes, SerializedStyles } from '@emotion/react';
 import { displayedWaveWidth, waveEasingFunc } from './constants';
-import waveSvg from '../../images/wave.svg';
+import waveSvg from '@/images/wave.svg';
 
 export interface Props {
   animation: WaveAnimationParams;
