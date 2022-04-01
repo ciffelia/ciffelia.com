@@ -21,7 +21,7 @@ const fes71: Work = {
   year: 2018,
   tags: ['Web', 'React', 'Gatsby', 'CSS Animation'],
   url: 'https://github.com/ciffelia/fes71.eikogakuen.com',
-  imageSrc: fes71Image,
+  image: fes71Image,
 };
 
 const airpapyrus: Work = {
@@ -30,7 +30,7 @@ const airpapyrus: Work = {
   year: 2020,
   tags: ['Arduino', 'Raspberry Pi', 'ESP32', 'C++', 'Python'],
   url: 'https://github.com/ciffelia/airpapyrus',
-  imageSrc: airpapyrusImage,
+  image: airpapyrusImage,
 };
 
 const iconCiffelia: Work = {
@@ -39,7 +39,7 @@ const iconCiffelia: Work = {
   year: 2021,
   tags: ['Node.js', 'Vercel', 'Serverless'],
   url: 'https://github.com/ciffelia/icon.ciffelia.com',
-  imageSrc: iconCiffeliaImage,
+  image: iconCiffeliaImage,
 };
 
 const koe: Work = {
@@ -48,7 +48,7 @@ const koe: Work = {
   year: 2021,
   tags: ['Discord', 'Rust', 'Text-to-Speech'],
   url: 'https://github.com/ciffelia/koe',
-  imageSrc: koeImage,
+  image: koeImage,
 };
 
 const multiEnvironmentMonitor: Work = {
@@ -57,7 +57,7 @@ const multiEnvironmentMonitor: Work = {
   year: 2018,
   tags: ['Arduino', 'C++', 'ESP32'],
   url: 'https://github.com/ciffelia/MultiEnvironmentMonitor',
-  imageSrc: multiEnvironmentMonitorImage,
+  image: multiEnvironmentMonitorImage,
 };
 
 const pdfPageSize: Work = {
@@ -66,7 +66,7 @@ const pdfPageSize: Work = {
   year: 2020,
   tags: ['Android', 'Kotlin'],
   url: 'https://github.com/ciffelia/PDFPageSize',
-  imageSrc: pdfPageSizeImage,
+  image: pdfPageSizeImage,
 };
 
 const portfolio2018: Work = {
@@ -75,7 +75,7 @@ const portfolio2018: Work = {
   year: 2018,
   tags: ['Web', 'CSS Animation'],
   url: 'https://github.com/ciffelia/ciffelia.com/tree/v2018',
-  imageSrc: portfolio2018Image,
+  image: portfolio2018Image,
 };
 
 const portfolio2021: Work = {
@@ -84,7 +84,7 @@ const portfolio2021: Work = {
   year: 2021,
   tags: ['Web', 'TypeScript', 'React', 'Gatsby'],
   url: 'https://github.com/ciffelia/ciffelia.com',
-  imageSrc: portfolio2021Image,
+  image: portfolio2021Image,
 };
 
 const rayTracing: Work = {
@@ -93,7 +93,7 @@ const rayTracing: Work = {
   year: 2018,
   tags: ['C++', 'OpenSiv3D'],
   url: 'https://github.com/ciffelia/RayTracing',
-  imageSrc: rayTracingImage,
+  image: rayTracingImage,
 };
 
 const twilens: Work = {
@@ -110,7 +110,7 @@ const twilens: Work = {
     'Elasticsearch',
   ],
   url: 'https://github.com/ciffelia/twilens',
-  imageSrc: twilensImage,
+  image: twilensImage,
 };
 
 const updraft: Work = {
@@ -119,7 +119,7 @@ const updraft: Work = {
   year: 2018,
   tags: ['Game', 'OS', 'UEFI', 'C++'],
   url: 'https://github.com/ciffelia/Updraft',
-  imageSrc: updraftImage,
+  image: updraftImage,
 };
 
 const wakeMyPC: Work = {
@@ -128,7 +128,7 @@ const wakeMyPC: Work = {
   year: 2021,
   tags: ['Web', 'Go', 'Wake-on-LAN'],
   url: 'https://github.com/ciffelia/wakeMyPC',
-  imageSrc: wakeMyPCImage,
+  image: wakeMyPCImage,
 };
 
 // 表示される順に並べる

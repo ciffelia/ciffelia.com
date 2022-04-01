@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { workList } from '@/contents/work';
 import Section from '@/components/Section';
 import Typography from '@/components/Typography';

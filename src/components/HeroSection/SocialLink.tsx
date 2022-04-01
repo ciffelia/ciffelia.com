@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { rgba } from 'polished';
+import Image from 'next/image';
 import ExternalLink from '@/components/ExternalLink';
 
 export interface Props {
@@ -14,7 +15,9 @@ const SocialLink: React.VFC<Props> = ({ name, url, color, iconPath }) => {
   return (
     <ExternalLink to={url}>
       <Container color={color}>
-        <Icon src={iconPath} alt="" />
+        <IconContainer>
+          <Image src={iconPath} alt="" layout="responsive" />
+        </IconContainer>
         <Name>{name}</Name>
       </Container>
     </ExternalLink>
@@ -41,7 +44,7 @@ const Container = styled.div<{ color: string }>`
   }
 `;
 
-const Icon = styled.img`
+const IconContainer = styled.div`
   width: clamp(29px, 6vw, 36px);
 `;
 

@@ -3,12 +3,10 @@
 /.yarnrc.yml
 /.pnp.*
 
-# Gatsby
-/.cache
-/public
-
-# gatsby-plugin-typegen
-/src/__generated__
+# Next.js
+/.next/
+/next-env.d.ts
+/out/
 
 # WebStorm
 /.idea

@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { rgba } from 'polished';
+import Image from 'next/image';
 import { Work } from '@/contents/work';
 import ExternalLink from '@/components/ExternalLink';
 import Tag from './Tag';
@@ -13,7 +14,9 @@ const WorkCard: React.VFC<Props> = ({ work }) => {
   return (
     <ExternalLink to={work.url}>
       <Container>
-        <Image src={work.imageSrc} alt={work.title} />
+        <ImageContainer>
+          <Image src={work.image} alt={work.title} layout="responsive" />
+        </ImageContainer>
         <Description>
           <Title>{work.title}</Title>
           <Year>{work.year}</Year>
@@ -47,8 +50,7 @@ const Container = styled.article`
   }
 `;
 
-const Image = styled.img`
-  display: block;
+const ImageContainer = styled.div`
   width: 100%;
   aspect-ratio: 4 / 3;
 `;
