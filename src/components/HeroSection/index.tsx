@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
 import Image from 'next/image';
@@ -9,6 +9,11 @@ import twitterIcon from '@/images/twitter.svg';
 import githubIcon from '@/images/github.svg';
 
 const HeroSection: React.VFC = () => {
+  const [isIconLoaded, setIsIconLoaded] = useState(false);
+  const handleIconLoad = useCallback(() => {
+    setIsIconLoaded(true);
+  }, []);
+
   return (
     <Header>
       <OceanContainer>
@@ -16,13 +21,14 @@ const HeroSection: React.VFC = () => {
       </OceanContainer>
 
       <Myself>
-        <IconContainer>
+        <IconContainer show={isIconLoaded}>
           <Image
             src={ciffeliaIcon}
             alt=""
             layout="responsive"
             sizes="min(20vw, 130px)" // max width
             priority
+            onLoad={handleIconLoad}
           />
         </IconContainer>
         <Name>Ciffelia</Name>
@@ -70,11 +76,13 @@ const Myself = styled.div`
   filter: drop-shadow(0 4px 7px ${rgba('black', 0.16)});
 `;
 
-const IconContainer = styled.div`
+const IconContainer = styled.div<{ show?: boolean }>`
   width: clamp(75px, 20vw, 130px);
   height: clamp(75px, 20vw, 130px);
   border-radius: 50%;
   overflow: hidden;
+  opacity: ${({ show }) => (show === true ? 1 : 0)};
+  transition: opacity 0.1s;
 `;
 
 const Name = styled.span`
