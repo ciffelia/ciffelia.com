@@ -56,7 +56,7 @@ const ImageContainer = styled.div`
 `;
 
 const Description = styled.div`
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 20px;
   width: 100%;
 `;
 
@@ -65,7 +65,7 @@ const Title = styled.h2`
 `;
 
 const Year = styled.p`
-  margin: 4px 0 10px 0;
+  margin: 4px 0 10px;
   opacity: 0.8;
 `;
 

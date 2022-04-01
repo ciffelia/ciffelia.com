@@ -36,6 +36,7 @@ const waveKeyframes = (from: number, to: number): Keyframes => keyframes`
   0% {
     background-position-x: calc(${displayedWaveWidth} * ${from});
   }
+
   100% {
     background-position-x: calc(${displayedWaveWidth} * ${to});
   }
