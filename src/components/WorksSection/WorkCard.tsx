@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { rgba } from 'polished';
 import Image from 'next/image';
 import { Work } from '@/contents/work';
 import ExternalLink from '@/components/ExternalLink';
+import Card from '@/components/Card';
 import Tag from './Tag';
 
 export interface Props {
@@ -13,7 +13,7 @@ export interface Props {
 const WorkCard: React.VFC<Props> = React.memo(function WorkCard({ work }) {
   return (
     <ExternalLink to={work.url}>
-      <Container>
+      <StyledCard>
         <ImageContainer>
           <Image
             src={work.image}
@@ -33,26 +33,16 @@ const WorkCard: React.VFC<Props> = React.memo(function WorkCard({ work }) {
             ))}
           </TagList>
         </Description>
-      </Container>
+      </StyledCard>
     </ExternalLink>
   );
 });
 
 export default WorkCard;
 
-const Container = styled.article`
+const StyledCard = styled(Card)`
   width: 100%;
   height: 100%;
-  border-radius: 5px;
-  border: #e1e4e8 solid 1px;
-  overflow: hidden;
-  background-color: var(--color-white);
-  transition: border-color 0.2s, filter 0.2s;
-
-  :hover {
-    border-color: #979797;
-    filter: drop-shadow(0 0 6px ${rgba('black', 0.16)});
-  }
 `;
 
 const ImageContainer = styled.div`
