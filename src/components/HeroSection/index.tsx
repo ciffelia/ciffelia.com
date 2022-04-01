@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { rgba } from 'polished';
 import Image from 'next/image';
 import Ocean from './Ocean';
 import SocialLink from './SocialLink';
@@ -54,7 +53,7 @@ const Header = styled.header`
   padding-bottom: 75px;
   font-family: Quicksand, sans-serif;
   background-color: var(--color-ocean);
-  color: var(--color-white);
+  color: var(--color-text2);
 `;
 
 const OceanContainer = styled.div`
@@ -67,7 +66,7 @@ const Myself = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 4px 7px ${rgba('black', 0.16)});
+  filter: drop-shadow(0 4px 7px var(--color-shadow1));
 `;
 
 const IconContainer = styled.div`

@@ -18,7 +18,7 @@ export default Tag;
 const Container = styled.div`
   padding: 0.2em 0.8em;
   border-radius: 5px;
-  border: #e1e4e8 solid 1px;
+  border: var(--border1);
   font-size: 0.8em;
   display: flex;
   justify-content: center;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { rgba } from 'polished';
 
 export interface Props {
   children: React.ReactNode;
@@ -19,9 +18,9 @@ const Container = styled.div`
   h1 {
     margin-top: 0;
     width: 100%;
-    border: 1px solid #eaecef;
+    border: var(--border1);
     border-radius: 10px;
-    box-shadow: 0 2px 2px ${rgba('black', 0.25)};
+    box-shadow: 0 2px 2px var(--color-shadow1);
     background-color: white;
     font-size: 2rem;
     text-align: center;

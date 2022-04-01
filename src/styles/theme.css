@@ -1,7 +1,15 @@
 :root {
-  --color-white: #fdfdfd;
-  --color-black: #2f2f2f;
+  --color-text1: #2f2f2f;
+  --color-text2: #fdfdfd;
+  --color-background1: #fdfdfd;
+  --color-surface1: rgba(0, 0, 0, 0.02);
+  --color-shadow1: rgba(0, 0, 0, 0.16);
+  --color-shadow2: rgba(0, 0, 0, 0.32);
+  --color-border1: #e1e4e8;
+  --color-border2: #979797;
   --color-ocean: #3585ff;
   --color-twitter: #1da1f2;
   --color-github: #231f20;
+  --border1: var(--color-border1) solid 1px;
+  --border2: var(--color-border2) solid 1px;
 }

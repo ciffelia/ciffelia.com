@@ -17,9 +17,10 @@ const Wave = styled.div<Props>`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('${waveSvg.src}');
-  background-size: auto 100%;
-  background-repeat: repeat-x;
+  background-color: var(--color-text2);
+  mask-image: url(${waveSvg.src});
+  mask-size: auto 100%;
+  mask-repeat: repeat-x;
   animation: ${({ animation: { from, to, duration, delay } }) =>
     css`
       ${waveKeyframes(from, to)} ${duration} ${waveEasingFunc} ${delay} infinite
@@ -34,10 +35,10 @@ export default Wave;
 
 const waveKeyframes = (from: number, to: number): Keyframes => keyframes`
   0% {
-    background-position-x: calc(${displayedWaveWidth} * ${from});
+    mask-position-x: calc(${displayedWaveWidth} * ${from});
   }
 
   100% {
-    background-position-x: calc(${displayedWaveWidth} * ${to});
+    mask-position-x: calc(${displayedWaveWidth} * ${to});
   }
 `;

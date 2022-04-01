@@ -223,7 +223,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.16.7":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.16.3":
   version: 7.17.8
   resolution: "@babel/runtime@npm:7.17.8"
   dependencies:
@@ -1361,7 +1361,6 @@ __metadata:
     modern-normalize: ^1.1.0
     next: ^12.1.4
     pinst: ^3.0.0
-    polished: ^4.1.4
     postcss-syntax: ^0.36.2
     prettier: ^2.6.1
     react: ^17.0.2
@@ -4106,15 +4105,6 @@ __metadata:
   bin:
     pinst: bin.js
   checksum: 4ae48a6a60f79c37071233af51b4d91bfc85cfa3c12b66ccda60cdb642b4d14a4ab0cb3587afc55b1f6192cea1772a5e4822026a0d0d3528296edef00cc2d61f
-  languageName: node
-  linkType: hard
-
-"polished@npm:^4.1.4":
-  version: 4.1.4
-  resolution: "polished@npm:4.1.4"
-  dependencies:
-    "@babel/runtime": ^7.16.7
-  checksum: 8faa41958df921e1441afc78c31dbe05b09b5b234b2a64ebfae56350c4580105f06e1ef4b3dcb69e86c28b354059e876ced36ba4deb3fb16e67485e1f59753f4
   languageName: node
   linkType: hard
 

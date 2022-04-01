@@ -26,7 +26,7 @@ const Wrapper = styled.section`
   }
 
   :nth-of-type(2n) {
-    background-color: #f7f7f7;
+    background-color: var(--color-surface1);
   }
 `;
 
