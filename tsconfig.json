@@ -1,31 +1,30 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["esnext", "dom"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "preserve",
     "noEmit": true,
 
-    /* Strict Type-Checking Options */
+    /* Type Checking */
     "strict": true,
+    "allowJs": false,
+    "skipLibCheck": true,
 
-    /* Module Resolution Options */
+    /* Module */
+    "module": "ESNext",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
 
-    /* Experimental Options */
-    "experimentalDecorators": true,
-
-    /* Advanced Options */
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "incremental": true
   },
 
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "./next-env.d.ts"],
+  "exclude": []
 }

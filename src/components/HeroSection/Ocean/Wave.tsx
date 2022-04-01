@@ -1,5 +1,4 @@
-import React from 'react';
-import { css, Keyframes, keyframes, SerializedStyles } from '@emotion/react';
+import styled, { css, Keyframes, keyframes } from 'styled-components';
 import { displayedWaveWidth, waveEasingFunc } from './constants';
 import waveSvg from '@/images/wave.svg';
 
@@ -14,36 +13,30 @@ export interface WaveAnimationParams {
   delay: `${number}s`;
 }
 
-const Wave: React.VFC<Props> = ({ animation }: Props) => (
-  <div css={waveStyle(animation)} />
-);
-
-export default Wave;
-
-const waveStyle = ({
-  from,
-  to,
-  duration,
-  delay,
-}: WaveAnimationParams): SerializedStyles => css`
+const Wave = styled.div<Props>`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('${waveSvg}');
+  background-image: url('${waveSvg.src}');
   background-size: auto 100%;
   background-repeat: repeat-x;
-  animation: ${waveKeyframes(from, to)} ${duration} ${waveEasingFunc} ${delay}
-    infinite;
+  animation: ${({ animation: { from, to, duration, delay } }) =>
+    css`
+      ${waveKeyframes(from, to)} ${duration} ${waveEasingFunc} ${delay} infinite
+    `};
 
   @media (prefers-reduced-motion: reduce) {
     animation-play-state: paused;
   }
 `;
 
+export default Wave;
+
 const waveKeyframes = (from: number, to: number): Keyframes => keyframes`
   0% {
     background-position-x: calc(${displayedWaveWidth} * ${from});
   }
+
   100% {
     background-position-x: calc(${displayedWaveWidth} * ${to});
   }

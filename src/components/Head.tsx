@@ -1,14 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import favicon from '@/images/favicon.png';
 import appleTouchIcon from '@/images/apple-touch-icon.png';
 
-const Head: React.VFC = () => {
+const MyHead: React.VFC = () => {
   return (
-    <Helmet>
-      <html lang="ja" prefix="og: https://ogp.me/ns#" />
-      <link rel="icon" type="image/png" href={favicon} />
-      <link rel="apple-touch-icon" href={appleTouchIcon} />
+    <Head>
+      <link rel="icon" type="image/png" href={favicon.src} />
+      <link rel="apple-touch-icon" href={appleTouchIcon.src} />
       <meta name="description" content="About me" />
       <meta property="og:title" content="Ciffelia" />
       <meta property="og:type" content="website" />
@@ -20,8 +19,8 @@ const Head: React.VFC = () => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ciffelia" />
       <title>Ciffelia</title>
-    </Helmet>
+    </Head>
   );
 };
 
-export default Head;
+export default MyHead;

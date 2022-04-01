@@ -1,10 +1,10 @@
 import React from 'react';
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { rgba } from 'polished';
-import { StaticImage } from 'gatsby-plugin-image';
+import Image from 'next/image';
 import Ocean from './Ocean';
 import SocialLink from './SocialLink';
+import ciffeliaIcon from '@/images/ciffelia.png';
 import twitterIcon from '@/images/twitter.svg';
 import githubIcon from '@/images/github.svg';
 
@@ -16,13 +16,15 @@ const HeroSection: React.VFC = () => {
       </OceanContainer>
 
       <Myself>
-        <StaticImage
-          css={iconStyle}
-          src="../../images/ciffelia.png"
-          alt=""
-          loading="eager"
-          width={130} // Max width
-        />
+        <IconContainer>
+          <Image
+            src={ciffeliaIcon}
+            alt=""
+            layout="responsive"
+            sizes="min(20vw, 130px)" // max width
+            priority
+          />
+        </IconContainer>
         <Name>Ciffelia</Name>
       </Myself>
 
@@ -68,10 +70,11 @@ const Myself = styled.div`
   filter: drop-shadow(0 4px 7px ${rgba('black', 0.16)});
 `;
 
-const iconStyle = css`
+const IconContainer = styled.div`
   width: clamp(75px, 20vw, 130px);
   height: clamp(75px, 20vw, 130px);
   border-radius: 50%;
+  overflow: hidden;
 `;
 
 const Name = styled.span`

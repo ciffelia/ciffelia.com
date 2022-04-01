@@ -1,12 +1,12 @@
 import React from 'react';
-import { PageProps } from 'gatsby';
+import type { NextPage } from 'next';
 import Head from '@/components/Head';
 import HeroSection from '@/components/HeroSection';
 import AboutMeSection from '@/components/AboutMeSection';
 import SkillsSection from '@/components/SkillsSection';
 import WorksSection from '@/components/WorksSection';
 
-const IndexPage: React.FC<PageProps> = (props) => {
+const IndexPage: NextPage = () => {
   return (
     <>
       <Head />

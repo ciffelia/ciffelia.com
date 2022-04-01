@@ -2,9 +2,10 @@
 /.yarn
 /.pnp.*
 
-# Gatsby
-/.cache
-/public
+# Next.js
+/.next/
+/next-env.d.ts
+/out/
 
 # WebStorm
 /.idea

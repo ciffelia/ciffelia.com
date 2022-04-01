@@ -7,7 +7,7 @@ export interface Props {
 
 const ExternalLink: React.VFC<Props> = (props) => {
   return (
-    <a href={props.to} target="_blank" rel="noopener">
+    <a href={props.to} target="_blank" rel="noopener noreferrer">
       {props.children}
     </a>
   );

@@ -1,28 +1,32 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { rgba } from 'polished';
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import Image from 'next/image';
+import { Work } from '@/contents/work';
 import ExternalLink from '@/components/ExternalLink';
 import Tag from './Tag';
 
 export interface Props {
-  title: string;
-  imageData: IGatsbyImageData;
-  year: number;
-  tags: string[];
-  url: string;
+  work: Work;
 }
 
-const WorkCard: React.VFC<Props> = ({ title, imageData, year, tags, url }) => {
+const WorkCard: React.VFC<Props> = ({ work }) => {
   return (
-    <ExternalLink to={url}>
+    <ExternalLink to={work.url}>
       <Container>
-        <GatsbyImage image={imageData} alt={title} />
+        <ImageContainer>
+          <Image
+            src={work.image}
+            alt={work.title}
+            layout="responsive"
+            sizes="510px" // max width
+          />
+        </ImageContainer>
         <Description>
-          <Title>{title}</Title>
-          <Year>{year}</Year>
+          <Title>{work.title}</Title>
+          <Year>{work.year}</Year>
           <TagList>
-            {tags.map((tag) => (
+            {work.tags.map((tag) => (
               <TagContainer key={tag}>
                 <Tag name={tag} />
               </TagContainer>
@@ -51,8 +55,13 @@ const Container = styled.article`
   }
 `;
 
+const ImageContainer = styled.div`
+  width: 100%;
+  aspect-ratio: 4 / 3;
+`;
+
 const Description = styled.div`
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 20px;
   width: 100%;
 `;
 
@@ -61,7 +70,7 @@ const Title = styled.h2`
 `;
 
 const Year = styled.p`
-  margin: 4px 0 10px 0;
+  margin: 4px 0 10px;
   opacity: 0.8;
 `;
 

@@ -1,10 +1,6 @@
 module.exports = {
   root: true,
-  env: {
-    browser: true,
-    node: true,
-  },
-  extends: ['standard-with-typescript', 'prettier'],
+  extends: ['standard-with-typescript', 'next/core-web-vitals', 'prettier'],
   parserOptions: {
     project: './tsconfig.json',
   },
