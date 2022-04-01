@@ -1,32 +1,27 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["esnext", "dom", "dom.iterable"],
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "jsx": "preserve",
     "noEmit": true,
-    "allowJs": false,
 
-    /* Strict Type-Checking Options */
+    /* Type Checking */
     "strict": true,
+    "allowJs": false,
+    "skipLibCheck": true,
 
-    /* Module Resolution Options */
+    /* Module */
+    "module": "ESNext",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
 
-    /* Experimental Options */
-    "experimentalDecorators": true,
-
-    /* Advanced Options */
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
     "incremental": true
   },
 
