@@ -21,7 +21,7 @@ const Container = styled.div`
     border: var(--border1);
     border-radius: 10px;
     box-shadow: 0 2px 2px var(--color-shadow1);
-    background-color: var(--color-background2);
+    background-color: var(--color-background1);
     font-size: 2rem;
     text-align: center;
   }
