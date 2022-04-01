@@ -9,5 +9,9 @@ module.exports = {
         'function-no-unknown': null,
       },
     },
+    {
+      files: ['**/*.scss'],
+      extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier'],
+    },
   ],
 };

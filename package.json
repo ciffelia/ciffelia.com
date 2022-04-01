@@ -11,11 +11,11 @@
     "start": "next start",
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint --ext .js,.ts,.jsx,.tsx .",
-    "lint:stylelint": "stylelint ./src/**/*.{css,js,jsx,ts,tsx}",
+    "lint:stylelint": "stylelint ./src/**/*.{css,scss,js,jsx,ts,tsx}",
     "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint",
     "fix:prettier": "prettier --write .",
     "fix:eslint": "eslint --ext .js,.ts,.jsx,.tsx --fix .",
-    "fix:stylelint": "stylelint ./src/**/*.{css,js,jsx,ts,tsx}  --fix",
+    "fix:stylelint": "stylelint ./src/**/*.{css,scss,js,jsx,ts,tsx}  --fix",
     "fix": "yarn fix:prettier && yarn fix:eslint && yarn fix:stylelint",
     "typecheck": "tsc",
     "postinstall": "husky install"
@@ -48,16 +48,19 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
     "pinst": "^3.0.0",
+    "postcss": "^8.4.12",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.6.1",
+    "sass": "^1.49.10",
     "stylelint": "^14.6.1",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^25.0.0"
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-standard-scss": "^3.0.0"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,json,yml,yaml,css,md}": "prettier --check",
     "*.{js,ts,jsx,tsx}": "eslint",
-    "*.{css,js,ts,jsx,tsx}": "stylelint"
+    "*.{css,scss,js,ts,jsx,tsx}": "stylelint"
   },
   "packageManager": "yarn@3.2.0"
 }

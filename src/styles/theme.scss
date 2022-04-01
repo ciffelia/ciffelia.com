@@ -1,0 +1,65 @@
+:root {
+  /* Light Theme */
+  --color-light-text1: #2f2f2f;
+  --color-light-text2: #fdfdfd;
+  --color-light-background1: #fdfdfd;
+  --color-light-surface1: rgba(0, 0, 0, 0.02);
+  --color-light-shadow1: rgba(0, 0, 0, 0.16);
+  --color-light-shadow2: rgba(0, 0, 0, 0.32);
+  --color-light-border1: #e1e4e8;
+  --color-light-border2: #979797;
+  --color-light-ocean: #3585ff;
+  --color-light-twitter: #1da1f2;
+  --color-light-github: #231f20;
+
+  /* Dark Theme */
+  --color-dark-text1: #fdfdfd;
+  --color-dark-text2: #fdfdfd;
+  --color-dark-background1: #1f1f1f;
+  --color-dark-surface1: rgba(255, 255, 255, 0.04);
+  --color-dark-shadow1: rgba(255, 255, 255, 0.32);
+  --color-dark-shadow2: rgba(255, 255, 255, 0.48);
+  --color-dark-border1: #626466;
+  --color-dark-border2: #808080;
+  --color-dark-ocean: #0044ac;
+  --color-dark-twitter: #1da1f2;
+  --color-dark-github: #231f20;
+
+  /* Miscellaneous */
+  --border1: var(--color-border1) solid 1px;
+  --border2: var(--color-border2) solid 1px;
+
+  @mixin use-light-theme {
+    --color-text1: var(--color-light-text1);
+    --color-text2: var(--color-light-text2);
+    --color-background1: var(--color-light-background1);
+    --color-surface1: var(--color-light-surface1);
+    --color-shadow1: var(--color-light-shadow1);
+    --color-shadow2: var(--color-light-shadow2);
+    --color-border1: var(--color-light-border1);
+    --color-border2: var(--color-light-border2);
+    --color-ocean: var(--color-light-ocean);
+    --color-twitter: var(--color-light-twitter);
+    --color-github: var(--color-light-github);
+  }
+
+  @mixin use-dark-theme {
+    --color-text1: var(--color-dark-text1);
+    --color-text2: var(--color-dark-text2);
+    --color-background1: var(--color-dark-background1);
+    --color-surface1: var(--color-dark-surface1);
+    --color-shadow1: var(--color-dark-shadow1);
+    --color-shadow2: var(--color-dark-shadow2);
+    --color-border1: var(--color-dark-border1);
+    --color-border2: var(--color-dark-border2);
+    --color-ocean: var(--color-dark-ocean);
+    --color-twitter: var(--color-dark-twitter);
+    --color-github: var(--color-dark-github);
+  }
+
+  @include use-light-theme;
+
+  @media (prefers-color-scheme: dark) {
+    @include use-dark-theme;
+  }
+}
