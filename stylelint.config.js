@@ -1,5 +1,8 @@
 module.exports = {
   extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  rules: {
+    'color-function-notation': null,
+  },
   overrides: [
     {
       files: ['**/*.{js,jsx,ts,tsx}'],
