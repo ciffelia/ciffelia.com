@@ -1,2 +1,2 @@
-export type { Work } from './type';
-export { workList } from './const';
+export type { Work, WorkId } from './type';
+export { work, workList } from './const';

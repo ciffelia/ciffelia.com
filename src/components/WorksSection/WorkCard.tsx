@@ -17,13 +17,13 @@ const WorkCard: React.VFC<Props> = React.memo(function WorkCard({ work }) {
         <ImageContainer>
           <Image
             src={work.image}
-            alt={work.title}
+            alt={work.name}
             layout="responsive"
             sizes="510px" // max width
           />
         </ImageContainer>
         <Description>
-          <Title>{work.title}</Title>
+          <Title>{work.name}</Title>
           <Year>{work.year}</Year>
           <TagList>
             {work.tags.map((tag) => (
