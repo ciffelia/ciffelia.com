@@ -6,7 +6,7 @@ import AboutMeSection from '@/components/AboutMeSection';
 import SkillsSection from '@/components/SkillsSection';
 import WorksSection from '@/components/WorksSection';
 
-const IndexPage: NextPage = () => {
+const IndexPage: NextPage = React.memo(function IndexPage() {
   return (
     <>
       <Head />
@@ -18,6 +18,6 @@ const IndexPage: NextPage = () => {
       </main>
     </>
   );
-};
+});
 
 export default IndexPage;

@@ -10,7 +10,7 @@ export interface Props {
   work: Work;
 }
 
-const WorkCard: React.VFC<Props> = ({ work }) => {
+const WorkCard: React.VFC<Props> = React.memo(function WorkCard({ work }) {
   return (
     <ExternalLink to={work.url}>
       <Container>
@@ -36,7 +36,7 @@ const WorkCard: React.VFC<Props> = ({ work }) => {
       </Container>
     </ExternalLink>
   );
-};
+});
 
 export default WorkCard;
 

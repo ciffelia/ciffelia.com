@@ -6,9 +6,9 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const Typography: React.VFC<Props> = (props) => {
+const Typography: React.VFC<Props> = React.memo(function Typography(props) {
   return <Container>{props.children}</Container>;
-};
+});
 
 export default Typography;
 

@@ -5,7 +5,7 @@ import Section from '@/components/Section';
 import Typography from '@/components/Typography';
 import Paragraph from './Paragraph';
 
-const AboutMeSection: React.VFC = () => {
+const AboutMeSection: React.VFC = React.memo(function AboutMeSection() {
   return (
     <Section>
       <Typography>
@@ -29,7 +29,7 @@ const AboutMeSection: React.VFC = () => {
       </Typography>
     </Section>
   );
-};
+});
 
 export default AboutMeSection;
 

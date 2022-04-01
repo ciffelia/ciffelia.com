@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '@/components/Section';
 import Typography from '@/components/Typography';
 
-const SkillsSection: React.VFC = () => {
+const SkillsSection: React.VFC = React.memo(function SkillsSection() {
   return (
     <Section>
       <Typography>
@@ -65,6 +65,6 @@ const SkillsSection: React.VFC = () => {
       </Typography>
     </Section>
   );
-};
+});
 
 export default SkillsSection;

@@ -5,13 +5,13 @@ export interface Props {
   name: string;
 }
 
-const Tag: React.VFC<Props> = ({ name }) => {
+const Tag: React.VFC<Props> = React.memo(function Tag({ name }) {
   return (
     <Container>
       <span>{name}</span>
     </Container>
   );
-};
+});
 
 export default Tag;
 

@@ -6,14 +6,17 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const Paragraph: React.VFC<Props> = ({ icon, children }) => {
+const Paragraph: React.VFC<Props> = React.memo(function Paragraph({
+  icon,
+  children,
+}) {
   return (
     <Container>
       <Icon>{icon}</Icon>
       <Description>{children}</Description>
     </Container>
   );
-};
+});
 
 export default Paragraph;
 

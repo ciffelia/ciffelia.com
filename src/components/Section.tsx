@@ -5,13 +5,13 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const Section: React.VFC<Props> = (props) => {
+const Section: React.VFC<Props> = React.memo(function Section(props) {
   return (
     <Wrapper>
       <Container>{props.children}</Container>
     </Wrapper>
   );
-};
+});
 
 export default Section;
 

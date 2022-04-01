@@ -5,12 +5,12 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const ExternalLink: React.VFC<Props> = (props) => {
+const ExternalLink: React.VFC<Props> = React.memo(function ExternalLink(props) {
   return (
     <a href={props.to} target="_blank" rel="noopener noreferrer">
       {props.children}
     </a>
   );
-};
+});
 
 export default ExternalLink;

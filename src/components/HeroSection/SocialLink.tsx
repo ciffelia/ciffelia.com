@@ -11,7 +11,12 @@ export interface Props {
   iconPath: string;
 }
 
-const SocialLink: React.VFC<Props> = ({ name, url, color, iconPath }) => {
+const SocialLink: React.VFC<Props> = React.memo(function SocialLink({
+  name,
+  url,
+  color,
+  iconPath,
+}) {
   return (
     <ExternalLink to={url}>
       <Container color={color}>
@@ -22,7 +27,7 @@ const SocialLink: React.VFC<Props> = ({ name, url, color, iconPath }) => {
       </Container>
     </ExternalLink>
   );
-};
+});
 
 export default SocialLink;
 

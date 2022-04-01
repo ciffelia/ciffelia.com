@@ -5,23 +5,25 @@ import Section from '@/components/Section';
 import Typography from '@/components/Typography';
 import WorkCard from './WorkCard';
 
-const WorksSection: React.VFC = () => (
-  <Section>
-    <Typography>
-      <h1>
-        Works <small>制作物</small>
-      </h1>
+const WorksSection: React.VFC = React.memo(function WorksSection() {
+  return (
+    <Section>
+      <Typography>
+        <h1>
+          Works <small>制作物</small>
+        </h1>
 
-      <List>
-        {workList.map((work) => (
-          <ListItem key={work.id}>
-            <WorkCard work={work} />
-          </ListItem>
-        ))}
-      </List>
-    </Typography>
-  </Section>
-);
+        <List>
+          {workList.map((work) => (
+            <ListItem key={work.id}>
+              <WorkCard work={work} />
+            </ListItem>
+          ))}
+        </List>
+      </Typography>
+    </Section>
+  );
+});
 
 export default WorksSection;
 

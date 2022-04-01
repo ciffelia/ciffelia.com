@@ -8,7 +8,7 @@ import ciffeliaIcon from '@/images/ciffelia.png';
 import twitterIcon from '@/images/twitter.svg';
 import githubIcon from '@/images/github.svg';
 
-const HeroSection: React.VFC = () => {
+const HeroSection: React.VFC = React.memo(function HeroSection() {
   const [isIconLoaded, setIsIconLoaded] = useState(false);
   const handleIconLoad = useCallback(() => {
     setIsIconLoaded(true);
@@ -50,7 +50,7 @@ const HeroSection: React.VFC = () => {
       </Links>
     </Header>
   );
-};
+});
 
 export default HeroSection;
 
