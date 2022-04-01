@@ -17,7 +17,7 @@ const Wave = styled.div<Props>`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('${waveSvg}');
+  background-image: url('${waveSvg.src}');
   background-size: auto 100%;
   background-repeat: repeat-x;
   animation: ${({ animation: { from, to, duration, delay } }) =>
