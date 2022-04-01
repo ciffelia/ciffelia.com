@@ -15,7 +15,12 @@ const WorkCard: React.VFC<Props> = ({ work }) => {
     <ExternalLink to={work.url}>
       <Container>
         <ImageContainer>
-          <Image src={work.image} alt={work.title} layout="responsive" />
+          <Image
+            src={work.image}
+            alt={work.title}
+            layout="responsive"
+            sizes="510px" // max width
+          />
         </ImageContainer>
         <Description>
           <Title>{work.title}</Title>

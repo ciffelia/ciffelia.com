@@ -17,7 +17,13 @@ const HeroSection: React.VFC = () => {
 
       <Myself>
         <IconContainer>
-          <Image src={ciffeliaIcon} alt="" priority />
+          <Image
+            src={ciffeliaIcon}
+            alt=""
+            layout="responsive"
+            sizes="min(20vw, 130px)" // max width
+            priority
+          />
         </IconContainer>
         <Name>Ciffelia</Name>
       </Myself>
