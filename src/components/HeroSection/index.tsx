@@ -49,8 +49,7 @@ export default HeroSection;
 
 const Header = styled.header`
   position: relative;
-  padding-top: 53px;
-  padding-bottom: 75px;
+  height: 350px;
   font-family: Quicksand, sans-serif;
   background-color: var(--color-ocean);
   color: var(--color-text2);
@@ -63,6 +62,9 @@ const OceanContainer = styled.div`
 `;
 
 const Myself = styled.div`
+  position: absolute;
+  top: 53px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,8 +85,10 @@ const Name = styled.span`
 `;
 
 const Links = styled.div`
+  position: absolute;
+  bottom: 75px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 42px;
 `;
