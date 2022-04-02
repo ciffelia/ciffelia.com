@@ -1,6 +1,6 @@
 import styled, { css, Keyframes, keyframes } from 'styled-components';
 import { displayedWaveWidth, waveEasingFunc } from './constants';
-import waveSvg from '@/images/wave.svg';
+import { waveMaskUrl } from './waveMask';
 
 export interface Props {
   animation: WaveAnimationParams;
@@ -18,7 +18,7 @@ const Wave = styled.div<Props>`
   width: 100%;
   height: 100%;
   background-color: var(--color-background1);
-  mask-image: url(${waveSvg.src});
+  mask-image: url('${waveMaskUrl}');
   mask-size: auto 100%;
   mask-repeat: repeat-x;
   animation: ${({ animation: { from, to, duration, delay } }) =>
