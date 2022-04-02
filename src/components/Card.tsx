@@ -7,8 +7,8 @@ const Card = styled.div`
   border: var(--border1);
   overflow: hidden;
   background-color: var(--color-background1);
-  transition: border-color 0.15s var(--easing1), filter 0.15s var(--easing1),
-    transform 0.15s var(--easing1);
+  transition: border-color 0.15s var(--easing-pop),
+    filter 0.15s var(--easing-pop), transform 0.15s var(--easing-pop);
 
   ${theme((o) => o.borderRadius(4))}
 

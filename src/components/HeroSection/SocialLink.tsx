@@ -39,7 +39,7 @@ const Container = styled.div<{ color: string }>`
   padding: 6px 12px;
   border-radius: 12px;
   filter: drop-shadow(0 4px 7px var(--color-shadow1));
-  transition: filter 0.15s var(--easing1), transform 0.15s var(--easing1);
+  transition: filter 0.15s var(--easing-pop), transform 0.15s var(--easing-pop);
   background-color: ${({ color }) => color};
 
   :hover {

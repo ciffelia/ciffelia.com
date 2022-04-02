@@ -30,7 +30,7 @@
   /* Miscellaneous */
   --border1: var(--color-border1) solid 1px;
   --border2: var(--color-border2) solid 1px;
-  --easing1: cubic-bezier(0.24, 2, 0.64, 1.15);
+  --easing-pop: cubic-bezier(0.24, 2, 0.64, 1.15);
 
   @mixin use-light-theme {
     --color-text1: var(--color-light-text1);
