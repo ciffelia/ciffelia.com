@@ -7,12 +7,8 @@ import Paragraph from './Paragraph';
 
 const ProfileSection: React.VFC = React.memo(function AboutMeSection() {
   return (
-    <Section>
+    <Section title="Profile" subtitle="基本情報">
       <Typography>
-        <h1>
-          Profile <small>基本情報</small>
-        </h1>
-
         <ListWrapper>
           <List>
             <Paragraph icon={<FaGraduationCap />}>

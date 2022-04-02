@@ -7,11 +7,8 @@ import SkillCard from './SkillCard';
 
 const SkillsSection: React.VFC = React.memo(function SkillsSection() {
   return (
-    <Section>
+    <Section title="Skills" subtitle="スキルセット">
       <Typography>
-        <h1>
-          Skills <small>スキルセット</small>
-        </h1>
         <List>
           {skillList.map((skill) => (
             <ListItem key={skill.id}>

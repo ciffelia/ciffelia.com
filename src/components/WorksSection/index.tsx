@@ -7,12 +7,8 @@ import WorkCard from './WorkCard';
 
 const WorksSection: React.VFC = React.memo(function WorksSection() {
   return (
-    <Section>
+    <Section title="Works" subtitle="制作物">
       <Typography>
-        <h1>
-          Works <small>制作物</small>
-        </h1>
-
         <List>
           {workList.map((work) => (
             <ListItem key={work.id}>
