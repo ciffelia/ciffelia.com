@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { SPACING } from '@charcoal-ui/foundation';
 import createTheme from '@charcoal-ui/styled';
+import InViewEffect from '@/components/InViewEffect';
 
 const theme = createTheme(styled);
 
@@ -19,10 +20,12 @@ const Section: React.VFC<Props> = React.memo(function Section({
   return (
     <Wrapper>
       <Container>
-        <TitleContainer>
-          <Title>{title}</Title>
-          <Subtitle>{subtitle}</Subtitle>
-        </TitleContainer>
+        <StyledCoverEffect>
+          <TitleContainer>
+            <Title>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+          </TitleContainer>
+        </StyledCoverEffect>
         <div>{children}</div>
       </Container>
     </Wrapper>
@@ -53,8 +56,11 @@ const Container = styled.div`
   gap: ${SPACING['24']}px;
 `;
 
-const TitleContainer = styled.div`
+const StyledCoverEffect = styled(InViewEffect)`
   justify-self: start;
+`;
+
+const TitleContainer = styled.div`
   border-bottom: var(--border1);
   display: flex;
   align-items: flex-end;

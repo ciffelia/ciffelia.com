@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import InViewEffect from '@/components/InViewEffect';
 import Ocean from './Ocean';
 import SocialLink from './SocialLink';
 import ciffeliaIcon from '@/images/ciffelia.png';
@@ -16,30 +17,38 @@ const HeroSection: React.VFC = React.memo(function HeroSection() {
 
       <Myself>
         <IconContainer>
-          <Image
-            src={ciffeliaIcon}
-            alt=""
-            layout="responsive"
-            sizes="min(20vw, 130px)" // max width
-            priority
-          />
+          <InViewEffect>
+            <Image
+              src={ciffeliaIcon}
+              alt=""
+              layout="responsive"
+              sizes="min(20vw, 130px)" // max width
+              priority
+            />
+          </InViewEffect>
         </IconContainer>
-        <Name>Ciffelia</Name>
+        <Name>
+          <InViewEffect>Ciffelia</InViewEffect>
+        </Name>
       </Myself>
 
       <Links>
-        <SocialLink
-          name="Twitter"
-          url="https://twitter.com/ciffelia"
-          color="var(--color-twitter)"
-          iconPath={twitterIcon}
-        />
-        <SocialLink
-          name="GitHub"
-          url="https://github.com/ciffelia"
-          color="var(--color-github)"
-          iconPath={githubIcon}
-        />
+        <InViewEffect>
+          <SocialLink
+            name="Twitter"
+            url="https://twitter.com/ciffelia"
+            color="var(--color-twitter)"
+            iconPath={twitterIcon}
+          />
+        </InViewEffect>
+        <InViewEffect>
+          <SocialLink
+            name="GitHub"
+            url="https://github.com/ciffelia"
+            color="var(--color-github)"
+            iconPath={githubIcon}
+          />
+        </InViewEffect>
       </Links>
     </Header>
   );

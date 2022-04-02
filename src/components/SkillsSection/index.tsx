@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { SPACING } from '@charcoal-ui/foundation';
 import { skillList } from '@/contents/skill';
 import Section from '@/components/Section';
+import InViewEffect from '@/components/InViewEffect';
 import SkillCard from './SkillCard';
 
 const SkillsSection: React.VFC = React.memo(function SkillsSection() {
@@ -11,7 +12,9 @@ const SkillsSection: React.VFC = React.memo(function SkillsSection() {
       <List>
         {skillList.map((skill) => (
           <ListItem key={skill.id}>
-            <SkillCard skill={skill} />
+            <InViewEffect>
+              <SkillCard skill={skill} />
+            </InViewEffect>
           </ListItem>
         ))}
       </List>

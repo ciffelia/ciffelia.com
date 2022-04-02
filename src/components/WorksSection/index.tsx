@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { SPACING } from '@charcoal-ui/foundation';
 import { workList } from '@/contents/work';
 import Section from '@/components/Section';
+import InViewEffect from '@/components/InViewEffect';
 import WorkCard from './WorkCard';
 
 const WorksSection: React.VFC = React.memo(function WorksSection() {
@@ -11,7 +12,9 @@ const WorksSection: React.VFC = React.memo(function WorksSection() {
       <List>
         {workList.map((work) => (
           <ListItem key={work.id}>
-            <WorkCard work={work} />
+            <InViewEffect>
+              <WorkCard work={work} />
+            </InViewEffect>
           </ListItem>
         ))}
       </List>

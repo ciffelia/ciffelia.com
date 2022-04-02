@@ -9,6 +9,8 @@
   --color-light-shadow2: rgba(0, 0, 0, 32%);
   --color-light-border1: #e1e4e8;
   --color-light-border2: #979797;
+  --color-light-cover1: #3585ff;
+  --color-light-cover2: #0044ac;
   --color-light-ocean: #3585ff;
   --color-light-twitter: #1da1f2;
   --color-light-github: #231f20;
@@ -23,6 +25,8 @@
   --color-dark-shadow2: rgba(255, 255, 255, 48%);
   --color-dark-border1: #626466;
   --color-dark-border2: #808080;
+  --color-dark-cover1: #0044ac;
+  --color-dark-cover2: #3585ff;
   --color-dark-ocean: #0044ac;
   --color-dark-twitter: #1da1f2;
   --color-dark-github: #231f20;
@@ -31,6 +35,8 @@
   --border1: var(--color-border1) solid 1px;
   --border2: var(--color-border2) solid 1px;
   --easing-pop: cubic-bezier(0.24, 2, 0.64, 1.15);
+  --easing-ease-in-expo: cubic-bezier(0.7, 0, 0.84, 0);
+  --easing-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
   @mixin use-light-theme {
     --color-text1: var(--color-light-text1);
@@ -42,6 +48,8 @@
     --color-shadow2: var(--color-light-shadow2);
     --color-border1: var(--color-light-border1);
     --color-border2: var(--color-light-border2);
+    --color-cover1: var(--color-light-cover1);
+    --color-cover2: var(--color-light-cover2);
     --color-ocean: var(--color-light-ocean);
     --color-twitter: var(--color-light-twitter);
     --color-github: var(--color-light-github);
@@ -57,6 +65,8 @@
     --color-shadow2: var(--color-dark-shadow2);
     --color-border1: var(--color-dark-border1);
     --color-border2: var(--color-dark-border2);
+    --color-cover1: var(--color-dark-cover1);
+    --color-cover2: var(--color-dark-cover2);
     --color-ocean: var(--color-dark-ocean);
     --color-twitter: var(--color-dark-twitter);
     --color-github: var(--color-dark-github);
