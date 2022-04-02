@@ -76,7 +76,7 @@ export const work: { [id in WorkId]: Work } = {
     id: WorkId.Portfolio2021,
     name: 'ポートフォリオ',
     year: 2021,
-    tags: ['Web', 'TypeScript', 'React', 'Gatsby'],
+    tags: ['Web', 'TypeScript', 'React', 'Next.js'],
     url: 'https://github.com/ciffelia/ciffelia.com',
     image: portfolio2021Image,
   },
