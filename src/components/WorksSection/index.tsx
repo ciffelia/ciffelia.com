@@ -1,22 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SPACING } from '@charcoal-ui/foundation';
 import { workList } from '@/contents/work';
 import Section from '@/components/Section';
-import Typography from '@/components/Typography';
 import WorkCard from './WorkCard';
 
 const WorksSection: React.VFC = React.memo(function WorksSection() {
   return (
     <Section title="Works" subtitle="制作物">
-      <Typography>
-        <List>
-          {workList.map((work) => (
-            <ListItem key={work.id}>
-              <WorkCard work={work} />
-            </ListItem>
-          ))}
-        </List>
-      </Typography>
+      <List>
+        {workList.map((work) => (
+          <ListItem key={work.id}>
+            <WorkCard work={work} />
+          </ListItem>
+        ))}
+      </List>
     </Section>
   );
 });
@@ -27,7 +25,7 @@ const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 20px;
+  row-gap: ${SPACING['16']}px;
   margin: 0;
   padding: 0;
 `;

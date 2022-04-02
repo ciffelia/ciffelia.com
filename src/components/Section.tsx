@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SPACING } from '@charcoal-ui/foundation';
+import createTheme from '@charcoal-ui/styled';
+
+const theme = createTheme(styled);
 
 export interface Props {
   title: string;
@@ -15,9 +19,10 @@ const Section: React.VFC<Props> = React.memo(function Section({
   return (
     <Wrapper>
       <Container>
-        <Title>
-          {title} <Subtitle>{subtitle}</Subtitle>
-        </Title>
+        <TitleContainer>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+        </TitleContainer>
         <div>{children}</div>
       </Container>
     </Wrapper>
@@ -28,9 +33,10 @@ export default Section;
 
 const Wrapper = styled.section`
   width: 100%;
-  padding: 25px 0;
   display: flex;
   justify-content: center;
+
+  ${theme((o) => o.padding.vertical(24))}
 
   :first-of-type {
     padding-top: 0;
@@ -43,18 +49,29 @@ const Wrapper = styled.section`
 
 const Container = styled.div`
   width: min(90%, 960px);
+  display: grid;
+  gap: ${SPACING['24']}px;
+`;
+
+const TitleContainer = styled.div`
+  justify-self: start;
+  border-bottom: var(--border1);
+  display: flex;
+  align-items: flex-end;
+  gap: ${SPACING['8']}px;
+
+  ${theme((o) => [o.padding.horizontal(4), o.padding.bottom(8)])}
 `;
 
 const Title = styled.h1`
-  display: inline-block;
-  margin: 0 0 25px;
-  padding: 0 3px;
-  border-bottom: var(--border1);
-  font-size: 2rem;
-  line-height: 1.5;
+  margin: 0;
+  vertical-align: bottom;
+
+  ${theme((o) => o.typography(32).bold)}
 `;
 
 const Subtitle = styled.small`
-  font-size: 0.5em;
   opacity: 0.5;
+
+  ${theme((o) => o.typography(16).bold)}
 `;

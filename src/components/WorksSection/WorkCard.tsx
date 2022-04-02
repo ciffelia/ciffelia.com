@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SPACING } from '@charcoal-ui/foundation';
+import createTheme from '@charcoal-ui/styled';
 import Image from 'next/image';
 import { Work } from '@/contents/work';
 import ExternalLink from '@/components/ExternalLink';
 import Card from '@/components/Card';
 import Tag from './Tag';
+
+const theme = createTheme(styled);
 
 export interface Props {
   work: Work;
@@ -28,7 +32,7 @@ const WorkCard: React.VFC<Props> = React.memo(function WorkCard({ work }) {
           <TagList>
             {work.tags.map((tag) => (
               <TagContainer key={tag}>
-                <Tag name={tag} />
+                <Tag>{tag}</Tag>
               </TagContainer>
             ))}
           </TagList>
@@ -51,26 +55,32 @@ const ImageContainer = styled.div`
 `;
 
 const Description = styled.div`
-  padding: 10px 20px 20px;
   width: 100%;
+  display: grid;
+  gap: ${SPACING['16']}px;
+
+  ${theme((o) => o.padding.all(16))}
 `;
 
 const Title = styled.h2`
   margin: 0;
+
+  ${theme((o) => o.typography(20).bold)}
 `;
 
 const Year = styled.p`
-  margin: 4px 0 10px;
+  margin: 0;
   opacity: 0.8;
+
+  ${theme((o) => [o.typography(16)])}
 `;
 
 const TagList = styled.ul`
   margin: 0;
   padding: 0;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: ${SPACING['8']}px;
 `;
 
 const TagContainer = styled.li`

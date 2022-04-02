@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export interface Props {
   to: string;
@@ -7,10 +8,15 @@ export interface Props {
 
 const ExternalLink: React.VFC<Props> = React.memo(function ExternalLink(props) {
   return (
-    <a href={props.to} target="_blank" rel="noopener noreferrer">
+    <StyledLink href={props.to} target="_blank" rel="noopener noreferrer">
       {props.children}
-    </a>
+    </StyledLink>
   );
 });
+
+const StyledLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+`;
 
 export default ExternalLink;

@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SPACING } from '@charcoal-ui/foundation';
+import createTheme from '@charcoal-ui/styled';
 import Image from 'next/image';
 import { unreachable } from '@/utils';
 import { Skill, SkillLevel } from '@/contents/skill';
 import Card from '@/components/Card';
+
+const theme = createTheme(styled);
 
 export interface Props {
   skill: Skill;
@@ -24,7 +28,7 @@ const SkillCard: React.VFC<Props> = React.memo(function WorkCard({ skill }) {
       </Logo>
       <Description>
         <Title>{skill.name}</Title>
-        <span>{formatSkillLevel(skill.level)}</span>
+        <Level>{formatSkillLevel(skill.level)}</Level>
       </Description>
     </StyledCard>
   );
@@ -39,10 +43,12 @@ const StyledCard = styled(Card)`
 const Logo = styled.div`
   width: 100%;
   aspect-ratio: 1 / 1;
-  padding: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: var(--color-background2);
+
+  ${theme((o) => o.padding.all(16))}
 `;
 
 const ImageContainer = styled.div`
@@ -52,12 +58,19 @@ const ImageContainer = styled.div`
 const Description = styled.div`
   display: grid;
   justify-items: center;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  gap: ${SPACING['8']}px;
+
+  ${theme((o) => o.padding.vertical(16))}
 `;
 
 const Title = styled.h2`
   margin: 0;
+
+  ${theme((o) => o.typography(20).bold)}
+`;
+
+const Level = styled.span`
+  ${theme((o) => o.typography(16))}
 `;
 
 const formatSkillLevel = (level: SkillLevel): string => {

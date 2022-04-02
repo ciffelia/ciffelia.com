@@ -1,12 +1,16 @@
 import styled from 'styled-components';
+import createTheme from '@charcoal-ui/styled';
+
+const theme = createTheme(styled);
 
 const Card = styled.div`
-  border-radius: 5px;
   border: var(--border1);
   overflow: hidden;
   background-color: var(--color-background1);
   transition: border-color 0.15s var(--easing1), filter 0.15s var(--easing1),
     transform 0.15s var(--easing1);
+
+  ${theme((o) => o.borderRadius(4))}
 
   :hover {
     border: var(--border2);
