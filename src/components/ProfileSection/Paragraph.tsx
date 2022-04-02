@@ -27,7 +27,9 @@ const Container = styled.p`
   gap: 0.75em;
 `;
 
-const Icon = styled.span`
+const Icon = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 1.75em;
 `;
 
