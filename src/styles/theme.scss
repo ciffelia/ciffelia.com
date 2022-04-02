@@ -3,6 +3,7 @@
   --color-light-text1: #2f2f2f;
   --color-light-text2: #fdfdfd;
   --color-light-background1: #fdfdfd;
+  --color-light-background2: #fdfdfd;
   --color-light-surface1: rgba(0, 0, 0, 2%);
   --color-light-shadow1: rgba(0, 0, 0, 16%);
   --color-light-shadow2: rgba(0, 0, 0, 32%);
@@ -16,6 +17,7 @@
   --color-dark-text1: #fdfdfd;
   --color-dark-text2: #fdfdfd;
   --color-dark-background1: #1f1f1f;
+  --color-dark-background2: #fdfdfd;
   --color-dark-surface1: rgba(255, 255, 255, 4%);
   --color-dark-shadow1: rgba(255, 255, 255, 32%);
   --color-dark-shadow2: rgba(255, 255, 255, 48%);
@@ -34,6 +36,7 @@
     --color-text1: var(--color-light-text1);
     --color-text2: var(--color-light-text2);
     --color-background1: var(--color-light-background1);
+    --color-background2: var(--color-light-background2);
     --color-surface1: var(--color-light-surface1);
     --color-shadow1: var(--color-light-shadow1);
     --color-shadow2: var(--color-light-shadow2);
@@ -48,6 +51,7 @@
     --color-text1: var(--color-dark-text1);
     --color-text2: var(--color-dark-text2);
     --color-background1: var(--color-dark-background1);
+    --color-background2: var(--color-dark-background2);
     --color-surface1: var(--color-dark-surface1);
     --color-shadow1: var(--color-dark-shadow1);
     --color-shadow2: var(--color-dark-shadow2);
