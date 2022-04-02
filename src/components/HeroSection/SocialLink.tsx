@@ -35,7 +35,6 @@ const Container = styled.div<{ color: string }>`
   justify-content: center;
   align-items: center;
   height: clamp(40px, 8vw, 50px);
-  margin: 0 clamp(15px, 6vw, 50px);
   padding: 6px 12px;
   border-radius: 12px;
   filter: drop-shadow(0 4px 7px var(--color-shadow1));

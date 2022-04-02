@@ -91,4 +91,5 @@ const Links = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: clamp(30px, 12vw, 100px);
 `;
