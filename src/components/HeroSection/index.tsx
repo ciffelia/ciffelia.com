@@ -50,7 +50,6 @@ export default HeroSection;
 const Header = styled.header`
   position: relative;
   height: 350px;
-  font-family: Quicksand, sans-serif;
   background-color: var(--color-ocean);
   color: var(--color-text2);
 `;
@@ -80,6 +79,7 @@ const IconContainer = styled.div`
 
 const Name = styled.span`
   margin-left: clamp(20px, 6vw, 40px);
+  font-family: Quicksand, sans-serif;
   font-weight: 600;
   font-size: clamp(64px, 16vw, 97px);
 `;

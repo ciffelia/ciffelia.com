@@ -55,6 +55,7 @@ const IconContainer = styled.div`
 const Name = styled.span`
   margin-left: clamp(9px, 17vw, 11px);
   color: var(--color-text2);
+  font-family: Quicksand, sans-serif;
   font-weight: 600;
   font-size: clamp(22px, 4vw, 27px);
 `;
