@@ -65,7 +65,6 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  vertical-align: bottom;
 
   ${theme((o) => o.typography(32).bold)}
 `;
