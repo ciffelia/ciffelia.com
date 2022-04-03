@@ -7,5 +7,5 @@
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/15273128/125577873-17ebcdc0-c856-47ea-b5aa-2d68cf088968.png" alt="preview of ciffelia.com" width="600" />
+  <img src="https://user-images.githubusercontent.com/15273128/161438716-dc184f34-56a7-43a4-b9a8-ff8a99efa447.png" alt="ciffelia.com preview" width="600" />
 </p>
