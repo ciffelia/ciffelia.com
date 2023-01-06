@@ -1,16 +1,16 @@
-import styled, { css, Keyframes, keyframes } from 'styled-components';
-import { displayedWaveWidth, waveEasingFunc } from './constants';
-import { waveMaskUrl } from './waveMask';
+import styled, { css, Keyframes, keyframes } from 'styled-components'
+import { displayedWaveWidth, waveEasingFunc } from './constants'
+import { waveMaskUrl } from './waveMask'
 
 export interface Props {
-  animation: WaveAnimationParams;
+  animation: WaveAnimationParams
 }
 
 export interface WaveAnimationParams {
-  from: number;
-  to: number;
-  duration: `${number}s`;
-  delay: `${number}s`;
+  from: number
+  to: number
+  duration: `${number}s`
+  delay: `${number}s`
 }
 
 const Wave = styled.div<Props>`
@@ -29,9 +29,9 @@ const Wave = styled.div<Props>`
   @media (prefers-reduced-motion: reduce) {
     animation-play-state: paused;
   }
-`;
+`
 
-export default Wave;
+export default Wave
 
 const waveKeyframes = (from: number, to: number): Keyframes => keyframes`
   0% {
@@ -41,4 +41,4 @@ const waveKeyframes = (from: number, to: number): Keyframes => keyframes`
   100% {
     mask-position-x: calc(${displayedWaveWidth} * ${to});
   }
-`;
+`

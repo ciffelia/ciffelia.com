@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import favicon from '@/images/favicon.png';
-import appleTouchIcon from '@/images/apple-touch-icon.png';
+import React from 'react'
+import Head from 'next/head'
+import favicon from '@/images/favicon.png'
+import appleTouchIcon from '@/images/apple-touch-icon.png'
 
 const MyHead: React.VFC = React.memo(function MyHead() {
   return (
@@ -20,7 +20,7 @@ const MyHead: React.VFC = React.memo(function MyHead() {
       <meta name="twitter:site" content="@ciffelia" />
       <title>Ciffelia</title>
     </Head>
-  );
-});
+  )
+})
 
-export default MyHead;
+export default MyHead

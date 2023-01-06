@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { SPACING } from '@charcoal-ui/foundation';
-import { workList } from '@/contents/work';
-import Section from '@/components/Section';
-import InViewEffect from '@/components/InViewEffect';
-import WorkCard from './WorkCard';
+import React from 'react'
+import styled from 'styled-components'
+import { SPACING } from '@charcoal-ui/foundation'
+import { workList } from '@/contents/work'
+import Section from '@/components/Section'
+import InViewEffect from '@/components/InViewEffect'
+import WorkCard from './WorkCard'
 
 const WorksSection: React.VFC = React.memo(function WorksSection() {
   return (
@@ -19,10 +19,10 @@ const WorksSection: React.VFC = React.memo(function WorksSection() {
         ))}
       </List>
     </Section>
-  );
-});
+  )
+})
 
-export default WorksSection;
+export default WorksSection
 
 const List = styled.ul`
   display: flex;
@@ -31,7 +31,7 @@ const List = styled.ul`
   row-gap: ${SPACING['16']}px;
   margin: 0;
   padding: 0;
-`;
+`
 
 const ListItem = styled.li`
   list-style: none;
@@ -44,4 +44,4 @@ const ListItem = styled.li`
   @media screen and (max-width: 560px) {
     width: 100%;
   }
-`;
+`

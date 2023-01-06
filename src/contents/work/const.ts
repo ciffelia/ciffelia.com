@@ -1,18 +1,18 @@
-import { Work, WorkId } from './type';
+import { Work, WorkId } from './type'
 
 // 画像のimportは辞書順に並べる
-import airpapyrusImage from './assets/airpapyrus.jpg';
-import fes71Image from './assets/fes71.png';
-import iconCiffeliaImage from './assets/iconCiffelia.png';
-import koeImage from './assets/koe.png';
-import multiEnvironmentMonitorImage from './assets/muliEnvironmentMonitor.jpg';
-import pdfPageSizeImage from './assets/pdfPageSize.png';
-import portfolio2018Image from './assets/portfolio2018.png';
-import portfolio2021Image from './assets/portfolio2021.png';
-import rayTracingImage from './assets/rayTracing.png';
-import twilensImage from './assets/twilens.png';
-import updraftImage from './assets/updraft.png';
-import wakeMyPCImage from './assets/wakeMyPC.png';
+import airpapyrusImage from './assets/airpapyrus.jpg'
+import fes71Image from './assets/fes71.png'
+import iconCiffeliaImage from './assets/iconCiffelia.png'
+import koeImage from './assets/koe.png'
+import multiEnvironmentMonitorImage from './assets/muliEnvironmentMonitor.jpg'
+import pdfPageSizeImage from './assets/pdfPageSize.png'
+import portfolio2018Image from './assets/portfolio2018.png'
+import portfolio2021Image from './assets/portfolio2021.png'
+import rayTracingImage from './assets/rayTracing.png'
+import twilensImage from './assets/twilens.png'
+import updraftImage from './assets/updraft.png'
+import wakeMyPCImage from './assets/wakeMyPC.png'
 
 // 辞書順に並べる
 export const work: { [id in WorkId]: Work } = {
@@ -120,7 +120,7 @@ export const work: { [id in WorkId]: Work } = {
     url: 'https://github.com/ciffelia/wakeMyPC',
     image: wakeMyPCImage,
   },
-};
+}
 
 // 表示される順に並べる
 export const workList: Work[] = [
@@ -136,4 +136,4 @@ export const workList: Work[] = [
   work[WorkId.IconCiffelia],
   work[WorkId.PDFPageSize],
   work[WorkId.WakeMyPC],
-];
+]

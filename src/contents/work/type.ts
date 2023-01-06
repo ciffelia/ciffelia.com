@@ -1,12 +1,12 @@
-import { StaticImageData } from 'next/legacy/image';
+import { StaticImageData } from 'next/legacy/image'
 
 export interface Work {
-  id: WorkId;
-  name: string;
-  year: number;
-  tags: string[];
-  url: string;
-  image: StaticImageData;
+  id: WorkId
+  name: string
+  year: number
+  tags: string[]
+  url: string
+  image: StaticImageData
 }
 
 // 辞書順に並べる

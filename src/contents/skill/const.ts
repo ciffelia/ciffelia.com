@@ -1,19 +1,19 @@
-import { Skill, SkillId } from './type';
+import { Skill, SkillId } from './type'
 
 // 画像のimportは辞書順に並べる
-import cppImage from './assets/cpp.svg';
-import dockerImage from './assets/docker.webp';
-import gatsbyImage from './assets/gatsby.svg';
-import gitImage from './assets/git.svg';
-import javaScriptImage from './assets/javaScript.svg';
-import nextJsImage from './assets/nextJs.svg';
-import nodeJsImage from './assets/nodeJs.svg';
-import nuxtJsImage from './assets/nuxt.svg';
-import phpImage from './assets/php.svg';
-import reactImage from './assets/react.svg';
-import rustImage from './assets/rust.svg';
-import typeScriptImage from './assets/typeScript.svg';
-import vueImage from './assets/vueJs.svg';
+import cppImage from './assets/cpp.svg'
+import dockerImage from './assets/docker.webp'
+import gatsbyImage from './assets/gatsby.svg'
+import gitImage from './assets/git.svg'
+import javaScriptImage from './assets/javaScript.svg'
+import nextJsImage from './assets/nextJs.svg'
+import nodeJsImage from './assets/nodeJs.svg'
+import nuxtJsImage from './assets/nuxt.svg'
+import phpImage from './assets/php.svg'
+import reactImage from './assets/react.svg'
+import rustImage from './assets/rust.svg'
+import typeScriptImage from './assets/typeScript.svg'
+import vueImage from './assets/vueJs.svg'
 
 // 辞書順に並べる
 export const skill: { [id in SkillId]: Skill } = {
@@ -95,7 +95,7 @@ export const skill: { [id in SkillId]: Skill } = {
     level: { type: 'since', year: 2020, month: 3 },
     image: vueImage,
   },
-};
+}
 
 export const skillList: Skill[] = [
   skill[SkillId.Rust],
@@ -111,4 +111,4 @@ export const skillList: Skill[] = [
   skill[SkillId.Cpp],
   skill[SkillId.Git],
   skill[SkillId.Docker],
-];
+]

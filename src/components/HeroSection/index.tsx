@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import Image from 'next/legacy/image';
-import InViewEffect from '@/components/InViewEffect';
-import Ocean from './Ocean';
-import SocialLink from './SocialLink';
-import ciffeliaIcon from '@/images/ciffelia.png';
-import twitterIcon from '@/images/twitter.svg';
-import githubIcon from '@/images/github.svg';
+import React from 'react'
+import styled from 'styled-components'
+import Image from 'next/legacy/image'
+import InViewEffect from '@/components/InViewEffect'
+import Ocean from './Ocean'
+import SocialLink from './SocialLink'
+import ciffeliaIcon from '@/images/ciffelia.png'
+import twitterIcon from '@/images/twitter.svg'
+import githubIcon from '@/images/github.svg'
 
 const HeroSection: React.VFC = React.memo(function HeroSection() {
   return (
@@ -51,23 +51,23 @@ const HeroSection: React.VFC = React.memo(function HeroSection() {
         </InViewEffect>
       </Links>
     </Header>
-  );
-});
+  )
+})
 
-export default HeroSection;
+export default HeroSection
 
 const Header = styled.header`
   position: relative;
   height: 350px;
   background-color: var(--color-ocean);
   color: var(--color-text2);
-`;
+`
 
 const OceanContainer = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-`;
+`
 
 const Myself = styled.div`
   position: absolute;
@@ -77,21 +77,21 @@ const Myself = styled.div`
   justify-content: center;
   align-items: center;
   filter: drop-shadow(0 4px 7px var(--color-shadow1));
-`;
+`
 
 const IconContainer = styled.div`
   width: clamp(75px, 20vw, 130px);
   height: clamp(75px, 20vw, 130px);
   border-radius: 50%;
   overflow: hidden;
-`;
+`
 
 const Name = styled.span`
   margin-left: clamp(20px, 6vw, 40px);
   font-family: Quicksand, sans-serif;
   font-weight: 600;
   font-size: clamp(64px, 16vw, 97px);
-`;
+`
 
 const Links = styled.div`
   position: absolute;
@@ -101,4 +101,4 @@ const Links = styled.div`
   justify-content: center;
   align-items: center;
   column-gap: clamp(30px, 12vw, 100px);
-`;
+`

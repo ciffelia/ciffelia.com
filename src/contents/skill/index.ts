@@ -4,5 +4,5 @@ export type {
   ExperienceSince,
   SkillLevelDescription,
   SkillId,
-} from './type';
-export { skill, skillList } from './const';
+} from './type'
+export { skill, skillList } from './const'

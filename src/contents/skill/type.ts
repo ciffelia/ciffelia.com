@@ -1,23 +1,23 @@
-import { StaticImageData } from 'next/legacy/image';
+import { StaticImageData } from 'next/legacy/image'
 
 export interface Skill {
-  id: SkillId;
-  name: string;
-  level: SkillLevel;
-  image: StaticImageData;
+  id: SkillId
+  name: string
+  level: SkillLevel
+  image: StaticImageData
 }
 
-export type SkillLevel = ExperienceSince | SkillLevelDescription;
+export type SkillLevel = ExperienceSince | SkillLevelDescription
 
 export interface ExperienceSince {
-  type: 'since';
-  year: number;
-  month?: number;
+  type: 'since'
+  year: number
+  month?: number
 }
 
 export interface SkillLevelDescription {
-  type: 'description';
-  value: string;
+  type: 'description'
+  value: string
 }
 
 // 辞書順に並べる

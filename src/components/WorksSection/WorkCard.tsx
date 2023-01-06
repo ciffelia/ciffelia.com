@@ -1,17 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import { SPACING } from '@charcoal-ui/foundation';
-import createTheme from '@charcoal-ui/styled';
-import Image from 'next/legacy/image';
-import { Work } from '@/contents/work';
-import ExternalLink from '@/components/ExternalLink';
-import Card from '@/components/Card';
-import Tag from './Tag';
+import React from 'react'
+import styled from 'styled-components'
+import { SPACING } from '@charcoal-ui/foundation'
+import createTheme from '@charcoal-ui/styled'
+import Image from 'next/legacy/image'
+import { Work } from '@/contents/work'
+import ExternalLink from '@/components/ExternalLink'
+import Card from '@/components/Card'
+import Tag from './Tag'
 
-const theme = createTheme(styled);
+const theme = createTheme(styled)
 
 export interface Props {
-  work: Work;
+  work: Work
 }
 
 const WorkCard: React.VFC<Props> = React.memo(function WorkCard({ work }) {
@@ -39,20 +39,20 @@ const WorkCard: React.VFC<Props> = React.memo(function WorkCard({ work }) {
         </Description>
       </StyledCard>
     </ExternalLink>
-  );
-});
+  )
+})
 
-export default WorkCard;
+export default WorkCard
 
 const StyledCard = styled(Card)`
   width: 100%;
   height: 100%;
-`;
+`
 
 const ImageContainer = styled.div`
   width: 100%;
   aspect-ratio: 4 / 3;
-`;
+`
 
 const Description = styled.div`
   width: 100%;
@@ -60,20 +60,20 @@ const Description = styled.div`
   gap: ${SPACING['16']}px;
 
   ${theme((o) => o.padding.all(16))}
-`;
+`
 
 const Title = styled.h2`
   margin: 0;
 
   ${theme((o) => o.typography(20).bold)}
-`;
+`
 
 const Year = styled.p`
   margin: 0;
   opacity: 0.8;
 
   ${theme((o) => [o.typography(16)])}
-`;
+`
 
 const TagList = styled.ul`
   margin: 0;
@@ -81,8 +81,8 @@ const TagList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: ${SPACING['8']}px;
-`;
+`
 
 const TagContainer = styled.li`
   list-style: none;
-`;
+`

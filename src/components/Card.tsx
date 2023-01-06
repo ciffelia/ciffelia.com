@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import createTheme from '@charcoal-ui/styled';
+import styled from 'styled-components'
+import createTheme from '@charcoal-ui/styled'
 
-const theme = createTheme(styled);
+const theme = createTheme(styled)
 
 const Card = styled.div`
   border: var(--border1);
@@ -17,6 +17,6 @@ const Card = styled.div`
     filter: drop-shadow(0 0 6px var(--color-shadow1));
     transform: scale(1.015);
   }
-`;
+`
 
-export default Card;
+export default Card

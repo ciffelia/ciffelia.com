@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { SPACING } from '@charcoal-ui/foundation';
-import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa';
-import Section from '@/components/Section';
-import InViewEffect from '@/components/InViewEffect';
-import Paragraph from './Paragraph';
+import React from 'react'
+import styled from 'styled-components'
+import { SPACING } from '@charcoal-ui/foundation'
+import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa'
+import Section from '@/components/Section'
+import InViewEffect from '@/components/InViewEffect'
+import Paragraph from './Paragraph'
 
 const ProfileSection: React.VFC = React.memo(function AboutMeSection() {
   return (
@@ -29,10 +29,10 @@ const ProfileSection: React.VFC = React.memo(function AboutMeSection() {
         </List>
       </ListWrapper>
     </Section>
-  );
-});
+  )
+})
 
-export default ProfileSection;
+export default ProfileSection
 
 const ListWrapper = styled.div`
   display: grid;
@@ -42,10 +42,10 @@ const ListWrapper = styled.div`
   @media (max-width: 768px) {
     padding: 0;
   }
-`;
+`
 
 const List = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${SPACING['16']}px;
-`;
+`

@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { SPACING } from '@charcoal-ui/foundation';
-import { skillList } from '@/contents/skill';
-import Section from '@/components/Section';
-import InViewEffect from '@/components/InViewEffect';
-import SkillCard from './SkillCard';
+import React from 'react'
+import styled from 'styled-components'
+import { SPACING } from '@charcoal-ui/foundation'
+import { skillList } from '@/contents/skill'
+import Section from '@/components/Section'
+import InViewEffect from '@/components/InViewEffect'
+import SkillCard from './SkillCard'
 
 const SkillsSection: React.VFC = React.memo(function SkillsSection() {
   return (
@@ -19,10 +19,10 @@ const SkillsSection: React.VFC = React.memo(function SkillsSection() {
         ))}
       </List>
     </Section>
-  );
-});
+  )
+})
 
-export default SkillsSection;
+export default SkillsSection
 
 const List = styled.ul`
   display: grid;
@@ -31,8 +31,8 @@ const List = styled.ul`
   justify-content: space-around;
   margin: 0;
   padding: 0;
-`;
+`
 
 const ListItem = styled.li`
   list-style: none;
-`;
+`
