@@ -5,14 +5,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Yarn v2
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
+# Yarn
+/.yarn/*
+!/.yarn/patches
+!/.yarn/plugins
+!/.yarn/releases
+!/.yarn/sdks
+!/.yarn/versions
+/.pnp.*
+/node_modules
 
 # TypeScript cache
 *.tsbuildinfo
