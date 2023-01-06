@@ -1,4 +1,0 @@
-# Hide .yarn from GitHub's language detection
-/.yarn/** linguist-vendored
-
-/src/__generated__/** linguist-generated
