@@ -9,7 +9,7 @@ export interface Props {
   skill: Skill
 }
 
-const SkillCard: React.VFC<Props> = React.memo(function WorkCard({ skill }) {
+const SkillCard: React.FC<Props> = React.memo(function WorkCard({ skill }) {
   return (
     <StyledCard>
       <Logo>

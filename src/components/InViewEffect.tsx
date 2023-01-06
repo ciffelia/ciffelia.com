@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 
 export type Props = React.ComponentProps<'div'>
 
-const InViewEffect: React.VFC<Props> = React.memo(function CoverEffect({
+const InViewEffect: React.FC<Props> = React.memo(function CoverEffect({
   children,
   ...props
 }) {

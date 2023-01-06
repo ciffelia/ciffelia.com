@@ -8,7 +8,7 @@ import ciffeliaIcon from '@/images/ciffelia.png'
 import twitterIcon from '@/images/twitter.svg'
 import githubIcon from '@/images/github.svg'
 
-const HeroSection: React.VFC = React.memo(function HeroSection() {
+const HeroSection: React.FC = React.memo(function HeroSection() {
   return (
     <Header>
       <OceanContainer>

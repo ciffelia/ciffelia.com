@@ -6,7 +6,7 @@ export interface Props {
   children: React.ReactNode
 }
 
-const ExternalLink: React.VFC<Props> = React.memo(function ExternalLink(props) {
+const ExternalLink: React.FC<Props> = React.memo(function ExternalLink(props) {
   return (
     <StyledLink href={props.to} target="_blank" rel="noopener noreferrer">
       {props.children}

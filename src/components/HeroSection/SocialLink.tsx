@@ -10,7 +10,7 @@ export interface Props {
   iconPath: string
 }
 
-const SocialLink: React.VFC<Props> = React.memo(function SocialLink({
+const SocialLink: React.FC<Props> = React.memo(function SocialLink({
   name,
   url,
   color,

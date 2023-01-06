@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { oceanHeight, oceanWidth } from './constants'
 import Wave from './Wave'
 
-const Ocean: React.VFC = React.memo(function Ocean() {
+const Ocean: React.FC = React.memo(function Ocean() {
   return (
     <Container>
       {waveAnimations.map((animation, i) => (

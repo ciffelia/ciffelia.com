@@ -5,7 +5,7 @@ import Section from '@/components/Section'
 import InViewEffect from '@/components/InViewEffect'
 import WorkCard from './WorkCard'
 
-const WorksSection: React.VFC = React.memo(function WorksSection() {
+const WorksSection: React.FC = React.memo(function WorksSection() {
   return (
     <Section title="Works" subtitle="制作物">
       <List>

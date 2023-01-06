@@ -6,7 +6,7 @@ export interface Props {
   children: React.ReactNode
 }
 
-const Paragraph: React.VFC<Props> = React.memo(function Paragraph({
+const Paragraph: React.FC<Props> = React.memo(function Paragraph({
   icon,
   children,
 }) {

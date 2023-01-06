@@ -8,7 +8,7 @@ export interface Props {
   children: React.ReactNode
 }
 
-const Section: React.VFC<Props> = React.memo(function Section({
+const Section: React.FC<Props> = React.memo(function Section({
   title,
   subtitle,
   children,

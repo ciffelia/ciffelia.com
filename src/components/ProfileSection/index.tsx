@@ -5,7 +5,7 @@ import Section from '@/components/Section'
 import InViewEffect from '@/components/InViewEffect'
 import Paragraph from './Paragraph'
 
-const ProfileSection: React.VFC = React.memo(function AboutMeSection() {
+const ProfileSection: React.FC = React.memo(function AboutMeSection() {
   return (
     <Section title="Profile" subtitle="基本情報">
       <ListWrapper>

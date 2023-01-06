@@ -3,7 +3,7 @@ import Head from 'next/head'
 import favicon from '@/images/favicon.png'
 import appleTouchIcon from '@/images/apple-touch-icon.png'
 
-const MyHead: React.VFC = React.memo(function MyHead() {
+const MyHead: React.FC = React.memo(function MyHead() {
   return (
     <Head>
       <link rel="icon" type="image/png" href={favicon.src} />
