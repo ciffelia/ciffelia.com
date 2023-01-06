@@ -15,7 +15,7 @@
     "lint:prettier": "prettier --check .",
     "fix": "run-s --print-label format:eslint format:stylelint format:prettier",
     "fix:eslint": "eslint --ext .js,.ts,.jsx,.tsx --fix .",
-    "fix:stylelint": "stylelint ./src/**/*.{css,scss,js,jsx,ts,tsx}  --fix",
+    "fix:stylelint": "stylelint ./src/**/*.{css,scss,js,jsx,ts,tsx} --fix",
     "fix:prettier": "prettier --write .",
     "typecheck": "tsc",
     "postinstall": "husky install"
