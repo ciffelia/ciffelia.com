@@ -26,15 +26,15 @@ export default WorksSection
 const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   row-gap: 16px;
-  margin: 0;
+  justify-content: space-between;
   padding: 0;
+  margin: 0;
 `
 
 const ListItem = styled.li`
-  list-style: none;
   width: 31%;
+  list-style: none;
 
   @media screen and (max-width: 880px) {
     width: 48%;

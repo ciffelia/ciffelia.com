@@ -51,9 +51,9 @@ const ImageContainer = styled.div`
 `
 
 const Description = styled.div`
-  width: 100%;
   display: grid;
   gap: 14px;
+  width: 100%;
   padding: 16px;
 `
 
@@ -65,16 +65,16 @@ const Title = styled.h2`
 
 const Year = styled.p`
   margin: 0;
-  opacity: 0.8;
   font-size: 16px;
+  opacity: 0.8;
 `
 
 const TagList = styled.ul`
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  padding: 0;
+  margin: 0;
 `
 
 const TagContainer = styled.li`

@@ -31,9 +31,9 @@ const Section: React.VFC<Props> = React.memo(function Section({
 export default Section
 
 const Wrapper = styled.section`
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -47,9 +47,9 @@ const Wrapper = styled.section`
 `
 
 const Container = styled.div`
-  width: min(90%, 960px);
   display: grid;
   gap: 24px;
+  width: min(90%, 960px);
 `
 
 const StyledCoverEffect = styled(InViewEffect)`
@@ -57,24 +57,24 @@ const StyledCoverEffect = styled(InViewEffect)`
 `
 
 const TitleContainer = styled.div`
-  border-bottom: var(--border1);
   display: flex;
-  align-items: flex-end;
   gap: 8px;
+  align-items: flex-end;
   padding-right: 4px;
-  padding-left: 4px;
   padding-bottom: 8px;
+  padding-left: 4px;
+  border-bottom: var(--border1);
 `
 
 const Title = styled.h1`
   margin: 0;
-  line-height: 1;
   font-size: 32px;
+  line-height: 1;
 `
 
 const Subtitle = styled.small`
-  opacity: 0.5;
-  line-height: 1;
   font-size: 16px;
   font-weight: bold;
+  line-height: 1;
+  opacity: 0.5;
 `

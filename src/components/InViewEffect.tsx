@@ -42,25 +42,25 @@ const ChildrenWrapper = styled.div<{ play: boolean }>`
 
 const coverKeyframes1 = keyframes`
   0% {
-    transform-origin: left;
     transform: scaleX(0);
+    transform-origin: left;
   }
 
   100% {
-    transform-origin: left;
     transform: scaleX(1);
+    transform-origin: left;
   }
 `
 
 const coverKeyframes2 = keyframes`
   0% {
-    transform-origin: right;
     transform: scaleX(1);
+    transform-origin: right;
   }
 
   100% {
-    transform-origin: right;
     transform: scaleX(0);
+    transform-origin: right;
   }
 `
 

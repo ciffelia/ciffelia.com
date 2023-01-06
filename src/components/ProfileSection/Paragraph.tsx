@@ -21,10 +21,10 @@ const Paragraph: React.VFC<Props> = React.memo(function Paragraph({
 export default Paragraph
 
 const Container = styled.p`
-  margin: 0;
   display: flex;
-  align-items: center;
   gap: 16px;
+  align-items: center;
+  margin: 0;
 `
 
 const Icon = styled.span`
@@ -34,7 +34,7 @@ const Icon = styled.span`
 `
 
 const Description = styled.span`
-  text-align: justify;
-  line-height: 1.5;
   font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
 `

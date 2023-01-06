@@ -37,13 +37,13 @@ const StyledCard = styled(Card)`
 `
 
 const Logo = styled.div`
-  width: 100%;
-  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-background2);
+  width: 100%;
+  aspect-ratio: 1 / 1;
   padding: 16px;
+  background-color: var(--color-background2);
 `
 
 const ImageContainer = styled.div`
@@ -52,8 +52,8 @@ const ImageContainer = styled.div`
 
 const Description = styled.div`
   display: grid;
-  justify-items: center;
   gap: 8px;
+  justify-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
 `

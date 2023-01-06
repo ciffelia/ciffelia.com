@@ -28,8 +28,8 @@ const List = styled.ul`
   grid-template-columns: repeat(auto-fill, 200px);
   gap: 16px;
   justify-content: space-around;
-  margin: 0;
   padding: 0;
+  margin: 0;
 `
 
 const ListItem = styled.li`
