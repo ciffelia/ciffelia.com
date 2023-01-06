@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SPACING } from '@charcoal-ui/foundation'
 import { workList } from '@/contents/work'
 import Section from '@/components/Section'
 import InViewEffect from '@/components/InViewEffect'
@@ -28,7 +27,7 @@ const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: ${SPACING['16']}px;
+  row-gap: 16px;
   margin: 0;
   padding: 0;
 `

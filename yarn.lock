@@ -322,7 +322,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.16.7":
+"@babel/runtime@npm:^7.10.2":
   version: 7.17.8
   resolution: "@babel/runtime@npm:7.17.8"
   dependencies:
@@ -416,48 +416,6 @@ __metadata:
     "@babel/helper-validator-identifier": ^7.19.1
     to-fast-properties: ^2.0.0
   checksum: b39af241f0b72bba67fd6d0d23914f6faec8c0eba8015c181cbd5ea92e59fc91a52a1ab490d3520c7dbd19ddb9ebb76c476308f6388764f16d8201e37fae6811
-  languageName: node
-  linkType: hard
-
-"@charcoal-ui/foundation@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@charcoal-ui/foundation@npm:1.0.0"
-  checksum: e1131e9bc5e1bc3130801befdab743fec568feb3711f96da365d00c0f3d934fbc478c2904bc72e867604f2e342461bd5fe44ff340d9361a07ec84499aecc2dd9
-  languageName: node
-  linkType: hard
-
-"@charcoal-ui/styled@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@charcoal-ui/styled@npm:1.0.0"
-  dependencies:
-    "@charcoal-ui/foundation": ^1.0.0
-    "@charcoal-ui/theme": ^1.0.0
-    "@charcoal-ui/utils": ^1.0.0
-    warning: ^4.0.3
-  peerDependencies:
-    react: ">=16.13.1"
-    styled-components: ">=5.1.1"
-  checksum: ece4bc61eef00b5525165a156fbb795f71ca5edfbd7b226ba78c03435943224c7833107459cda01026e3961f21344e32d7e4cf225583265ceb165da746d2c947
-  languageName: node
-  linkType: hard
-
-"@charcoal-ui/theme@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@charcoal-ui/theme@npm:1.0.0"
-  dependencies:
-    "@charcoal-ui/foundation": ^1.0.0
-    "@charcoal-ui/utils": ^1.0.0
-  checksum: 4eea624932fa5ff658d63459ac5cc104f5d6f8b2f692cdffa31d3d197e3108da33796c9608745bfdd6e55dcf4c8189344a656ce6c903fde792e2b10319ecdd2e
-  languageName: node
-  linkType: hard
-
-"@charcoal-ui/utils@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@charcoal-ui/utils@npm:1.0.0"
-  dependencies:
-    "@charcoal-ui/foundation": ^1.0.0
-    polished: ^4.1.4
-  checksum: e540a4c6a62f64cc4854934c1c93fd6a27bd07527992a33d6de8c1f55f2ed9596669b265c885fb99fb93fc8d753572f0542d648fbb0b7d5cd0bf863811d93201
   languageName: node
   linkType: hard
 
@@ -1578,9 +1536,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ciffelia.com@workspace:."
   dependencies:
-    "@charcoal-ui/foundation": ^1.0.0
-    "@charcoal-ui/styled": ^1.0.0
-    "@charcoal-ui/theme": ^1.0.0
     "@fontsource/quicksand": ^4.5.11
     "@stylelint/postcss-css-in-js": ^0.38.0
     "@types/node": ^18.11.18
@@ -3887,7 +3842,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.0.0, loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -4783,15 +4738,6 @@ __metadata:
   bin:
     pinst: bin.js
   checksum: 4ae48a6a60f79c37071233af51b4d91bfc85cfa3c12b66ccda60cdb642b4d14a4ab0cb3587afc55b1f6192cea1772a5e4822026a0d0d3528296edef00cc2d61f
-  languageName: node
-  linkType: hard
-
-"polished@npm:^4.1.4":
-  version: 4.1.4
-  resolution: "polished@npm:4.1.4"
-  dependencies:
-    "@babel/runtime": ^7.16.7
-  checksum: 8faa41958df921e1441afc78c31dbe05b09b5b234b2a64ebfae56350c4580105f06e1ef4b3dcb69e86c28b354059e876ced36ba4deb3fb16e67485e1f59753f4
   languageName: node
   linkType: hard
 
@@ -6338,15 +6284,6 @@ __metadata:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 35703ac889d419cf2aceef63daeadbe4e77227c39ab6287eeb6c1b36a746b364f50ba22e88591f5d017bc54685d8137bc2d328d0a896e4d3fd22093c0f32a9ad
-  languageName: node
-  linkType: hard
-
-"warning@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "warning@npm:4.0.3"
-  dependencies:
-    loose-envify: ^1.0.0
-  checksum: 4f2cb6a9575e4faf71ddad9ad1ae7a00d0a75d24521c193fa464f30e6b04027bd97aa5d9546b0e13d3a150ab402eda216d59c1d0f2d6ca60124d96cd40dfa35c
   languageName: node
   linkType: hard
 

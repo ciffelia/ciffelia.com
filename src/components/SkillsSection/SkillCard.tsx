@@ -1,13 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SPACING } from '@charcoal-ui/foundation'
-import createTheme from '@charcoal-ui/styled'
 import Image from 'next/legacy/image'
 import { unreachable } from '@/utils'
 import { Skill, SkillLevel } from '@/contents/skill'
 import Card from '@/components/Card'
-
-const theme = createTheme(styled)
 
 export interface Props {
   skill: Skill
@@ -47,8 +43,7 @@ const Logo = styled.div`
   align-items: center;
   justify-content: center;
   background-color: var(--color-background2);
-
-  ${theme((o) => o.padding.all(16))}
+  padding: 16px;
 `
 
 const ImageContainer = styled.div`
@@ -58,19 +53,19 @@ const ImageContainer = styled.div`
 const Description = styled.div`
   display: grid;
   justify-items: center;
-  gap: ${SPACING['8']}px;
-
-  ${theme((o) => o.padding.vertical(16))}
+  gap: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 `
 
 const Title = styled.h2`
   margin: 0;
-
-  ${theme((o) => o.typography(20).bold)}
+  font-size: 20px;
+  font-weight: bold;
 `
 
 const Level = styled.span`
-  ${theme((o) => o.typography(16))}
+  font-size: 16px;
 `
 
 const formatSkillLevel = (level: SkillLevel): string => {

@@ -21,9 +21,6 @@
     "postinstall": "husky install"
   },
   "dependencies": {
-    "@charcoal-ui/foundation": "^1.0.0",
-    "@charcoal-ui/styled": "^1.0.0",
-    "@charcoal-ui/theme": "^1.0.0",
     "@fontsource/quicksand": "^4.5.11",
     "modern-normalize": "^1.1.0",
     "next": "^13.1.1",

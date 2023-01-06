@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SPACING } from '@charcoal-ui/foundation'
 import { skillList } from '@/contents/skill'
 import Section from '@/components/Section'
 import InViewEffect from '@/components/InViewEffect'
@@ -27,7 +26,7 @@ export default SkillsSection
 const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
-  gap: ${SPACING['16']}px;
+  gap: 16px;
   justify-content: space-around;
   margin: 0;
   padding: 0;

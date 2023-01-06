@@ -1,9 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SPACING } from '@charcoal-ui/foundation'
-import createTheme from '@charcoal-ui/styled'
-
-const theme = createTheme(styled)
 
 export interface Props {
   icon: React.ReactNode
@@ -28,18 +24,17 @@ const Container = styled.p`
   margin: 0;
   display: flex;
   align-items: center;
-  gap: ${SPACING['16']}px;
+  gap: 16px;
 `
 
 const Icon = styled.span`
   display: flex;
   align-items: center;
-
-  ${theme((o) => o.typography(32).preserveHalfLeading)}
+  font-size: 32px;
 `
 
 const Description = styled.span`
   text-align: justify;
-
-  ${theme((o) => o.typography(16))}
+  line-height: 1.5;
+  font-size: 16px;
 `

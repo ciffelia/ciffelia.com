@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SPACING } from '@charcoal-ui/foundation'
 import { FaGraduationCap, FaLayerGroup, FaRegLightbulb } from 'react-icons/fa'
 import Section from '@/components/Section'
 import InViewEffect from '@/components/InViewEffect'
@@ -47,5 +46,5 @@ const ListWrapper = styled.div`
 const List = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${SPACING['16']}px;
+  gap: 16px;
 `

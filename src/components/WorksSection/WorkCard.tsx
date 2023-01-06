@@ -1,14 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SPACING } from '@charcoal-ui/foundation'
-import createTheme from '@charcoal-ui/styled'
 import Image from 'next/legacy/image'
 import { Work } from '@/contents/work'
 import ExternalLink from '@/components/ExternalLink'
 import Card from '@/components/Card'
 import Tag from './Tag'
-
-const theme = createTheme(styled)
 
 export interface Props {
   work: Work
@@ -57,22 +53,20 @@ const ImageContainer = styled.div`
 const Description = styled.div`
   width: 100%;
   display: grid;
-  gap: ${SPACING['16']}px;
-
-  ${theme((o) => o.padding.all(16))}
+  gap: 14px;
+  padding: 16px;
 `
 
 const Title = styled.h2`
   margin: 0;
-
-  ${theme((o) => o.typography(20).bold)}
+  font-size: 20px;
+  font-weight: bold;
 `
 
 const Year = styled.p`
   margin: 0;
   opacity: 0.8;
-
-  ${theme((o) => [o.typography(16)])}
+  font-size: 16px;
 `
 
 const TagList = styled.ul`
@@ -80,7 +74,7 @@ const TagList = styled.ul`
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: ${SPACING['8']}px;
+  gap: 8px;
 `
 
 const TagContainer = styled.li`
