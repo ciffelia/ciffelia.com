@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { SPACING } from '@charcoal-ui/foundation';
 import createTheme from '@charcoal-ui/styled';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { Work } from '@/contents/work';
 import ExternalLink from '@/components/ExternalLink';
 import Card from '@/components/Card';

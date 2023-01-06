@@ -6,7 +6,11 @@ declare module 'styled-components' {
   export interface DefaultTheme extends CharcoalTheme {}
 }
 
-const CharcoalThemeProvider: React.FC = React.memo(
+export interface Props {
+  children: React.ReactNode;
+}
+
+const CharcoalThemeProvider: React.FC<Props> = React.memo(
   function CharcoalThemeProvider({ children }) {
     return <ThemeProvider theme={light}>{children}</ThemeProvider>;
   },
