@@ -10,9 +10,11 @@ import pdfPageSizeImage from './assets/pdfPageSize.png'
 import portfolio2018Image from './assets/portfolio2018.png'
 import portfolio2021Image from './assets/portfolio2021.png'
 import rayTracingImage from './assets/rayTracing.png'
+import twauthImage from './assets/twauth.png'
+import twauthRsImage from './assets/twauthRs.png'
 import twilensImage from './assets/twilens.png'
 import updraftImage from './assets/updraft.png'
-import wakeMyPCImage from './assets/wakeMyPC.png'
+import wowoImage from './assets/wowo.png'
 
 // 辞書順に並べる
 export const work: { [id in WorkId]: Work } = {
@@ -88,6 +90,22 @@ export const work: { [id in WorkId]: Work } = {
     url: 'https://github.com/ciffelia/RayTracing',
     image: rayTracingImage,
   },
+  [WorkId.Twauth]: {
+    id: WorkId.Twauth,
+    name: 'twauth',
+    year: 2020,
+    tags: ['TypeScript', 'Twitter API'],
+    url: 'https://github.com/ciffelia/twauth',
+    image: twauthImage,
+  },
+  [WorkId.TwauthRs]: {
+    id: WorkId.TwauthRs,
+    name: 'twauth-rs',
+    year: 2020,
+    tags: ['Rust', 'Twitter API'],
+    url: 'https://github.com/ciffelia/twauth-rs',
+    image: twauthRsImage,
+  },
   [WorkId.Twilens]: {
     id: WorkId.Twilens,
     name: '全文検索アプリ',
@@ -112,28 +130,30 @@ export const work: { [id in WorkId]: Work } = {
     url: 'https://github.com/ciffelia/Updraft',
     image: updraftImage,
   },
-  [WorkId.WakeMyPC]: {
-    id: WorkId.WakeMyPC,
-    name: 'wakeMyPC',
+  [WorkId.Wowo]: {
+    id: WorkId.Wowo,
+    name: 'wowo',
     year: 2021,
     tags: ['Web', 'Go', 'Wake-on-LAN'],
-    url: 'https://github.com/ciffelia/wakeMyPC',
-    image: wakeMyPCImage,
+    url: 'https://github.com/ciffelia/wowo',
+    image: wowoImage,
   },
 }
 
 // 表示される順に並べる
 export const workList: Work[] = [
   work[WorkId.Fes71],
-  work[WorkId.Twilens],
+  work[WorkId.Koe],
   work[WorkId.Portfolio2021],
+  work[WorkId.Twilens],
   work[WorkId.MultiEnvironmentMonitor],
   work[WorkId.Airpapyrus],
   work[WorkId.Updraft],
   work[WorkId.RayTracing],
-  work[WorkId.Koe],
   work[WorkId.Portfolio2018],
   work[WorkId.IconCiffelia],
   work[WorkId.PDFPageSize],
-  work[WorkId.WakeMyPC],
+  work[WorkId.Wowo],
+  work[WorkId.Twauth],
+  work[WorkId.TwauthRs],
 ]

@@ -27,6 +27,7 @@ export enum SkillId {
   Gatsby = 'gatsby',
   Git = 'git',
   JavaScript = 'javaScript',
+  Kubernetes = 'kubernetes',
   NextJs = 'nextJs',
   NodeJs = 'nodeJs',
   Nuxt = 'nuxtJs',

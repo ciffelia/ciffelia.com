@@ -6,6 +6,7 @@ import dockerImage from './assets/docker.webp'
 import gatsbyImage from './assets/gatsby.svg'
 import gitImage from './assets/git.svg'
 import javaScriptImage from './assets/javaScript.svg'
+import kubernetesImage from './assets/kubernetes.svg'
 import nextJsImage from './assets/nextJs.svg'
 import nodeJsImage from './assets/nodeJs.svg'
 import nuxtJsImage from './assets/nuxt.svg'
@@ -46,6 +47,12 @@ export const skill: { [id in SkillId]: Skill } = {
     name: 'JavaScript',
     level: { type: 'since', year: 2012 },
     image: javaScriptImage,
+  },
+  [SkillId.Kubernetes]: {
+    id: SkillId.Kubernetes,
+    name: 'Kubernetes',
+    level: { type: 'since', year: 2022 },
+    image: kubernetesImage,
   },
   [SkillId.NextJs]: {
     id: SkillId.NextJs,
@@ -98,6 +105,7 @@ export const skill: { [id in SkillId]: Skill } = {
 }
 
 export const skillList: Skill[] = [
+  skill[SkillId.Kubernetes],
   skill[SkillId.Rust],
   skill[SkillId.TypeScript],
   skill[SkillId.JavaScript],

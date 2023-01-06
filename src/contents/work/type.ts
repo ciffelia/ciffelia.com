@@ -20,7 +20,9 @@ export enum WorkId {
   Portfolio2018 = 'portfolio2018',
   Portfolio2021 = 'portfolio2021',
   RayTracing = 'rayTracing',
+  Twauth = 'twauth',
+  TwauthRs = 'twauthRs',
   Twilens = 'twilens',
   Updraft = 'updraft',
-  WakeMyPC = 'wakeMyPC',
+  Wowo = 'wowo',
 }
