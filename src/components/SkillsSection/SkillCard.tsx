@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import { unreachable } from '@/utils'
 import { Skill, SkillLevel } from '@/contents/skill'
 import Card from '@/components/Card'
@@ -13,14 +13,7 @@ const SkillCard: React.FC<Props> = React.memo(function WorkCard({ skill }) {
   return (
     <StyledCard>
       <Logo>
-        <ImageContainer>
-          <Image
-            src={skill.image}
-            alt={skill.name}
-            layout="responsive"
-            sizes="158px"
-          />
-        </ImageContainer>
+        <LogoImage src={skill.image} alt={`${skill.name} logo`} sizes="100%" />
       </Logo>
       <Description>
         <Title>{skill.name}</Title>
@@ -37,17 +30,17 @@ const StyledCard = styled(Card)`
 `
 
 const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   aspect-ratio: 1 / 1;
   padding: 16px;
   background-color: var(--color-background2);
 `
 
-const ImageContainer = styled.div`
+const LogoImage = styled(Image)`
   width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: contain;
 `
 
 const Description = styled.div`
