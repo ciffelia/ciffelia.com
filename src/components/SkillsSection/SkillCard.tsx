@@ -13,7 +13,11 @@ const SkillCard: React.FC<Props> = React.memo(function WorkCard({ skill }) {
   return (
     <StyledCard>
       <Logo>
-        <LogoImage src={skill.image} alt={`${skill.name} logo`} sizes="100%" />
+        <LogoImage
+          src={skill.image}
+          alt={`${skill.name} logo`}
+          sizes="168px" // max width
+        />
       </Logo>
       <Description>
         <Title>{skill.name}</Title>

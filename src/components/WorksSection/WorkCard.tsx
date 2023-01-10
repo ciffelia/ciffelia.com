@@ -15,7 +15,11 @@ const WorkCard: React.FC<Props> = React.memo(function WorkCard({ work }) {
     <ExternalLink to={work.url}>
       <StyledCard>
         <Thumbnail>
-          <ThumbnailImage src={work.image} alt={work.name} sizes="100%" />
+          <ThumbnailImage
+            src={work.image}
+            alt={work.name}
+            sizes="510px" // max width
+          />
         </Thumbnail>
         <Description>
           <Title>{work.name}</Title>
