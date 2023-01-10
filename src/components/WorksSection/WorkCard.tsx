@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import { Work } from '@/contents/work'
 import ExternalLink from '@/components/ExternalLink'
 import Card from '@/components/Card'
@@ -14,14 +14,9 @@ const WorkCard: React.FC<Props> = React.memo(function WorkCard({ work }) {
   return (
     <ExternalLink to={work.url}>
       <StyledCard>
-        <ImageContainer>
-          <Image
-            src={work.image}
-            alt={work.name}
-            layout="responsive"
-            sizes="510px" // max width
-          />
-        </ImageContainer>
+        <Thumbnail>
+          <ThumbnailImage src={work.image} alt={work.name} sizes="100%" />
+        </Thumbnail>
         <Description>
           <Title>{work.name}</Title>
           <Year>{work.year}</Year>
@@ -45,9 +40,16 @@ const StyledCard = styled(Card)`
   height: 100%;
 `
 
-const ImageContainer = styled.div`
+const Thumbnail = styled.div`
   width: 100%;
   aspect-ratio: 4 / 3;
+`
+
+const ThumbnailImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: contain;
 `
 
 const Description = styled.div`
