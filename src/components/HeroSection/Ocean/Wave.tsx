@@ -1,4 +1,4 @@
-import styled, { css, Keyframes, keyframes } from 'styled-components'
+import styled, { css, type Keyframes, keyframes } from 'styled-components'
 import { displayedWaveWidth, waveEasingFunc } from './constants'
 import { waveMaskUrl } from './waveMask'
 

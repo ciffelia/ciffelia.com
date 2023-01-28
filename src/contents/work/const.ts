@@ -1,4 +1,4 @@
-import { Work, WorkId } from './type'
+import { type Work, WorkId } from './type'
 
 // 画像のimportは辞書順に並べる
 import airpapyrusImage from './assets/airpapyrus.jpg'

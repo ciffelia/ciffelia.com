@@ -1,4 +1,4 @@
-import { Skill, SkillId } from './type'
+import { type Skill, SkillId } from './type'
 
 // 画像のimportは辞書順に並べる
 import cppImage from './assets/cpp.svg'

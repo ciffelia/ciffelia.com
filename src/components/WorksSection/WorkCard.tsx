@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
-import { Work } from '@/contents/work'
+import { type Work } from '@/contents/work'
 import ExternalLink from '@/components/ExternalLink'
 import Card from '@/components/Card'
 import Tag from './Tag'
