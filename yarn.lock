@@ -1396,6 +1396,7 @@ __metadata:
     eslint-plugin-n: ^15.6.1
     eslint-plugin-promise: ^6.1.1
     husky: ^8.0.3
+    json5: ^2.2.3
     lint-staged: ^13.1.0
     modern-normalize: ^1.1.0
     next: ^13.1.6
@@ -1416,6 +1417,7 @@ __metadata:
     stylelint-config-recess-order: ^3.1.0
     stylelint-config-sass-guidelines: ^9.0.1
     typescript: ~4.9.4
+    zod: ^3.20.2
   languageName: unknown
   linkType: soft
 
@@ -3428,7 +3430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.2.2":
+"json5@npm:^2.2.2, json5@npm:^2.2.3":
   version: 2.2.3
   resolution: "json5@npm:2.2.3"
   bin:
@@ -6073,5 +6075,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: f77b3d8d00310def622123df93d4ee654fc6a0096182af8bd60679ddcdfb3474c56c6c7190817c84a2785648cdee9d721c0154eb45698c62176c322fb46fc700
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.20.2":
+  version: 3.20.2
+  resolution: "zod@npm:3.20.2"
+  checksum: 04172f7e9350372684ccd298d4716908edc9113751295b6c4e1b3ea84e2af8997e504b33ba36f4741417bb2a5dc90bfd40501f6b0e7389df10e42a63d6d8366c
   languageName: node
   linkType: hard

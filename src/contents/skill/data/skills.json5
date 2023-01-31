@@ -1,0 +1,86 @@
+[
+  {
+    id: 'kubernetes',
+    name: 'Kubernetes',
+    level: { type: 'since', year: 2022 },
+    image: 'kubernetes',
+  },
+  {
+    id: 'rust',
+    name: 'Rust',
+    level: { type: 'since', year: 2020, month: 6 },
+    image: 'rust',
+  },
+  {
+    id: 'typeScript',
+    name: 'TypeScript',
+    level: { type: 'since', year: 2020, month: 2 },
+    image: 'typeScript',
+  },
+  {
+    id: 'javaScript',
+    name: 'JavaScript',
+    level: { type: 'since', year: 2012 },
+    image: 'javaScript',
+  },
+  {
+    id: 'react',
+    name: 'React',
+    level: { type: 'since', year: 2016, month: 11 },
+    image: 'react',
+  },
+  {
+    id: 'vueJs',
+    name: 'Vue.js',
+    level: { type: 'since', year: 2020, month: 3 },
+    image: 'vue',
+  },
+  {
+    id: 'nextJs',
+    name: 'Next.js',
+    level: { type: 'since', year: 2017 },
+    image: 'nextJs',
+  },
+  {
+    id: 'nuxtJs',
+    name: 'Nuxt',
+    level: { type: 'since', year: 2020, month: 3 },
+    image: 'nuxt',
+  },
+  {
+    id: 'gatsby',
+    name: 'Gatsby',
+    level: { type: 'since', year: 2018, month: 2 },
+    image: 'gatsby',
+  },
+  {
+    id: 'nodeJs',
+    name: 'Node.js',
+    level: { type: 'since', year: 2016, month: 2 },
+    image: 'nodeJs',
+  },
+  {
+    id: 'php',
+    name: 'PHP',
+    level: { type: 'since', year: 2015 },
+    image: 'php',
+  },
+  {
+    id: 'cpp',
+    name: 'C++',
+    level: { type: 'since', year: 2015 },
+    image: 'cpp',
+  },
+  {
+    id: 'git',
+    name: 'Git',
+    level: { type: 'since', year: 2015, month: 10 },
+    image: 'git',
+  },
+  {
+    id: 'docker',
+    name: 'Docker',
+    level: { type: 'since', year: 2016, month: 6 },
+    image: 'docker',
+  },
+]

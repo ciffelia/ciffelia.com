@@ -1,19 +1,27 @@
 import React from 'react'
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
+import type { Skill } from '@/contents/skill/schema'
+import { loadSkills } from '@/contents/skill/loadSkills'
 import Head from '@/components/Head'
 import HeroSection from '@/components/HeroSection'
 import ProfileSection from '@/components/ProfileSection'
 import SkillsSection from '@/components/SkillsSection'
 import WorksSection from '@/components/WorksSection'
 
-const IndexPage: NextPage = React.memo(function IndexPage() {
+export interface IndexPageProps {
+  skills: Skill[]
+}
+
+const IndexPage: NextPage<IndexPageProps> = React.memo(function IndexPage({
+  skills,
+}) {
   return (
     <>
       <Head />
       <HeroSection />
       <main>
         <ProfileSection />
-        <SkillsSection />
+        <SkillsSection skills={skills} />
         <WorksSection />
       </main>
     </>
@@ -21,3 +29,11 @@ const IndexPage: NextPage = React.memo(function IndexPage() {
 })
 
 export default IndexPage
+
+export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
+  const skills = await loadSkills()
+
+  return {
+    props: { skills },
+  }
+}

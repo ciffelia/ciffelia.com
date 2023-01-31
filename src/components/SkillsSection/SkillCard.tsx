@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { unreachable } from '@/utils'
-import { type Skill, type SkillLevel } from '@/contents/skill'
+import type { Skill, SkillLevel } from '@/contents/skill/schema'
 import Card from '@/components/Card'
 
 export interface Props {

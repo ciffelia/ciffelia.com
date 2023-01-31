@@ -1,25 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
-import { skillList } from '@/contents/skill'
+import type { Skill } from '@/contents/skill/schema'
 import Section from '@/components/Section'
 import InViewEffect from '@/components/InViewEffect'
 import SkillCard from './SkillCard'
 
-const SkillsSection: React.FC = React.memo(function SkillsSection() {
-  return (
-    <Section title="Skills" subtitle="スキルセット">
-      <List>
-        {skillList.map((skill) => (
-          <ListItem key={skill.id}>
-            <InViewEffect>
-              <SkillCard skill={skill} />
-            </InViewEffect>
-          </ListItem>
-        ))}
-      </List>
-    </Section>
-  )
-})
+export interface SkillsSectionProps {
+  skills: Skill[]
+}
+
+const SkillsSection: React.FC<SkillsSectionProps> = React.memo(
+  function SkillsSection({ skills }) {
+    return (
+      <Section title="Skills" subtitle="スキルセット">
+        <List>
+          {skills.map((skill) => (
+            <ListItem key={skill.id}>
+              <InViewEffect>
+                <SkillCard skill={skill} />
+              </InViewEffect>
+            </ListItem>
+          ))}
+        </List>
+      </Section>
+    )
+  },
+)
 
 export default SkillsSection
 
