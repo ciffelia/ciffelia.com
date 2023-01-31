@@ -25,7 +25,7 @@ export default SkillsSection
 
 const List = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, clamp(150px, 20vw, 200px));
   gap: 16px;
   justify-content: space-around;
   padding: 0;
