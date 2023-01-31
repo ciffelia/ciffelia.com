@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import ExternalLink from '@/components/ExternalLink'
 
 export interface Props {
@@ -19,9 +19,7 @@ const SocialLink: React.FC<Props> = React.memo(function SocialLink({
   return (
     <ExternalLink to={url}>
       <Container color={color}>
-        <IconContainer>
-          <Image src={iconPath} alt="" layout="responsive" />
-        </IconContainer>
+        <IconImage src={iconPath} alt="" priority />
         <Name>{name}</Name>
       </Container>
     </ExternalLink>
@@ -47,8 +45,10 @@ const Container = styled.div<{ color: string }>`
   }
 `
 
-const IconContainer = styled.div`
+const IconImage = styled(Image)`
   width: clamp(29px, 6vw, 36px);
+  height: clamp(29px, 6vw, 36px);
+  vertical-align: top;
 `
 
 const Name = styled.span`

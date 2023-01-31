@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import InViewEffect from '@/components/InViewEffect'
 import Ocean from './Ocean'
 import SocialLink from './SocialLink'
 import ciffeliaIcon from '@/images/ciffelia.png'
 import twitterIcon from '@/images/twitter.svg'
 import githubIcon from '@/images/github.svg'
+
+const iconSize = 'clamp(75px, 20vw, 130px)'
 
 const HeroSection: React.FC = React.memo(function HeroSection() {
   return (
@@ -18,13 +20,7 @@ const HeroSection: React.FC = React.memo(function HeroSection() {
       <Myself>
         <IconContainer>
           <InViewEffect>
-            <Image
-              src={ciffeliaIcon}
-              alt=""
-              layout="responsive"
-              sizes="min(20vw, 130px)" // max width
-              priority
-            />
+            <IconImage src={ciffeliaIcon} alt="" sizes={iconSize} priority />
           </InViewEffect>
         </IconContainer>
         <Name>
@@ -80,10 +76,14 @@ const Myself = styled.div`
 `
 
 const IconContainer = styled.div`
-  width: clamp(75px, 20vw, 130px);
-  height: clamp(75px, 20vw, 130px);
   overflow: hidden;
   border-radius: 50%;
+`
+
+const IconImage = styled(Image)`
+  width: ${iconSize};
+  height: ${iconSize};
+  vertical-align: top;
 `
 
 const Name = styled.span`
