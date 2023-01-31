@@ -10,32 +10,30 @@ export interface Props {
   work: Work
 }
 
-const WorkCard: React.FC<Props> = React.memo(function WorkCard({ work }) {
-  return (
-    <ExternalLink to={work.url}>
-      <StyledCard>
-        <Thumbnail>
-          <ThumbnailImage
-            src={work.image}
-            alt={work.name}
-            sizes="510px" // max width
-          />
-        </Thumbnail>
-        <Description>
-          <Title>{work.name}</Title>
-          <Year>{work.year}</Year>
-          <TagList>
-            {work.tags.map((tag) => (
-              <TagContainer key={tag}>
-                <Tag>{tag}</Tag>
-              </TagContainer>
-            ))}
-          </TagList>
-        </Description>
-      </StyledCard>
-    </ExternalLink>
-  )
-})
+const WorkCard: React.FC<Props> = ({ work }) => (
+  <ExternalLink to={work.url}>
+    <StyledCard>
+      <Thumbnail>
+        <ThumbnailImage
+          src={work.image}
+          alt={work.name}
+          sizes="510px" // max width
+        />
+      </Thumbnail>
+      <Description>
+        <Title>{work.name}</Title>
+        <Year>{work.year}</Year>
+        <TagList>
+          {work.tags.map((tag) => (
+            <TagContainer key={tag}>
+              <Tag>{tag}</Tag>
+            </TagContainer>
+          ))}
+        </TagList>
+      </Description>
+    </StyledCard>
+  </ExternalLink>
+)
 
 export default WorkCard
 

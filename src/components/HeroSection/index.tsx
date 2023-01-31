@@ -10,45 +10,43 @@ import githubIcon from '@/images/github.svg'
 
 const iconSize = 'clamp(75px, 20vw, 130px)'
 
-const HeroSection: React.FC = React.memo(function HeroSection() {
-  return (
-    <Header>
-      <OceanContainer>
-        <Ocean />
-      </OceanContainer>
+const HeroSection: React.FC = () => (
+  <Header>
+    <OceanContainer>
+      <Ocean />
+    </OceanContainer>
 
-      <Myself>
-        <IconContainer>
-          <InViewEffect>
-            <IconImage src={ciffeliaIcon} alt="" sizes={iconSize} priority />
-          </InViewEffect>
-        </IconContainer>
-        <Name>
-          <InViewEffect>Ciffelia</InViewEffect>
-        </Name>
-      </Myself>
+    <Myself>
+      <IconContainer>
+        <InViewEffect>
+          <IconImage src={ciffeliaIcon} alt="" sizes={iconSize} priority />
+        </InViewEffect>
+      </IconContainer>
+      <Name>
+        <InViewEffect>Ciffelia</InViewEffect>
+      </Name>
+    </Myself>
 
-      <Links>
-        <InViewEffect>
-          <SocialLink
-            name="Twitter"
-            url="https://twitter.com/ciffelia"
-            color="var(--color-twitter)"
-            iconPath={twitterIcon}
-          />
-        </InViewEffect>
-        <InViewEffect>
-          <SocialLink
-            name="GitHub"
-            url="https://github.com/ciffelia"
-            color="var(--color-github)"
-            iconPath={githubIcon}
-          />
-        </InViewEffect>
-      </Links>
-    </Header>
-  )
-})
+    <Links>
+      <InViewEffect>
+        <SocialLink
+          name="Twitter"
+          url="https://twitter.com/ciffelia"
+          color="var(--color-twitter)"
+          iconPath={twitterIcon}
+        />
+      </InViewEffect>
+      <InViewEffect>
+        <SocialLink
+          name="GitHub"
+          url="https://github.com/ciffelia"
+          color="var(--color-github)"
+          iconPath={githubIcon}
+        />
+      </InViewEffect>
+    </Links>
+  </Header>
+)
 
 export default HeroSection
 

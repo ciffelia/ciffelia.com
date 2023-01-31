@@ -9,22 +9,18 @@ export interface SkillsSectionProps {
   skills: Skill[]
 }
 
-const SkillsSection: React.FC<SkillsSectionProps> = React.memo(
-  function SkillsSection({ skills }) {
-    return (
-      <Section title="Skills" subtitle="スキルセット">
-        <List>
-          {skills.map((skill) => (
-            <ListItem key={skill.id}>
-              <InViewEffect>
-                <SkillCard skill={skill} />
-              </InViewEffect>
-            </ListItem>
-          ))}
-        </List>
-      </Section>
-    )
-  },
+const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => (
+  <Section title="Skills" subtitle="スキルセット">
+    <List>
+      {skills.map((skill) => (
+        <ListItem key={skill.id}>
+          <InViewEffect>
+            <SkillCard skill={skill} />
+          </InViewEffect>
+        </ListItem>
+      ))}
+    </List>
+  </Section>
 )
 
 export default SkillsSection

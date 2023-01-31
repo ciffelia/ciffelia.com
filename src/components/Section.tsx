@@ -8,25 +8,19 @@ export interface Props {
   children: React.ReactNode
 }
 
-const Section: React.FC<Props> = React.memo(function Section({
-  title,
-  subtitle,
-  children,
-}) {
-  return (
-    <Wrapper>
-      <Container>
-        <StyledCoverEffect>
-          <TitleContainer>
-            <Title>{title}</Title>
-            <Subtitle>{subtitle}</Subtitle>
-          </TitleContainer>
-        </StyledCoverEffect>
-        <div>{children}</div>
-      </Container>
-    </Wrapper>
-  )
-})
+const Section: React.FC<Props> = ({ title, subtitle, children }) => (
+  <Wrapper>
+    <Container>
+      <StyledCoverEffect>
+        <TitleContainer>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+        </TitleContainer>
+      </StyledCoverEffect>
+      <div>{children}</div>
+    </Container>
+  </Wrapper>
+)
 
 export default Section
 

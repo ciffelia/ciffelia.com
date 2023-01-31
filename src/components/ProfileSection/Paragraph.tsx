@@ -6,17 +6,12 @@ export interface Props {
   children: React.ReactNode
 }
 
-const Paragraph: React.FC<Props> = React.memo(function Paragraph({
-  icon,
-  children,
-}) {
-  return (
-    <Container>
-      <Icon>{icon}</Icon>
-      <Description>{children}</Description>
-    </Container>
-  )
-})
+const Paragraph: React.FC<Props> = ({ icon, children }) => (
+  <Container>
+    <Icon>{icon}</Icon>
+    <Description>{children}</Description>
+  </Container>
+)
 
 export default Paragraph
 

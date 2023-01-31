@@ -10,21 +10,14 @@ export interface Props {
   iconPath: string
 }
 
-const SocialLink: React.FC<Props> = React.memo(function SocialLink({
-  name,
-  url,
-  color,
-  iconPath,
-}) {
-  return (
-    <ExternalLink to={url}>
-      <Container color={color}>
-        <IconImage src={iconPath} alt="" priority />
-        <Name>{name}</Name>
-      </Container>
-    </ExternalLink>
-  )
-})
+const SocialLink: React.FC<Props> = ({ name, url, color, iconPath }) => (
+  <ExternalLink to={url}>
+    <Container color={color}>
+      <IconImage src={iconPath} alt="" priority />
+      <Name>{name}</Name>
+    </Container>
+  </ExternalLink>
+)
 
 export default SocialLink
 

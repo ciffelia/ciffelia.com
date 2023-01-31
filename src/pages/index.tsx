@@ -12,21 +12,17 @@ export interface IndexPageProps {
   skills: Skill[]
 }
 
-const IndexPage: NextPage<IndexPageProps> = React.memo(function IndexPage({
-  skills,
-}) {
-  return (
-    <>
-      <Head />
-      <HeroSection />
-      <main>
-        <ProfileSection />
-        <SkillsSection skills={skills} />
-        <WorksSection />
-      </main>
-    </>
-  )
-})
+const IndexPage: NextPage<IndexPageProps> = ({ skills }) => (
+  <>
+    <Head />
+    <HeroSection />
+    <main>
+      <ProfileSection />
+      <SkillsSection skills={skills} />
+      <WorksSection />
+    </main>
+  </>
+)
 
 export default IndexPage
 

@@ -6,35 +6,33 @@ import InViewEffect from '@/components/InViewEffect'
 import WorkCard from './WorkCard'
 import SilhouetteCard from '@/components/WorksSection/SilhouetteCard'
 
-const WorksSection: React.FC = React.memo(function WorksSection() {
-  return (
-    <Section title="Works" subtitle="制作物">
-      <List>
-        {workList.map((work) => (
-          <ListItem key={work.id}>
-            <InViewEffect>
-              <WorkCard work={work} />
-            </InViewEffect>
-          </ListItem>
-        ))}
-        {workList.length % 3 > 0 && (
-          <ListItem>
-            <InViewEffect>
-              <SilhouetteCard variant={0} />
-            </InViewEffect>
-          </ListItem>
-        )}
-        {workList.length % 3 === 1 && (
-          <ListItem>
-            <InViewEffect>
-              <SilhouetteCard variant={1} />
-            </InViewEffect>
-          </ListItem>
-        )}
-      </List>
-    </Section>
-  )
-})
+const WorksSection: React.FC = () => (
+  <Section title="Works" subtitle="制作物">
+    <List>
+      {workList.map((work) => (
+        <ListItem key={work.id}>
+          <InViewEffect>
+            <WorkCard work={work} />
+          </InViewEffect>
+        </ListItem>
+      ))}
+      {workList.length % 3 > 0 && (
+        <ListItem>
+          <InViewEffect>
+            <SilhouetteCard variant={0} />
+          </InViewEffect>
+        </ListItem>
+      )}
+      {workList.length % 3 === 1 && (
+        <ListItem>
+          <InViewEffect>
+            <SilhouetteCard variant={1} />
+          </InViewEffect>
+        </ListItem>
+      )}
+    </List>
+  </Section>
+)
 
 export default WorksSection
 

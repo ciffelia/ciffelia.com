@@ -9,23 +9,21 @@ export interface Props {
   skill: Skill
 }
 
-const SkillCard: React.FC<Props> = React.memo(function WorkCard({ skill }) {
-  return (
-    <StyledCard>
-      <Logo>
-        <LogoImage
-          src={skill.image}
-          alt={`${skill.name} logo`}
-          sizes="168px" // max width
-        />
-      </Logo>
-      <Description>
-        <Title>{skill.name}</Title>
-        <Level>{formatSkillLevel(skill.level)}</Level>
-      </Description>
-    </StyledCard>
-  )
-})
+const SkillCard: React.FC<Props> = ({ skill }) => (
+  <StyledCard>
+    <Logo>
+      <LogoImage
+        src={skill.image}
+        alt={`${skill.name} logo`}
+        sizes="168px" // max width
+      />
+    </Logo>
+    <Description>
+      <Title>{skill.name}</Title>
+      <Level>{formatSkillLevel(skill.level)}</Level>
+    </Description>
+  </StyledCard>
+)
 
 export default SkillCard
 

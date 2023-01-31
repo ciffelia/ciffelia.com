@@ -3,15 +3,13 @@ import styled from 'styled-components'
 import { oceanHeight, oceanWidth } from './constants'
 import Wave from './Wave'
 
-const Ocean: React.FC = React.memo(function Ocean() {
-  return (
-    <Container>
-      {waveAnimations.map((animation, i) => (
-        <Wave key={i} animation={animation} />
-      ))}
-    </Container>
-  )
-})
+const Ocean: React.FC = () => (
+  <Container>
+    {waveAnimations.map((animation, i) => (
+      <Wave key={i} animation={animation} />
+    ))}
+  </Container>
+)
 
 export default Ocean
 

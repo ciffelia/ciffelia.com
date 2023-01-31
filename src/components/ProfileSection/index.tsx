@@ -5,31 +5,29 @@ import Section from '@/components/Section'
 import InViewEffect from '@/components/InViewEffect'
 import Paragraph from './Paragraph'
 
-const ProfileSection: React.FC = React.memo(function AboutMeSection() {
-  return (
-    <Section title="Profile" subtitle="基本情報">
-      <ListWrapper>
-        <List>
-          <InViewEffect>
-            <Paragraph icon={<FaGraduationCap />}>
-              ソフトウェア開発が好きな大学生です。プログラミングを始めて10年になります。
-            </Paragraph>
-          </InViewEffect>
-          <InViewEffect>
-            <Paragraph icon={<FaLayerGroup />}>
-              Webアプリ、ゲーム、小型デバイス、OSなど様々なものを制作しています。
-            </Paragraph>
-          </InViewEffect>
-          <InViewEffect>
-            <Paragraph icon={<FaRegLightbulb />}>
-              2018年からLinuxサーバーを運用しており、自作のWebアプリや情報収集ツールがDockerコンテナの中で動いています。
-            </Paragraph>
-          </InViewEffect>
-        </List>
-      </ListWrapper>
-    </Section>
-  )
-})
+const ProfileSection: React.FC = () => (
+  <Section title="Profile" subtitle="基本情報">
+    <ListWrapper>
+      <List>
+        <InViewEffect>
+          <Paragraph icon={<FaGraduationCap />}>
+            ソフトウェア開発が好きな大学生です。プログラミングを始めて10年になります。
+          </Paragraph>
+        </InViewEffect>
+        <InViewEffect>
+          <Paragraph icon={<FaLayerGroup />}>
+            Webアプリ、ゲーム、小型デバイス、OSなど様々なものを制作しています。
+          </Paragraph>
+        </InViewEffect>
+        <InViewEffect>
+          <Paragraph icon={<FaRegLightbulb />}>
+            2018年からLinuxサーバーを運用しており、自作のWebアプリや情報収集ツールがDockerコンテナの中で動いています。
+          </Paragraph>
+        </InViewEffect>
+      </List>
+    </ListWrapper>
+  </Section>
+)
 
 export default ProfileSection
 

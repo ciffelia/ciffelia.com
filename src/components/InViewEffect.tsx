@@ -4,10 +4,7 @@ import { useInView } from 'react-intersection-observer'
 
 export type Props = React.ComponentPropsWithoutRef<'div'>
 
-const InViewEffect: React.FC<Props> = React.memo(function CoverEffect({
-  children,
-  ...props
-}) {
+const InViewEffect: React.FC<Props> = ({ children, ...props }) => {
   const [ref, inView] = useInView({ threshold: 0.3 })
 
   return (
@@ -17,7 +14,7 @@ const InViewEffect: React.FC<Props> = React.memo(function CoverEffect({
       <Cover2 play={inView} />
     </Container>
   )
-})
+}
 
 export default InViewEffect
 

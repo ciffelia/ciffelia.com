@@ -6,13 +6,11 @@ export interface Props {
   children: React.ReactNode
 }
 
-const ExternalLink: React.FC<Props> = React.memo(function ExternalLink(props) {
-  return (
-    <StyledLink href={props.to} target="_blank" rel="noopener noreferrer">
-      {props.children}
-    </StyledLink>
-  )
-})
+const ExternalLink: React.FC<Props> = (props) => (
+  <StyledLink href={props.to} target="_blank" rel="noopener noreferrer">
+    {props.children}
+  </StyledLink>
+)
 
 const StyledLink = styled.a`
   color: inherit;
