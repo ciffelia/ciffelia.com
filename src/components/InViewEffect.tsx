@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { useInView } from 'react-intersection-observer'
 
-export type Props = React.ComponentProps<'div'>
+export type Props = React.ComponentPropsWithoutRef<'div'>
 
 const InViewEffect: React.FC<Props> = React.memo(function CoverEffect({
   children,
