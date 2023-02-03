@@ -66,5 +66,5 @@
     "*.{js,ts,jsx,tsx}": "eslint",
     "*.{css,scss,js,ts,jsx,tsx}": "stylelint"
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.4.1"
 }
