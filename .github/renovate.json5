@@ -10,6 +10,7 @@
   packageRules: [
     {
       matchManagers: ['npm'],
+      enabled: false,
       rangeStrategy: 'bump',
     },
     {
@@ -29,6 +30,7 @@
       ],
       matchUpdateTypes: ['minor', 'patch'],
       matchCurrentVersion: '!/^0/',
+      enabled: true,
       automerge: true,
     },
     {
