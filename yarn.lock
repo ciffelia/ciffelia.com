@@ -658,10 +658,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.15.0":
-  version: 18.15.0
-  resolution: "@types/node@npm:18.15.0"
-  checksum: d81372276dd5053b1743338b61a2178ff9722dc609189d01fc7d1c2acd539414039e0e4780678730514390dad3f29c366a28c29e8dbd5b0025651181f6dd6669
+"@types/node@npm:^18.15.8":
+  version: 18.15.8
+  resolution: "@types/node@npm:18.15.8"
+  checksum: 795695b9f5bbfaea864261d3179da530dbe8c615bd525d6afcaa0d508f0b73f252507b54c735b1d744932677e30f55161bbe9b78487a60bd6a93b2d03027d30d
   languageName: node
   linkType: hard
 
@@ -1442,7 +1442,7 @@ __metadata:
   dependencies:
     "@fontsource/quicksand": ^4.5.12
     "@stylelint/postcss-css-in-js": ^0.38.0
-    "@types/node": ^18.15.0
+    "@types/node": ^18.15.8
     "@types/react": ^18.0.29
     "@types/react-dom": ^18.0.11
     "@types/styled-components": ^5.1.26
