@@ -784,7 +784,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.0.0, @typescript-eslint/parser@npm:^5.42.0":
+"@typescript-eslint/parser@npm:^5.42.0":
   version: 5.54.0
   resolution: "@typescript-eslint/parser@npm:5.54.0"
   dependencies:
@@ -798,6 +798,23 @@ __metadata:
     typescript:
       optional: true
   checksum: 368d6dd85be42c3f518f0ddeed23ecd1d3c9484a77ae291ee4e08e2703ed379bed613bde014cd8ab2a3e06e85dd8aef201112ae5e3d2a07deba29ae80bb1fe06
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/parser@npm:^5.43.0":
+  version: 5.57.0
+  resolution: "@typescript-eslint/parser@npm:5.57.0"
+  dependencies:
+    "@typescript-eslint/scope-manager": 5.57.0
+    "@typescript-eslint/types": 5.57.0
+    "@typescript-eslint/typescript-estree": 5.57.0
+    debug: ^4.3.4
+  peerDependencies:
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: b7e8345631911f721591ba970fea5c888f0f3bf2e2ea2dbc3e5b0dc345c0776b62b92c534edfde1379b4b182958a421f35ac26d84705fe6ae7dd37aa675d9493
   languageName: node
   linkType: hard
 
@@ -1468,7 +1485,7 @@ __metadata:
     eslint: ^8.35.0
     eslint-config-next: ^13.2.4
     eslint-config-prettier: ^8.7.0
-    eslint-config-standard-with-typescript: ^34.0.0
+    eslint-config-standard-with-typescript: ^34.0.1
     eslint-plugin-import: ^2.27.5
     eslint-plugin-n: ^15.6.1
     eslint-plugin-promise: ^6.1.1
@@ -2067,20 +2084,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-standard-with-typescript@npm:^34.0.0":
-  version: 34.0.0
-  resolution: "eslint-config-standard-with-typescript@npm:34.0.0"
+"eslint-config-standard-with-typescript@npm:^34.0.1":
+  version: 34.0.1
+  resolution: "eslint-config-standard-with-typescript@npm:34.0.1"
   dependencies:
-    "@typescript-eslint/parser": ^5.0.0
+    "@typescript-eslint/parser": ^5.43.0
     eslint-config-standard: 17.0.0
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^5.0.0
+    "@typescript-eslint/eslint-plugin": ^5.43.0
     eslint: ^8.0.1
     eslint-plugin-import: ^2.25.2
     eslint-plugin-n: ^15.0.0
     eslint-plugin-promise: ^6.0.0
     typescript: "*"
-  checksum: d81fd7de4d6f65cad189d7f93d34a7289505b05bd77044edb81c78c1cc94b7e546fe6a8ab5fd5e88ff3db2ebef01569c56dd5b43d77797a7c5ae50062beae2b1
+  checksum: 9deb397a639caaf578692d232d3418641ed65186289152dc744a49b3b19db2fafc7b50eb463e91991452c1d942bf6a3fa796c01e73d55e36565f225b3aff3b81
   languageName: node
   linkType: hard
 
