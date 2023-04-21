@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@stylelint/postcss-css-in-js": "^0.38.0",
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.15.13",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
