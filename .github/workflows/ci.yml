@@ -1,6 +1,13 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [v2021]
+  pull_request:
+    branches: [v2021]
+
+permissions:
+  contents: read
 
 jobs:
   build:
