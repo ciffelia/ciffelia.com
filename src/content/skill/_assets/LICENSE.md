@@ -2,35 +2,14 @@
 
 - https://github.com/isocpp/logos
 
-# [Docker logo](docker.webp)
+# [Kubernetes logo](kubernetes.svg)
 
-- https://www.docker.com/company/newsroom/media-resources/
-
-# [Gatsby logo](gatsby.svg)
-
-- https://www.gatsbyjs.com/guidelines/logo
-
-# [Git logo](git.svg)
-
-- https://git-scm.com/downloads/logos
-- Jason Long, CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
-
-# [JavaScript logo](javascript.svg)
-
-- https://github.com/voodootikigod/logo.js
-- Christopher Williams, MIT License: https://github.com/voodootikigod/logo.js/blob/1544bdeed6d618a6cfe4f0650d04ab8d9cfa76d9/LICENSE
+- https://github.com/kubernetes/kubernetes/tree/master/logo
+- Kubernetes Project, CC-BY-4.0: https://creativecommons.org/licenses/by-sa/4.0/
 
 # [Next.js logo](nextjs.svg)
 
 - https://vercel.com/design/nextjs
-
-# [Node.js logo](nodejs.svg)
-
-- https://nodejs.org/en/about/resources/
-
-# [Nuxt logo](nuxt.svg)
-
-- https://nuxtjs.org/design/
 
 # [PHP logo](php.svg)
 
@@ -50,8 +29,3 @@
 # [TypeScript logo](typescript.svg)
 
 - https://www.typescriptlang.org/branding/
-
-# [Vue.js logo](vuejs.svg)
-
-- https://github.com/vuejs/art
-- Evan You, CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/
