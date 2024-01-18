@@ -11,7 +11,10 @@
     (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          entry.target.style.setProperty("--playState", "running");
+          (entry.target as HTMLDivElement).style.setProperty(
+            "--playState",
+            "running",
+          );
           observer.unobserve(entry.target);
         }
       }
