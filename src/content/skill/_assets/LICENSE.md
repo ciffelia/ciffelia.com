@@ -2,6 +2,11 @@
 
 - https://github.com/isocpp/logos
 
+# [Go logo](go.svg)
+
+- https://go.dev/blog/go-brand
+- Copyright 2018 The Go Authors. All rights reserved.
+
 # [Kubernetes logo](kubernetes.svg)
 
 - https://github.com/kubernetes/kubernetes/tree/master/logo
