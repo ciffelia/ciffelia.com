@@ -24,7 +24,7 @@ const skills = await getCollection("skill");
 <style>
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fill, clamp(150px, 20vw, 200px));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 16px;
     justify-content: space-around;
     padding: 0;
