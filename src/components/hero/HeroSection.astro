@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import ciffeliaIcon from "@/assets/ciffelia.png";
-import twitterIcon from "@/assets/twitter.svg";
-import githubIcon from "@/assets/github.svg";
 import InViewEffect from "@/components/InViewEffect.astro";
 import Ocean from "./ocean/Ocean.astro";
 import SocialLink from "./SocialLink.astro";
+
+const links = await getCollection("link");
 ---
 
 <header>
@@ -31,26 +32,20 @@ import SocialLink from "./SocialLink.astro";
   </div>
 
   <div class="links">
-    <InViewEffect>
-      <SocialLink
-        url="https://twitter.com/ciffelia"
-        color="var(--color-twitter)"
-        icon={twitterIcon}
-        iconLoading="eager"
-      >
-        Twitter
-      </SocialLink>
-    </InViewEffect>
-    <InViewEffect>
-      <SocialLink
-        url="https://github.com/ciffelia"
-        color="var(--color-github)"
-        icon={githubIcon}
-        iconLoading="eager"
-      >
-        GitHub
-      </SocialLink>
-    </InViewEffect>
+    {
+      links.map(({ data }) => (
+        <InViewEffect>
+          <SocialLink
+            url={data.url}
+            color={data.color}
+            icon={data.icon}
+            iconLoading="eager"
+          >
+            {data.name}
+          </SocialLink>
+        </InViewEffect>
+      ))
+    }
   </div>
 </header>
 

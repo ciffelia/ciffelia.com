@@ -12,8 +12,6 @@
   --color-light-cover1: #3585ff;
   --color-light-cover2: #0044ac;
   --color-light-ocean: #3585ff;
-  --color-light-twitter: #1da1f2;
-  --color-light-github: #231f20;
 
   /* Dark Theme */
   --color-dark-text1: #fdfdfd;
@@ -28,8 +26,6 @@
   --color-dark-cover1: #0044ac;
   --color-dark-cover2: #3585ff;
   --color-dark-ocean: #0044ac;
-  --color-dark-twitter: #1da1f2;
-  --color-dark-github: #231f20;
 
   /* Miscellaneous */
   --border1: var(--color-border1) solid 1px;
@@ -51,8 +47,6 @@
   --color-cover1: var(--color-light-cover1);
   --color-cover2: var(--color-light-cover2);
   --color-ocean: var(--color-light-ocean);
-  --color-twitter: var(--color-light-twitter);
-  --color-github: var(--color-light-github);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,7 +64,5 @@
     --color-cover1: var(--color-dark-cover1);
     --color-cover2: var(--color-dark-cover2);
     --color-ocean: var(--color-dark-ocean);
-    --color-twitter: var(--color-dark-twitter);
-    --color-github: var(--color-dark-github);
   }
 }
