@@ -1,13 +1,1 @@
-# Yarn v2
-/.yarn
-/.yarnrc.yml
-/.pnp.*
-/node_modules
-
-# Next.js
-/.next/
-/next-env.d.ts
-/out/
-
-# WebStorm
-/.idea
+/pnpm-lock.yaml
