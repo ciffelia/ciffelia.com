@@ -1,0 +1,7 @@
+{
+  "name": "Bare-metal Game",
+  "year": 2018,
+  "tags": ["Game", "OS", "UEFI", "C++"],
+  "url": "https://github.com/ciffelia/Updraft",
+  "image": "./updraft.png"
+}

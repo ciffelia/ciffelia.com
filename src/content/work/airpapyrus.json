@@ -1,0 +1,7 @@
+{
+  "name": "環境可視化装置",
+  "year": 2020,
+  "tags": ["Arduino", "Raspberry Pi", "ESP32", "C++", "Python"],
+  "url": "https://github.com/ciffelia/airpapyrus",
+  "image": "./airpapyrus.jpg"
+}

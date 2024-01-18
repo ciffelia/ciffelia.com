@@ -1,0 +1,7 @@
+{
+  "name": "環境観測装置",
+  "year": 2018,
+  "tags": ["Arduino", "C++", "ESP32"],
+  "url": "https://github.com/ciffelia/MultiEnvironmentMonitor",
+  "image": "./multi-environment-monitor.jpg"
+}

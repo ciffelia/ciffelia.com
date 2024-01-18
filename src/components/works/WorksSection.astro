@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import Section from "@/components/Section.astro";
+import InViewEffect from "@/components/InViewEffect.astro";
+import WorkCard from "./WorkCard.astro";
+
+const works = await getCollection("work");
+---
+
+<Section title="Works" subtitle="制作物">
+  <ul>
+    {
+      works.map((work) => (
+        <li>
+          <InViewEffect>
+            <WorkCard work={work} />
+          </InViewEffect>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+</style>

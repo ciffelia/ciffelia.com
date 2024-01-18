@@ -1,0 +1,15 @@
+{
+  "name": "全文検索アプリ",
+  "year": 2020,
+  "tags": [
+    "Web",
+    "TypeScript",
+    "Vue",
+    "Nuxt",
+    "Node.js",
+    "PostgreSQL",
+    "Elasticsearch"
+  ],
+  "url": "https://github.com/ciffelia/twilens",
+  "image": "./twilens.png"
+}

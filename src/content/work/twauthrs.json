@@ -1,0 +1,7 @@
+{
+  "name": "twauth-rs",
+  "year": 2020,
+  "tags": ["Rust", "Twitter API"],
+  "url": "https://github.com/ciffelia/twauth-rs",
+  "image": "./twauthrs.png"
+}

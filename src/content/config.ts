@@ -21,7 +21,20 @@ const skillCollection = defineCollection({
     }),
 });
 
+const workCollection = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      year: z.number().int(),
+      tags: z.array(z.string()),
+      url: z.string().url(),
+      image: image(),
+    }),
+});
+
 export const collections = {
   link: linkCollection,
   skill: skillCollection,
+  work: workCollection,
 };

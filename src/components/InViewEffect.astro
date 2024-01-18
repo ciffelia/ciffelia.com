@@ -27,13 +27,15 @@
 <style>
   .container {
     position: relative;
+    height: 100%;
   }
   .in-view-effect {
     --playState: paused;
   }
   .content-wrapper {
-    animation: content-wrapper 1s 0s both;
+    animation: in-view-content-wrapper 1s 0s both;
     animation-play-state: var(--playState);
+    height: 100%;
   }
   .cover {
     position: absolute;
@@ -43,19 +45,19 @@
   .cover1 {
     background-color: var(--color-cover1);
     animation:
-      cover1 var(--easing-ease-in-expo) 1s 0s backwards,
-      cover2 var(--easing-ease-out-expo) 0.5s 0.5s forwards;
+      in-view-cover1 var(--easing-ease-in-expo) 1s 0s backwards,
+      in-view-cover2 var(--easing-ease-out-expo) 0.5s 0.5s forwards;
     animation-play-state: var(--playState);
   }
   .cover2 {
     background-color: var(--color-cover2);
     animation:
-      cover1 var(--easing-ease-in-expo) 0.25s 0.25s backwards,
-      cover2 var(--easing-ease-out-expo) 0.25s 0.5s forwards;
+      in-view-cover1 var(--easing-ease-in-expo) 0.25s 0.25s backwards,
+      in-view-cover2 var(--easing-ease-out-expo) 0.25s 0.5s forwards;
     animation-play-state: var(--playState);
   }
 
-  @keyframes content-wrapper {
+  @keyframes in-view-content-wrapper {
     0% {
       visibility: hidden;
     }
@@ -63,7 +65,7 @@
       visibility: hidden;
     }
   }
-  @keyframes cover1 {
+  @keyframes in-view-cover1 {
     0% {
       transform: scaleX(0);
       transform-origin: left;
@@ -73,7 +75,7 @@
       transform-origin: left;
     }
   }
-  @keyframes cover2 {
+  @keyframes in-view-cover2 {
     0% {
       transform: scaleX(1);
       transform-origin: right;

@@ -1,0 +1,7 @@
+{
+  "name": "Discord Bot",
+  "year": 2021,
+  "tags": ["Discord", "Rust", "Text-to-Speech"],
+  "url": "https://github.com/ciffelia/koe",
+  "image": "./koe.png"
+}

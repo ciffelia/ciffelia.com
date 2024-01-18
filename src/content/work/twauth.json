@@ -1,0 +1,7 @@
+{
+  "name": "twauth",
+  "year": 2020,
+  "tags": ["TypeScript", "Twitter API"],
+  "url": "https://github.com/ciffelia/twauth",
+  "image": "./twauth.png"
+}

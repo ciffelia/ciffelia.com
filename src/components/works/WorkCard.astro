@@ -1,0 +1,94 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import Card from "@/components/Card.astro";
+import Tag from "./Tag.astro";
+
+export interface Props {
+  work: CollectionEntry<"work">;
+}
+
+const { work } = Astro.props;
+---
+
+<a href={work.data.url} target="_blank">
+  <Card class="work-card">
+    <div class="thumbnail">
+      <Image
+        src={work.data.image}
+        alt={`${work.data.name} screenshot`}
+        widths={[510, 1020, 1530]}
+        class="thumbnail-image"
+      />
+    </div>
+    <div class="description">
+      <h2 class="title">{work.data.name}</h2>
+      <p class="year">{work.data.year}</p>
+      <ul class="tag-list">
+        {
+          work.data.tags.map((tag) => (
+            <li class="tag-container">
+              <Tag>{tag}</Tag>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </Card>
+</a>
+
+<style>
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .work-card {
+    width: 100%;
+    height: 100%;
+    grid-row: span 1;
+  }
+
+  .thumbnail {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .thumbnail-image {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: contain;
+  }
+
+  .description {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .year {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.8;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tag-container {
+    list-style: none;
+  }
+</style>
