@@ -32,19 +32,23 @@
     position: relative;
     height: 100%;
   }
+
   .in-view-effect {
     --playState: paused;
   }
+
   .content-wrapper {
+    height: 100%;
     animation: in-view-content-wrapper 1s 0s both;
     animation-play-state: var(--playState);
-    height: 100%;
   }
+
   .cover {
     position: absolute;
     inset: 0;
     pointer-events: none;
   }
+
   .cover1 {
     background-color: var(--color-cover1);
     animation:
@@ -52,6 +56,7 @@
       in-view-cover2 var(--easing-ease-out-expo) 0.5s 0.5s forwards;
     animation-play-state: var(--playState);
   }
+
   .cover2 {
     background-color: var(--color-cover2);
     animation:
@@ -64,25 +69,30 @@
     0% {
       visibility: hidden;
     }
+
     49% {
       visibility: hidden;
     }
   }
+
   @keyframes in-view-cover1 {
     0% {
       transform: scaleX(0);
       transform-origin: left;
     }
+
     100% {
       transform: scaleX(1);
       transform-origin: left;
     }
   }
+
   @keyframes in-view-cover2 {
     0% {
       transform: scaleX(1);
       transform-origin: right;
     }
+
     100% {
       transform: scaleX(0);
       transform-origin: right;

@@ -1,12 +1,11 @@
-@import "modern-normalize/modern-normalize.css";
-@import "@fontsource/quicksand/600.css";
-@import "./theme.css";
+@import url("modern-normalize/modern-normalize.css");
+@import url("@fontsource/quicksand/600.css");
+@import url("./theme.css");
 
 body {
   /* https://ics.media/entry/200317/ */
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
-
   color: var(--color-text1);
   background-color: var(--color-background1);
 }

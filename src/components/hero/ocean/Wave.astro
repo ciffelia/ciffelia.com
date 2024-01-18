@@ -36,6 +36,7 @@ const {
     0% {
       mask-position: calc(600px * var(--from)) 0;
     }
+
     100% {
       mask-position: calc(600px * var(--to)) 0;
     }
@@ -47,8 +48,8 @@ const {
     height: 100%;
     background-color: var(--color-background1);
     mask-image: var(--waveMaskImage);
-    mask-size: auto 100%;
     mask-repeat: repeat-x;
+    mask-size: auto 100%;
     animation: wave var(--duration) cubic-bezier(0.37, 0, 0.63, 1) var(--delay)
       alternate infinite;
   }
