@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import Card from "../Card.astro";
+
+export interface Props {
+  skill: CollectionEntry<"skill">;
+}
+
+const { skill } = Astro.props;
+---
+
+<Card class="skill-card">
+  <div class="logo">
+    <Image
+      src={skill.data.icon}
+      alt={`${skill.data.name} logo`}
+      widths={[168, 336, 504]}
+      class="logo-image"
+    />
+  </div>
+  <div class="description">
+    <h2 class="title">{skill.data.name}</h2>
+    <span class="level">{skill.data.since}-</span>
+  </div>
+</Card>
+
+<style>
+  .skill-card {
+    width: 100%;
+  }
+
+  .logo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 16px;
+    background-color: var(--color-background2);
+  }
+
+  .logo-image {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: contain;
+  }
+
+  .description {
+    display: grid;
+    gap: 8px;
+    justify-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .level {
+    font-size: 16px;
+  }
+</style>

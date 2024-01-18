@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import Section from "@/components/Section.astro";
+import InViewEffect from "@/components/InViewEffect.astro";
+import SkillCard from "./SkillCard.astro";
+
+const skills = await getCollection("skill");
+---
+
+<Section title="Skills" subtitle="スキルセット">
+  <ul>
+    {
+      skills.map((skill) => (
+        <li>
+          <InViewEffect>
+            <SkillCard {skill} />
+          </InViewEffect>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, clamp(150px, 20vw, 200px));
+    gap: 16px;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+</style>

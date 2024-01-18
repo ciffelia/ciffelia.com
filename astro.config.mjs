@@ -5,5 +5,5 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://ciffelia.com",
-  integrations: [icon()]
+  integrations: [icon()],
 });

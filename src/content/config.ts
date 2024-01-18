@@ -11,6 +11,17 @@ const linkCollection = defineCollection({
     }),
 });
 
+const skillCollection = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      since: z.number().int(),
+      icon: image(),
+    }),
+});
+
 export const collections = {
   link: linkCollection,
+  skill: skillCollection,
 };
