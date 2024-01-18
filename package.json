@@ -21,6 +21,7 @@
     "astro-icon": "^1.0.2",
     "modern-normalize": "^2.0.0",
     "postcss-preset-env": "^9.3.0",
+    "sharp": "^0.33.2",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
