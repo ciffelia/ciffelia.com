@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+  icon: string;
+}
+
+const { icon } = Astro.props;
+---
+
+<div class="container">
+  <span class="icon"><Icon name={icon} width={32} height={32} /></span>
+  <span class="description"><slot /></span>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin: 0;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+</style>

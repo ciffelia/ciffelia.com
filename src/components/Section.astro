@@ -1,0 +1,75 @@
+---
+import InViewEffect from "./InViewEffect.astro";
+
+export interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="effect-container">
+      <InViewEffect>
+        <div class="title-container">
+          <h1 class="title">{title}</h1>
+          <small class="subtitle">{subtitle}</small>
+        </div>
+      </InViewEffect>
+    </div>
+    <div><slot /></div>
+  </div>
+</section>
+
+<style>
+  .section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:nth-of-type(2n) {
+      background-color: var(--color-surface1);
+    }
+  }
+
+  .container {
+    display: grid;
+    gap: 24px;
+    width: min(90%, 960px);
+  }
+
+  .effect-container {
+    justify-self: start;
+  }
+
+  .title-container {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    padding-right: 4px;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    border-bottom: var(--border1);
+  }
+
+  .title {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    opacity: 0.5;
+  }
+</style>

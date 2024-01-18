@@ -1,0 +1,47 @@
+---
+import Section from "@/components/Section.astro";
+import InViewEffect from "@/components/InViewEffect.astro";
+import Paragraph from "./Paragraph.astro";
+---
+
+<Section title="Profile" subtitle="基本情報">
+  <div class="list-wrapper">
+    <div class="list">
+      <InViewEffect>
+        <Paragraph icon="fa6-solid:graduation-cap">
+          ソフトウェア開発が好きな大学生です。プログラミングを始めて10年になります。
+        </Paragraph>
+      </InViewEffect>
+      <InViewEffect>
+        <Paragraph icon="fa6-solid:layer-group">
+          Webアプリ、ゲーム、小型デバイス、OSなど様々なものを制作しています。
+        </Paragraph>
+      </InViewEffect>
+      <InViewEffect>
+        <Paragraph icon="fa6-regular:lightbulb">
+          2018年からLinuxサーバーを運用しており、自作のWebアプリや情報収集ツールがDockerコンテナの中で動いています。
+        </Paragraph>
+      </InViewEffect>
+    </div>
+  </div>
+</Section>
+
+<style>
+  .list-wrapper {
+    display: grid;
+    justify-items: center;
+    padding: 0 min(12vw, 128px);
+  }
+
+  @media (max-width: 768px) {
+    .list-wrapper {
+      padding: 0;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+</style>
