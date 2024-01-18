@@ -1,1 +1,86 @@
-<slot />
+<div class="container in-view-effect">
+  <div class="content-wrapper">
+    <slot />
+  </div>
+  <div class="cover cover1"></div>
+  <div class="cover cover2"></div>
+</div>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.style.setProperty("--playState", "running");
+          observer.unobserve(entry.target);
+        }
+      }
+    },
+    { threshold: 0.3 },
+  );
+
+  for (const el of document.querySelectorAll(".in-view-effect")) {
+    observer.observe(el);
+  }
+</script>
+
+<style>
+  .container {
+    position: relative;
+  }
+  .in-view-effect {
+    --playState: paused;
+  }
+  .content-wrapper {
+    animation: content-wrapper 1s 0s both;
+    animation-play-state: var(--playState);
+  }
+  .cover {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .cover1 {
+    background-color: var(--color-cover1);
+    animation:
+      cover1 var(--easing-ease-in-expo) 1s 0s backwards,
+      cover2 var(--easing-ease-out-expo) 0.5s 0.5s forwards;
+    animation-play-state: var(--playState);
+  }
+  .cover2 {
+    background-color: var(--color-cover2);
+    animation:
+      cover1 var(--easing-ease-in-expo) 0.25s 0.25s backwards,
+      cover2 var(--easing-ease-out-expo) 0.25s 0.5s forwards;
+    animation-play-state: var(--playState);
+  }
+
+  @keyframes content-wrapper {
+    0% {
+      visibility: hidden;
+    }
+    49% {
+      visibility: hidden;
+    }
+  }
+  @keyframes cover1 {
+    0% {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    100% {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  @keyframes cover2 {
+    0% {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+    100% {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+  }
+</style>
