@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import ciffeliaIcon from "@/assets/ciffelia.png";
+import twitterIcon from "@/assets/twitter.svg";
+import githubIcon from "@/assets/github.svg";
+import InViewEffect from "@/components/InViewEffect.astro";
+import Ocean from "./ocean/Ocean.astro";
+import SocialLink from "./SocialLink.astro";
+---
+
+<header>
+  <div class="ocean-container">
+    <Ocean />
+  </div>
+
+  <div class="icon-and-name">
+    <div class="icon-container">
+      <InViewEffect>
+        <Image
+          src={ciffeliaIcon}
+          alt=""
+          widths={[130, 260, 390]}
+          class="icon"
+          loading="eager"
+        />
+      </InViewEffect>
+    </div>
+    <span class="name">
+      <InViewEffect>Ciffelia</InViewEffect>
+    </span>
+  </div>
+
+  <div class="links">
+    <InViewEffect>
+      <SocialLink
+        url="https://twitter.com/ciffelia"
+        color="var(--color-twitter)"
+        icon={twitterIcon}
+        iconLoading="eager"
+      >
+        Twitter
+      </SocialLink>
+    </InViewEffect>
+    <InViewEffect>
+      <SocialLink
+        url="https://github.com/ciffelia"
+        color="var(--color-github)"
+        icon={githubIcon}
+        iconLoading="eager"
+      >
+        GitHub
+      </SocialLink>
+    </InViewEffect>
+  </div>
+</header>
+
+<style>
+  header {
+    position: relative;
+    height: 350px;
+    color: var(--color-text2);
+    background-color: var(--color-ocean);
+  }
+
+  .ocean-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .icon-and-name {
+    position: absolute;
+    top: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    filter: drop-shadow(0 4px 7px var(--color-shadow1));
+  }
+
+  .icon-container {
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  .icon {
+    width: clamp(75px, 20vw, 130px);
+    height: clamp(75px, 20vw, 130px);
+    vertical-align: top;
+  }
+
+  .name {
+    margin-left: clamp(20px, 6vw, 40px);
+    font-family: Quicksand, sans-serif;
+    font-size: clamp(64px, 16vw, 97px);
+    font-weight: 600;
+  }
+
+  .links {
+    position: absolute;
+    bottom: 75px;
+    display: flex;
+    column-gap: clamp(30px, 12vw, 100px);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+</style>

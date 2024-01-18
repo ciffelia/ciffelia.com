@@ -1,0 +1,60 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Image } from "astro:assets";
+
+export interface Props {
+  url: string;
+  color: string;
+  icon: ImageMetadata | Promise<{ default: ImageMetadata }>;
+  iconLoading?: HTMLAttributes<"img">["loading"];
+}
+
+const { url, color, icon, iconLoading } = Astro.props;
+---
+
+<a href={url} target="_blank">
+  <Image
+    src={icon}
+    alt=""
+    widths={[36, 72, 108]}
+    class="icon"
+    loading={iconLoading}
+  />
+  <span class="name"><slot /></span>
+</a>
+
+<style define:vars={{ color }}>
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(40px, 8vw, 50px);
+    padding: 6px 12px;
+    background-color: var(--color);
+    filter: drop-shadow(0 4px 7px var(--color-shadow1));
+    border-radius: 12px;
+    transition:
+      filter 0.15s var(--easing-pop),
+      transform 0.15s var(--easing-pop);
+
+    &:hover {
+      filter: drop-shadow(0 4px 7px var(--color-shadow2));
+      transform: scale(1.1);
+    }
+  }
+
+  .icon {
+    width: clamp(29px, 6vw, 36px);
+    height: clamp(29px, 6vw, 36px);
+    object-fit: contain;
+    vertical-align: top;
+  }
+
+  .name {
+    margin-left: clamp(9px, 17vw, 11px);
+    font-family: Quicksand, sans-serif;
+    font-size: clamp(22px, 4vw, 27px);
+    font-weight: 600;
+    color: var(--color-text2);
+  }
+</style>
