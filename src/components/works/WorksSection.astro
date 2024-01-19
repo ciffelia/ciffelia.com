@@ -1,10 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import Section from "@/components/Section.astro";
 import InViewEffect from "@/components/InViewEffect.astro";
+import { getSortedWorks } from "@/sorted-content";
 import WorkCard from "./WorkCard.astro";
 
-const works = await getCollection("work");
+const works = await getSortedWorks();
 ---
 
 <Section title="Works" subtitle="制作物">
