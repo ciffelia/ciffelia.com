@@ -1,0 +1,36 @@
+---
+import Section from "@/components/Section.astro";
+import InViewEffect from "@/components/InViewEffect.astro";
+import { getSortedArticles } from "@/sorted-content";
+import ArticleCard from "./ArticleCard.astro";
+
+const articles = await getSortedArticles();
+---
+
+<Section title="Articles" subtitle="執筆した記事">
+  <ul>
+    {
+      articles.map((article) => (
+        <li>
+          <InViewEffect>
+            <ArticleCard {article} />
+          </InViewEffect>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+</style>

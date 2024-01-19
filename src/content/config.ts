@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection, reference } from "astro:content";
 
 const linkCollection = defineCollection({
   type: "data",
@@ -7,6 +7,25 @@ const linkCollection = defineCollection({
       name: z.string(),
       url: z.string().url(),
       color: z.string(),
+      icon: image(),
+    }),
+});
+
+const articleCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    title: z.string(),
+    url: z.string().url(),
+    year: z.number().int(),
+    media: reference("media"),
+  }),
+});
+
+const mediaCollection = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
       icon: image(),
     }),
 });
@@ -35,6 +54,8 @@ const workCollection = defineCollection({
 
 export const collections = {
   link: linkCollection,
+  article: articleCollection,
+  media: mediaCollection,
   skill: skillCollection,
   work: workCollection,
 };
