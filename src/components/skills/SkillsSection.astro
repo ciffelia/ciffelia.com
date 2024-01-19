@@ -1,10 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import Section from "@/components/Section.astro";
 import InViewEffect from "@/components/InViewEffect.astro";
+import { getSortedSkills } from "@/sorted-content";
 import SkillCard from "./SkillCard.astro";
 
-const skills = await getCollection("skill");
+const skills = await getSortedSkills();
 ---
 
 <Section title="Skills" subtitle="スキルセット">
