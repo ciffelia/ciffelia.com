@@ -1,7 +1,7 @@
 {
   "name": "ポートフォリオ",
   "year": 2021,
-  "tags": ["Web", "TypeScript", "React", "Next.js"],
+  "tags": ["Web", "TypeScript", "React", "Next.js", "Astro"],
   "url": "https://github.com/ciffelia/ciffelia.com",
   "image": "./portfolio2021.png"
 }
