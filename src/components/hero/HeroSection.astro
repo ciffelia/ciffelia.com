@@ -26,9 +26,9 @@ const links = await getCollection("link");
         />
       </InViewEffect>
     </div>
-    <span class="name">
+    <h1 class="name">
       <InViewEffect>Ciffelia</InViewEffect>
-    </span>
+    </h1>
   </div>
 
   <div class="links">
@@ -67,6 +67,7 @@ const links = await getCollection("link");
     position: absolute;
     top: 53px;
     display: flex;
+    gap: clamp(20px, 6vw, 40px);
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -85,7 +86,7 @@ const links = await getCollection("link");
   }
 
   .name {
-    margin-left: clamp(20px, 6vw, 40px);
+    margin: 0;
     font-family: Quicksand, sans-serif;
     font-size: clamp(64px, 16vw, 97px);
     font-weight: 600;
