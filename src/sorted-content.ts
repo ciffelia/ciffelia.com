@@ -1,6 +1,10 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 
 export const sortedArticleIds = [
+  "2024-wsl-pbcopy-pbpaste",
+  "2024-lambda-vpc-security",
+  "2024-diverctf",
+  "2024-wsl-xdg-open",
   "2024-luks-unlock-with-tailscale-ssh",
   "2023-pfn-cache-system",
   "2023-nextjs-preview-pr",
