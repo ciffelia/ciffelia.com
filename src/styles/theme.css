@@ -13,7 +13,6 @@
   --color-cover1: light-dark(#3585ff, #0044ac);
   --color-cover2: light-dark(#0044ac, #3585ff);
   --color-ocean: light-dark(#3585ff, #0044ac);
-
   --border1: var(--color-border1) solid 1px;
   --border2: var(--color-border2) solid 1px;
   --easing-pop: cubic-bezier(0.24, 2, 0.64, 1.15);
