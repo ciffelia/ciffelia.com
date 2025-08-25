@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 
 const data = await fetch(
   "https://zenn.dev/api/articles?username=ciffelia",
