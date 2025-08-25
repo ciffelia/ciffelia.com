@@ -1,6 +1,8 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 
 export const sortedArticleIds = [
+  "2025-web-speed-hackathon-2025",
+  "2025-ix2215-jcom-ipv6",
   "2024-wanictf2024",
   "2024-wsl-pbcopy-pbpaste",
   "2024-lambda-vpc-security",
