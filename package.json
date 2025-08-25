@@ -14,21 +14,21 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@fontsource/quicksand": "^5.1.0",
-    "@iconify-json/fa6-regular": "^1.2.1",
-    "@iconify-json/fa6-solid": "^1.2.1",
+    "@fontsource/quicksand": "^5.2.8",
+    "@iconify-json/fa6-regular": "^1.2.4",
+    "@iconify-json/fa6-solid": "^1.2.4",
     "astro": "^4.16.6",
-    "astro-icon": "^1.1.1",
+    "astro-icon": "^1.1.5",
     "modern-normalize": "^3.0.1",
-    "postcss-preset-env": "^10.0.7",
-    "sharp": "^0.33.5",
-    "typescript": "^5.6.3"
+    "postcss-preset-env": "^10.3.0",
+    "sharp": "^0.34.3",
+    "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "postcss-html": "^1.7.0",
-    "prettier": "^3.3.3",
+    "postcss-html": "^1.8.0",
+    "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "stylelint": "^16.10.0",
+    "stylelint": "^16.23.1",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^5.1.1",
     "stylelint-config-standard": "^36.0.1"
